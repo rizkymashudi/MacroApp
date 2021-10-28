@@ -55,12 +55,12 @@
 		F5D54A3C272102DE00FF8DE7 /* MacroApp */ = {
 			isa = PBXGroup;
 			children = (
-				F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */,
-				F5D54A3F272102DE00FF8DE7 /* ContentView.swift */,
-				F5D54A41272102E100FF8DE7 /* Assets.xcassets */,
+				F5D54A502721033300FF8DE7 /* Extensions */,
+				F5D54A512721034300FF8DE7 /* Code */,
+				F5D54A522721034D00FF8DE7 /* Utils */,
+				F5D54A532721035500FF8DE7 /* Resources */,
 				F5D54A46272102E100FF8DE7 /* Persistence.swift */,
 				F5D54A48272102E100FF8DE7 /* MacroApp.xcdatamodeld */,
-				F5D54A43272102E100FF8DE7 /* Preview Content */,
 			);
 			path = MacroApp;
 			sourceTree = "<group>";
@@ -71,6 +71,78 @@
 				F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5D54A502721033300FF8DE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5D54A512721034300FF8DE7 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				F5D54A542721037C00FF8DE7 /* Services */,
+				F5D54A552721038600FF8DE7 /* Controllers */,
+				F5D54A562721038F00FF8DE7 /* Views */,
+				F5D54A572721039700FF8DE7 /* Models */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		F5D54A522721034D00FF8DE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F5D54A532721035500FF8DE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5D54A41272102E100FF8DE7 /* Assets.xcassets */,
+				F5D54A43272102E100FF8DE7 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5D54A542721037C00FF8DE7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F5D54A552721038600FF8DE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5D54A562721038F00FF8DE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5D54A582721054700FF8DE7 /* Support Views */,
+				F5D54A3F272102DE00FF8DE7 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5D54A572721039700FF8DE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F5D54A582721054700FF8DE7 /* Support Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Support Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +352,7 @@
 				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacroApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,6 +383,7 @@
 				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacroApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
