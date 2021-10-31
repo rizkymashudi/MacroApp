@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D569B4B272E71D300206935 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6D569B4A272E71D300206935 /* Alamofire */; };
+		6D569B51272E7A5B00206935 /* GoogleSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D569B50272E7A5B00206935 /* GoogleSearchModel.swift */; };
+		6D569B53272E7D0600206935 /* ApiServiceGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D569B52272E7D0600206935 /* ApiServiceGoogle.swift */; };
+		6D569B87272E92B800206935 /* GoogleSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D569B86272E92B800206935 /* GoogleSearchView.swift */; };
+		6D569B89272E936200206935 /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D569B88272E936200206935 /* SearchList.swift */; };
+		6D569B8B272E938700206935 /* DetailSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D569B8A272E938700206935 /* DetailSearch.swift */; };
+		6D569B8D272E93AC00206935 /* SearchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D569B8C272E93AC00206935 /* SearchRow.swift */; };
 		F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */; };
 		F5D54A40272102DE00FF8DE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3F272102DE00FF8DE7 /* ContentView.swift */; };
 		F5D54A42272102E100FF8DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A41272102E100FF8DE7 /* Assets.xcassets */; };
@@ -16,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D569B50272E7A5B00206935 /* GoogleSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearchModel.swift; sourceTree = "<group>"; };
+		6D569B52272E7D0600206935 /* ApiServiceGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiServiceGoogle.swift; path = MacroApp/ApiServiceGoogle.swift; sourceTree = SOURCE_ROOT; };
+		6D569B86272E92B800206935 /* GoogleSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearchView.swift; sourceTree = "<group>"; };
+		6D569B88272E936200206935 /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
+		6D569B8A272E938700206935 /* DetailSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailSearch.swift; path = MacroApp/Code/Models/DetailSearch.swift; sourceTree = SOURCE_ROOT; };
+		6D569B8C272E93AC00206935 /* SearchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRow.swift; sourceTree = "<group>"; };
 		F5D54A3A272102DE00FF8DE7 /* MacroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAppApp.swift; sourceTree = "<group>"; };
 		F5D54A3F272102DE00FF8DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D569B4B272E71D300206935 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +124,7 @@
 		F5D54A542721037C00FF8DE7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6D569B52272E7D0600206935 /* ApiServiceGoogle.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -127,6 +142,8 @@
 			children = (
 				F5D54A582721054700FF8DE7 /* Support Views */,
 				F5D54A3F272102DE00FF8DE7 /* ContentView.swift */,
+				6D569B86272E92B800206935 /* GoogleSearchView.swift */,
+				6D569B8C272E93AC00206935 /* SearchRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +151,8 @@
 		F5D54A572721039700FF8DE7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6D569B50272E7A5B00206935 /* GoogleSearchModel.swift */,
+				6D569B88272E936200206935 /* SearchList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +160,7 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
+				6D569B8A272E938700206935 /* DetailSearch.swift */,
 			);
 			path = "Support Views";
 			sourceTree = "<group>";
@@ -161,6 +181,9 @@
 			dependencies = (
 			);
 			name = MacroApp;
+			packageProductDependencies = (
+				6D569B4A272E71D300206935 /* Alamofire */,
+			);
 			productName = MacroApp;
 			productReference = F5D54A3A272102DE00FF8DE7 /* MacroApp.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +212,9 @@
 				Base,
 			);
 			mainGroup = F5D54A31272102DE00FF8DE7;
+			packageReferences = (
+				6D569B49272E71D300206935 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F5D54A3B272102DE00FF8DE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -218,6 +244,12 @@
 				F5D54A4A272102E100FF8DE7 /* MacroApp.xcdatamodeld in Sources */,
 				F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */,
 				F5D54A40272102DE00FF8DE7 /* ContentView.swift in Sources */,
+				6D569B53272E7D0600206935 /* ApiServiceGoogle.swift in Sources */,
+				6D569B51272E7A5B00206935 /* GoogleSearchModel.swift in Sources */,
+				6D569B89272E936200206935 /* SearchList.swift in Sources */,
+				6D569B8D272E93AC00206935 /* SearchRow.swift in Sources */,
+				6D569B8B272E938700206935 /* DetailSearch.swift in Sources */,
+				6D569B87272E92B800206935 /* GoogleSearchView.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,7 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Resources/Info.plist;
@@ -380,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Resources/Info.plist;
@@ -425,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6D569B49272E71D300206935 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6D569B4A272E71D300206935 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D569B49272E71D300206935 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F5D54A48272102E100FF8DE7 /* MacroApp.xcdatamodeld */ = {
