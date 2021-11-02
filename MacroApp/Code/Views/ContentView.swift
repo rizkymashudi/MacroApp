@@ -15,7 +15,7 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    @StateObject var service = ApiYudistira()
     var body: some View {
         NavigationView {
             List {
@@ -38,7 +38,9 @@ struct ContentView: View {
                     }
                 }
             }
-            Text("Select an item")
+            Text("selected an item")
+        }.onAppear{
+            service.fetch()
         }
     }
 
