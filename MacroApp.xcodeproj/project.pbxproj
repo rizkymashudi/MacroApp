@@ -12,6 +12,10 @@
 		F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE805273282BB009E9853 /* CardOnboarding.swift */; };
 		F53AE808273282D9009E9853 /* ButtonStartOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE807273282D9009E9853 /* ButtonStartOnboarding.swift */; };
 		F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE80927328364009E9853 /* OnBoardingScene.swift */; };
+		F53AE80D27328AE7009E9853 /* PasteViewScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE80C27328AE7009E9853 /* PasteViewScene.swift */; };
+		F53AE80F27328B0B009E9853 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE80E27328B0B009E9853 /* HeaderView.swift */; };
+		F53AE81127328B1E009E9853 /* CopastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE81027328B1E009E9853 /* CopastView.swift */; };
+		F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE81227328B32009E9853 /* StartSearchButton.swift */; };
 		F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */; };
 		F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */; };
 		F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */; };
@@ -28,6 +32,10 @@
 		F53AE805273282BB009E9853 /* CardOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnboarding.swift; sourceTree = "<group>"; };
 		F53AE807273282D9009E9853 /* ButtonStartOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStartOnboarding.swift; sourceTree = "<group>"; };
 		F53AE80927328364009E9853 /* OnBoardingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScene.swift; sourceTree = "<group>"; };
+		F53AE80C27328AE7009E9853 /* PasteViewScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteViewScene.swift; sourceTree = "<group>"; };
+		F53AE80E27328B0B009E9853 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F53AE81027328B1E009E9853 /* CopastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopastView.swift; sourceTree = "<group>"; };
+		F53AE81227328B32009E9853 /* StartSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSearchButton.swift; sourceTree = "<group>"; };
 		F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIYudistiraModel.swift; sourceTree = "<group>"; };
 		F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceYudistira.swift; sourceTree = "<group>"; };
 		F5D54A3A272102DE00FF8DE7 /* MacroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +66,16 @@
 				F53AE807273282D9009E9853 /* ButtonStartOnboarding.swift */,
 			);
 			path = "Onboarding support";
+			sourceTree = "<group>";
+		};
+		F53AE80B27328ABA009E9853 /* PasteView support */ = {
+			isa = PBXGroup;
+			children = (
+				F53AE80E27328B0B009E9853 /* HeaderView.swift */,
+				F53AE81027328B1E009E9853 /* CopastView.swift */,
+				F53AE81227328B32009E9853 /* StartSearchButton.swift */,
+			);
+			path = "PasteView support";
 			sourceTree = "<group>";
 		};
 		F5D54A31272102DE00FF8DE7 = {
@@ -153,6 +171,7 @@
 			children = (
 				F5D54A582721054700FF8DE7 /* Support Views */,
 				F5D54A3F272102DE00FF8DE7 /* MainView.swift */,
+				F53AE80C27328AE7009E9853 /* PasteViewScene.swift */,
 				F53AE80927328364009E9853 /* OnBoardingScene.swift */,
 			);
 			path = Views;
@@ -169,6 +188,7 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
+				F53AE80B27328ABA009E9853 /* PasteView support */,
 				F53AE800273281E0009E9853 /* Onboarding support */,
 			);
 			path = "Support Views";
@@ -247,14 +267,18 @@
 				F5D54A4A272102E100FF8DE7 /* MacroApp.xcdatamodeld in Sources */,
 				F53AE808273282D9009E9853 /* ButtonStartOnboarding.swift in Sources */,
 				F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */,
+				F53AE81127328B1E009E9853 /* CopastView.swift in Sources */,
 				F53AE802273281FE009E9853 /* Color.swift in Sources */,
 				F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */,
 				F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */,
 				F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
 				F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */,
+				F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */,
+				F53AE80D27328AE7009E9853 /* PasteViewScene.swift in Sources */,
 				F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
+				F53AE80F27328B0B009E9853 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

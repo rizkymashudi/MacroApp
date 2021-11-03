@@ -10,7 +10,7 @@ import SwiftUI
 struct CardOnboarding: View {
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 15, style: .continuous)
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
                 .fill(Color.white)
                 .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
             
