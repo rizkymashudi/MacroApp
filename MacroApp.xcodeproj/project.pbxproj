@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F53AE802273281FE009E9853 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE801273281FE009E9853 /* Color.swift */; };
+		F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE803273282A4009E9853 /* HeaderOnboarding.swift */; };
+		F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE805273282BB009E9853 /* CardOnboarding.swift */; };
+		F53AE808273282D9009E9853 /* ButtonStartOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE807273282D9009E9853 /* ButtonStartOnboarding.swift */; };
+		F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE80927328364009E9853 /* OnBoardingScene.swift */; };
 		F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */; };
 		F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */; };
 		F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */; };
-		F5D54A40272102DE00FF8DE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3F272102DE00FF8DE7 /* ContentView.swift */; };
+		F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3F272102DE00FF8DE7 /* MainView.swift */; };
 		F5D54A42272102E100FF8DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A41272102E100FF8DE7 /* Assets.xcassets */; };
 		F5D54A45272102E100FF8DE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */; };
 		F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A46272102E100FF8DE7 /* Persistence.swift */; };
@@ -18,11 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F53AE801273281FE009E9853 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F53AE803273282A4009E9853 /* HeaderOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboarding.swift; sourceTree = "<group>"; };
+		F53AE805273282BB009E9853 /* CardOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnboarding.swift; sourceTree = "<group>"; };
+		F53AE807273282D9009E9853 /* ButtonStartOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStartOnboarding.swift; sourceTree = "<group>"; };
+		F53AE80927328364009E9853 /* OnBoardingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScene.swift; sourceTree = "<group>"; };
 		F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIYudistiraModel.swift; sourceTree = "<group>"; };
 		F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceYudistira.swift; sourceTree = "<group>"; };
 		F5D54A3A272102DE00FF8DE7 /* MacroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAppApp.swift; sourceTree = "<group>"; };
-		F5D54A3F272102DE00FF8DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5D54A3F272102DE00FF8DE7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F5D54A41272102E100FF8DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5D54A46272102E100FF8DE7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -40,6 +50,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F53AE800273281E0009E9853 /* Onboarding support */ = {
+			isa = PBXGroup;
+			children = (
+				F53AE803273282A4009E9853 /* HeaderOnboarding.swift */,
+				F53AE805273282BB009E9853 /* CardOnboarding.swift */,
+				F53AE807273282D9009E9853 /* ButtonStartOnboarding.swift */,
+			);
+			path = "Onboarding support";
+			sourceTree = "<group>";
+		};
 		F5D54A31272102DE00FF8DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +100,7 @@
 		F5D54A502721033300FF8DE7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F53AE801273281FE009E9853 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,7 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				F5D54A582721054700FF8DE7 /* Support Views */,
-				F5D54A3F272102DE00FF8DE7 /* ContentView.swift */,
+				F5D54A3F272102DE00FF8DE7 /* MainView.swift */,
+				F53AE80927328364009E9853 /* OnBoardingScene.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +169,7 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
+				F53AE800273281E0009E9853 /* Onboarding support */,
 			);
 			path = "Support Views";
 			sourceTree = "<group>";
@@ -222,10 +245,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D54A4A272102E100FF8DE7 /* MacroApp.xcdatamodeld in Sources */,
+				F53AE808273282D9009E9853 /* ButtonStartOnboarding.swift in Sources */,
 				F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */,
-				F5D54A40272102DE00FF8DE7 /* ContentView.swift in Sources */,
+				F53AE802273281FE009E9853 /* Color.swift in Sources */,
+				F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */,
 				F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */,
+				F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
+				F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */,
+				F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
