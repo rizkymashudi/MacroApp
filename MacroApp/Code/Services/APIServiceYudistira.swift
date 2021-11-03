@@ -7,11 +7,13 @@
 
 import Foundation
 import Combine
+
+
 class ApiYudistira: ObservableObject {
     
 //    @Published var news: [News] = []
     
-    let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
+    let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/"
     let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
     
 
@@ -24,25 +26,32 @@ class ApiYudistira: ObservableObject {
         let urlSession = URLSession(configuration: .ephemeral)
         
         //body
-        let body : [String:Any] = ["key": acessKey,"method": "content","value": "pemilu"]
+        let body : [String:Any] = ["key": acessKey]
         let bodyData = try? JSONSerialization.data(withJSONObject: body)
-        
         
         var req = URLRequest(url: url)
         req.httpMethod = "POST"
         req.httpBody = bodyData
 //        print(req.self)
         
-        let task = urlSession.dataTask(with: req) { [weak self](data, response, error) in
+        let task = urlSession.dataTask(with: req) { [weak self] (data, response, error) in
+            let httpResponse = response as! HTTPURLResponse
+            httpResponse.statusCode
+            
+            print(httpResponse.statusCode)
             guard let self = self else {return}
             if let d  = data{
-                print(d)
+               print(d)
                 do{
-                    let jsonString = try JSONDecoder().decode(String.self, from: d)
-                    print(jsonString)
-                    let jsonData = jsonString.data(using: .utf8)!
-                    let decode = try JSONDecoder().decode([NewsObject].self, from: jsonData)
+                    let decode = try JSONDecoder().decode([Test].self, from: d)
                     print(decode)
+            
+                    // nil handling omitted for brevity
+//                    let jsonString = try! JSONDecoder().decode(String.self, from: d)
+//                    let jsonData = jsonString.data(using: .utf8)!
+//                    let sub = try! JSONDecoder().decode([NewsObject].self, from: jsonData)
+                    
+                    
                 }catch{
                     print(error)
                 }
@@ -72,12 +81,17 @@ class ApiYudistira: ObservableObject {
     }
 }
 
+struct Test: Decodable {
+    let authors: String
+}
+
+
 
 struct News:Decodable{
     let list : [NewsObject]
 }
 
-struct NewsObject:Decodable{
+struct NewsObject: Decodable{
     let id, authors, status, classification: String
     let title, content, fact: String
     let references: String
