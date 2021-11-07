@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CopastView: View {
-    
-    @State private var yourText: String = "Tempelkan / Paste Informasi yang anda dapat disini"
+
+    private let placeHolderString = "Tempelkan / Paste Informasi yang anda dapat disini"
+    @State private var yourText = ""
     
     var body: some View {
         ZStack{
@@ -19,10 +20,7 @@ struct CopastView: View {
             
             ScrollView(.vertical, showsIndicators: true){
                 VStack{
-                    TextEditor(text: $yourText)
-                        .opacity(0.3)
-                        .frame(width: 320, height: 390, alignment: .center)
-                        .cornerRadius(8)
+                    CustomTextEditor.init(placeHolder: placeHolderString, yourText: $yourText)
                 }
                 .padding(.top)
             }
@@ -33,8 +31,31 @@ struct CopastView: View {
     }
 }
 
+struct CustomTextEditor: View {
+    let placeHolder: String
+    @Binding var yourText: String
+
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            if yourText.isEmpty {
+                Text(placeHolder)
+                .opacity(0.3)
+            }
+            TextEditor(text: $yourText)
+                .frame(width: 320, height: 390, alignment: .center)
+                .cornerRadius(8)
+        }
+        .onAppear() {
+            UITextView.appearance().backgroundColor = .clear
+        }.onDisappear() {
+            UITextView.appearance().backgroundColor = nil
+        }
+    }
+}
+
 struct CopastView_Previews: PreviewProvider {
     static var previews: some View {
         CopastView()
     }
 }
+

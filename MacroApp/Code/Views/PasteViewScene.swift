@@ -22,6 +22,8 @@ struct PasteViewScene: View {
                 StartSearchButton()
                     .position(x: 195, y: 90)
             }
+        }.onTapGesture {
+            self.hideKeyboard()
         }
     }
     
@@ -32,3 +34,11 @@ struct PasteViewScene_Previews: PreviewProvider {
         PasteViewScene()
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
