@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD56FA77270DE535FBB7D529 /* Pods_MacroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61057E017D6A5E501E5DB495 /* Pods_MacroApp.framework */; };
 		F53AE802273281FE009E9853 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE801273281FE009E9853 /* Color.swift */; };
 		F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE803273282A4009E9853 /* HeaderOnboarding.swift */; };
 		F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE805273282BB009E9853 /* CardOnboarding.swift */; };
@@ -16,8 +17,21 @@
 		F53AE80F27328B0B009E9853 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE80E27328B0B009E9853 /* HeaderView.swift */; };
 		F53AE81127328B1E009E9853 /* CopastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE81027328B1E009E9853 /* CopastView.swift */; };
 		F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE81227328B32009E9853 /* StartSearchButton.swift */; };
+		F53AE8162732D76E009E9853 /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE8152732D76E009E9853 /* SearchListView.swift */; };
+		F53AE8182732DE3D009E9853 /* DummyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE8172732DE3D009E9853 /* DummyApiService.swift */; };
+		F53AE81A2732DFF6009E9853 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE8192732DFF6009E9853 /* URLImage.swift */; };
+		F53AE81F2732ECEF009E9853 /* NewsAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE81E2732ECEF009E9853 /* NewsAPIModel.swift */; };
+		F53AE8212732EEEC009E9853 /* NewsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE8202732EEEC009E9853 /* NewsApiService.swift */; };
+		F53AE8242733971F009E9853 /* DummyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE8232733971F009E9853 /* DummyListView.swift */; };
+		F53AE82627339888009E9853 /* DummyListSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE82527339888009E9853 /* DummyListSupport.swift */; };
+		F53AE8282733A85E009E9853 /* DetailViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE8272733A85E009E9853 /* DetailViewSupport.swift */; };
+		F53AE82A273412D6009E9853 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE829273412D6009E9853 /* DateFormatter.swift */; };
 		F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */; };
 		F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */; };
+		F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */; };
+		F5B61CC12738F23900F1EF38 /* ListDetailViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CC02738F23900F1EF38 /* ListDetailViewSupport.swift */; };
+		F5B61CC327395A8100F1EF38 /* YudistiraListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */; };
+		F5B61CC527395C5000F1EF38 /* NewsYudistiraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CC427395C5000F1EF38 /* NewsYudistiraModel.swift */; };
 		F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */; };
 		F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3F272102DE00FF8DE7 /* MainView.swift */; };
 		F5D54A42272102E100FF8DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A41272102E100FF8DE7 /* Assets.xcassets */; };
@@ -27,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61057E017D6A5E501E5DB495 /* Pods_MacroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroApp.release.xcconfig"; path = "Target Support Files/Pods-MacroApp/Pods-MacroApp.release.xcconfig"; sourceTree = "<group>"; };
 		F53AE801273281FE009E9853 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F53AE803273282A4009E9853 /* HeaderOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboarding.swift; sourceTree = "<group>"; };
 		F53AE805273282BB009E9853 /* CardOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnboarding.swift; sourceTree = "<group>"; };
@@ -36,8 +52,22 @@
 		F53AE80E27328B0B009E9853 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F53AE81027328B1E009E9853 /* CopastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopastView.swift; sourceTree = "<group>"; };
 		F53AE81227328B32009E9853 /* StartSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSearchButton.swift; sourceTree = "<group>"; };
+		F53AE8152732D76E009E9853 /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		F53AE8172732DE3D009E9853 /* DummyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyApiService.swift; sourceTree = "<group>"; };
+		F53AE8192732DFF6009E9853 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		F53AE81D2732EC90009E9853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F53AE81E2732ECEF009E9853 /* NewsAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIModel.swift; sourceTree = "<group>"; };
+		F53AE8202732EEEC009E9853 /* NewsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiService.swift; sourceTree = "<group>"; };
+		F53AE8232733971F009E9853 /* DummyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyListView.swift; sourceTree = "<group>"; };
+		F53AE82527339888009E9853 /* DummyListSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyListSupport.swift; sourceTree = "<group>"; };
+		F53AE8272733A85E009E9853 /* DetailViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewSupport.swift; sourceTree = "<group>"; };
+		F53AE829273412D6009E9853 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIYudistiraModel.swift; sourceTree = "<group>"; };
 		F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceYudistira.swift; sourceTree = "<group>"; };
+		F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YudistiraListViewSupport.swift; sourceTree = "<group>"; };
+		F5B61CC02738F23900F1EF38 /* ListDetailViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewSupport.swift; sourceTree = "<group>"; };
+		F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YudistiraListView.swift; sourceTree = "<group>"; };
+		F5B61CC427395C5000F1EF38 /* NewsYudistiraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsYudistiraModel.swift; sourceTree = "<group>"; };
 		F5D54A3A272102DE00FF8DE7 /* MacroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAppApp.swift; sourceTree = "<group>"; };
 		F5D54A3F272102DE00FF8DE7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -45,6 +75,7 @@
 		F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5D54A46272102E100FF8DE7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F5D54A49272102E100FF8DE7 /* MacroApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacroApp.xcdatamodel; sourceTree = "<group>"; };
+		FC88C803D73D6DA6AD292E25 /* Pods-MacroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroApp.debug.xcconfig"; path = "Target Support Files/Pods-MacroApp/Pods-MacroApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +83,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD56FA77270DE535FBB7D529 /* Pods_MacroApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		398AC3E6EB7F343180CBA9E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC88C803D73D6DA6AD292E25 /* Pods-MacroApp.debug.xcconfig */,
+				BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F53AE800273281E0009E9853 /* Onboarding support */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +119,41 @@
 			path = "PasteView support";
 			sourceTree = "<group>";
 		};
+		F53AE8142732D734009E9853 /* Dummy ListView Support */ = {
+			isa = PBXGroup;
+			children = (
+				F53AE8192732DFF6009E9853 /* URLImage.swift */,
+				F53AE82527339888009E9853 /* DummyListSupport.swift */,
+				F53AE8272733A85E009E9853 /* DetailViewSupport.swift */,
+			);
+			path = "Dummy ListView Support";
+			sourceTree = "<group>";
+		};
+		F53AE82227337D53009E9853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61057E017D6A5E501E5DB495 /* Pods_MacroApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5B61CBD2738F1DF00F1EF38 /* Yudistira List View support */ = {
+			isa = PBXGroup;
+			children = (
+				F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */,
+				F5B61CC02738F23900F1EF38 /* ListDetailViewSupport.swift */,
+				F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */,
+			);
+			path = "Yudistira List View support";
+			sourceTree = "<group>";
+		};
 		F5D54A31272102DE00FF8DE7 = {
 			isa = PBXGroup;
 			children = (
 				F5D54A3C272102DE00FF8DE7 /* MacroApp */,
 				F5D54A3B272102DE00FF8DE7 /* Products */,
+				F53AE82227337D53009E9853 /* Frameworks */,
+				398AC3E6EB7F343180CBA9E9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +168,7 @@
 		F5D54A3C272102DE00FF8DE7 /* MacroApp */ = {
 			isa = PBXGroup;
 			children = (
+				F53AE81D2732EC90009E9853 /* Info.plist */,
 				F5D54A502721033300FF8DE7 /* Extensions */,
 				F5D54A512721034300FF8DE7 /* Code */,
 				F5D54A522721034D00FF8DE7 /* Utils */,
@@ -119,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F53AE801273281FE009E9853 /* Color.swift */,
+				F53AE829273412D6009E9853 /* DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */,
+				F53AE8172732DE3D009E9853 /* DummyApiService.swift */,
+				F53AE8202732EEEC009E9853 /* NewsApiService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -173,6 +248,8 @@
 				F5D54A3F272102DE00FF8DE7 /* MainView.swift */,
 				F53AE80C27328AE7009E9853 /* PasteViewScene.swift */,
 				F53AE80927328364009E9853 /* OnBoardingScene.swift */,
+				F53AE8152732D76E009E9853 /* SearchListView.swift */,
+				F53AE8232733971F009E9853 /* DummyListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */,
+				F53AE81E2732ECEF009E9853 /* NewsAPIModel.swift */,
+				F5B61CC427395C5000F1EF38 /* NewsYudistiraModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +267,8 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
+				F53AE8142732D734009E9853 /* Dummy ListView Support */,
+				F5B61CBD2738F1DF00F1EF38 /* Yudistira List View support */,
 				F53AE80B27328ABA009E9853 /* PasteView support */,
 				F53AE800273281E0009E9853 /* Onboarding support */,
 			);
@@ -201,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5D54A4D272102E100FF8DE7 /* Build configuration list for PBXNativeTarget "MacroApp" */;
 			buildPhases = (
+				D9F16D0F2EE5CB8256B951B8 /* [CP] Check Pods Manifest.lock */,
 				F5D54A36272102DE00FF8DE7 /* Sources */,
 				F5D54A37272102DE00FF8DE7 /* Frameworks */,
 				F5D54A38272102DE00FF8DE7 /* Resources */,
+				79047CC6631BB39A77BEE8AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +321,10 @@
 				Base,
 			);
 			mainGroup = F5D54A31272102DE00FF8DE7;
+			packageReferences = (
+				F53AE81B2732E750009E9853 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				F53AE81C2732E88E009E9853 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = F5D54A3B272102DE00FF8DE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,26 +346,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79047CC6631BB39A77BEE8AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacroApp/Pods-MacroApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacroApp/Pods-MacroApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacroApp/Pods-MacroApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F16D0F2EE5CB8256B951B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacroApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5D54A36272102DE00FF8DE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53AE82A273412D6009E9853 /* DateFormatter.swift in Sources */,
 				F5D54A4A272102E100FF8DE7 /* MacroApp.xcdatamodeld in Sources */,
+				F53AE81A2732DFF6009E9853 /* URLImage.swift in Sources */,
 				F53AE808273282D9009E9853 /* ButtonStartOnboarding.swift in Sources */,
 				F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */,
 				F53AE81127328B1E009E9853 /* CopastView.swift in Sources */,
 				F53AE802273281FE009E9853 /* Color.swift in Sources */,
+				F53AE8182732DE3D009E9853 /* DummyApiService.swift in Sources */,
+				F53AE8242733971F009E9853 /* DummyListView.swift in Sources */,
+				F53AE8282733A85E009E9853 /* DetailViewSupport.swift in Sources */,
 				F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */,
 				F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */,
+				F53AE82627339888009E9853 /* DummyListSupport.swift in Sources */,
+				F53AE81F2732ECEF009E9853 /* NewsAPIModel.swift in Sources */,
 				F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */,
+				F53AE8212732EEEC009E9853 /* NewsApiService.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
 				F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */,
 				F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */,
 				F53AE80D27328AE7009E9853 /* PasteViewScene.swift in Sources */,
+				F53AE8162732D76E009E9853 /* SearchListView.swift in Sources */,
+				F5B61CC12738F23900F1EF38 /* ListDetailViewSupport.swift in Sources */,
 				F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
+				F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */,
 				F53AE80F27328B0B009E9853 /* HeaderView.swift in Sources */,
+				F5B61CC327395A8100F1EF38 /* YudistiraListView.swift in Sources */,
+				F5B61CC527395C5000F1EF38 /* NewsYudistiraModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +545,7 @@
 		};
 		F5D54A4E272102E100FF8DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC88C803D73D6DA6AD292E25 /* Pods-MacroApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -412,12 +555,13 @@
 				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = MacroApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PerLu;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,12 +572,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				UIUserInterfaceStyle = Light;
 			};
 			name = Debug;
 		};
 		F5D54A4F272102E100FF8DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,12 +589,13 @@
 				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = MacroApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PerLu;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,7 +606,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				UIUserInterfaceStyle = Light;
 			};
 			name = Release;
 		};
@@ -485,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F53AE81B2732E750009E9853 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		F53AE81C2732E88E009E9853 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		F5D54A48272102E100FF8DE7 /* MacroApp.xcdatamodeld */ = {

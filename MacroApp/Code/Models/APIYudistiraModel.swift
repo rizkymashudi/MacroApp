@@ -10,7 +10,7 @@
 import Foundation
 
 // MARK: - WelcomeElement
-struct WelcomeElement: Codable {
+struct WelcomeElement: Decodable, Identifiable {
     let id, authors, status, classification: String
     let title, content, fact: String
     let references: String
@@ -18,23 +18,22 @@ struct WelcomeElement: Codable {
     let sourceLink: String
     let picture1: String
     let picture2, tanggal, tags, conclusion: String
-    let claimReview: [JSONAny]
-    let media: [[JSONAny]]
+//    let claimReview: [JSONAny]
+//    let media: [[JSONAny]]
 
     enum CodingKeys: String, CodingKey {
         case id, authors, status, classification, title, content, fact, references
         case sourceIssue = "source_issue"
         case sourceLink = "source_link"
         case picture1, picture2, tanggal, tags, conclusion
-        case claimReview = "claim_review"
-        case media
+//        case claimReview = "claim_review"
+//        case media
     }
 }
 
 typealias Welcome = [WelcomeElement]
 
 // MARK: - Encode/decode helpers
-
 class JSONNull: Codable, Hashable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {

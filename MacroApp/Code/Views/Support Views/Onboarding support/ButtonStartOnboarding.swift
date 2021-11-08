@@ -36,6 +36,8 @@ struct GrowingButton: ButtonStyle {
 
 
 struct ButtonStartOnboarding: View {
+   
+    
     var body: some View {
         ZStack{
             Button("Ayo mulai"){
@@ -43,6 +45,7 @@ struct ButtonStartOnboarding: View {
             }
             .buttonStyle(GrowingButton())
         }
+        
     }
 }
 
