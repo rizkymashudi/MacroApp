@@ -142,7 +142,6 @@
 			children = (
 				F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */,
 				F5B61CC02738F23900F1EF38 /* ListDetailViewSupport.swift */,
-				F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */,
 			);
 			path = "Yudistira List View support";
 			sourceTree = "<group>";
@@ -249,6 +248,7 @@
 				F53AE80C27328AE7009E9853 /* PasteViewScene.swift */,
 				F53AE80927328364009E9853 /* OnBoardingScene.swift */,
 				F53AE8152732D76E009E9853 /* SearchListView.swift */,
+				F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */,
 				F53AE8232733971F009E9853 /* DummyListView.swift */,
 			);
 			path = Views;
