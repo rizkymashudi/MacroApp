@@ -12,8 +12,11 @@ struct NewsYudistira: Identifiable {
     var authors : String
     var title : String
     var content: String
+    var fact: String
+    var references: String
     var imgUrl : String
     var date : String
+    var conclusion : String
 }
 
 

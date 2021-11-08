@@ -63,12 +63,22 @@ struct ListDetailViewSupport: View {
                             .multilineTextAlignment(.leading)
                             .lineLimit(nil)
                             .padding(16)
+                        Text(newsItems.fact)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .padding(16)
+                        Text(newsItems.conclusion)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .padding(16)
                     }
                     Spacer()
                 }
                 .toolbar{
                     Button(action: {
                         print("share tapped")
+                        print(newsItems.references)
+                        actionSheet()
                     }) {
                         Image(systemName: "square.and.arrow.up").imageScale(.large)
                             .foregroundColor(colorPallete.primary)
@@ -76,6 +86,14 @@ struct ListDetailViewSupport: View {
                 }
             }
         }
+        .navigationBarTitle("Detail Hasil Pencarian")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    func actionSheet() {
+        guard let urlShare = URL(string: newsItems.references) else { return }
+        let activeVc = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(activeVc, animated: true, completion: nil)
     }
 }
 
