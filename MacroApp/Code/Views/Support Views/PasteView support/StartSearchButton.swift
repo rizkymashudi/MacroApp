@@ -35,18 +35,20 @@ struct GrowingSearchButton: ButtonStyle {
 
 
 struct StartSearchButton: View {
+//    @ObservedObject var copastView = CopastView()
     var body: some View {
         ZStack{
-            Button("Pindai teks dan mulai pencarian"){
+            Button("Mulai Pencarian"){
                 print("button pressed")
             }
             .buttonStyle(GrowingSearchButton())
+//            .disabled(yourText == "")
         }
     }
 }
 
-struct StartSearchButton_Previews: PreviewProvider {
-    static var previews: some View {
-        StartSearchButton()
-    }
-}
+//struct StartSearchButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StartSearchButton()
+//    }
+//}

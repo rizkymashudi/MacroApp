@@ -11,4 +11,5 @@ import SwiftUI
 struct colorPallete {
     static let primary = Color("Primary")
     static let button = Color("YellowButton")
+    static let buttonClearColor = Color("clearButton")
 }

@@ -10,8 +10,9 @@ import SwiftUI
 struct CopastView: View {
 
     private let placeHolderString = "Tempelkan / Paste Informasi yang anda dapat disini"
-    @State private var yourText = ""
-    
+    @State var yourText = ""
+//    @Published var isPasted = false
+
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 8, style: .continuous)
@@ -24,7 +25,6 @@ struct CopastView: View {
                 }
                 .padding(.top)
             }
-    
     
         }
         .frame(width: 350, height: 420, alignment: .center)
@@ -49,6 +49,15 @@ struct CustomTextEditor: View {
             UITextView.appearance().backgroundColor = .clear
         }.onDisappear() {
             UITextView.appearance().backgroundColor = nil
+        }
+
+        ZStack(alignment: .bottomLeading) {
+            Button {
+                print("Button Reset was tapped")
+                yourText = ""
+            } label: {
+                Label("Bersihkan", systemImage: "trash")
+            }.buttonStyle(buttonClear())
         }
     }
 }

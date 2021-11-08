@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PasteViewScene: View {
+//    @Binding var yourText: String
+    
     var body: some View {
         ZStack{
             Color(UIColor.systemBackground)
