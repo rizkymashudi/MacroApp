@@ -15,7 +15,9 @@ struct MacroAppApp: App {
         WindowGroup {
 //            OnBoardingScene()
 //            DummyListView()
-            YudistiraListView()
+//            YudistiraListView()
+            MainView()
+            
         }
     }
 }

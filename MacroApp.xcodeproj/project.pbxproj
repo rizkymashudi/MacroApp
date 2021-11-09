@@ -38,6 +38,7 @@
 		F5D54A45272102E100FF8DE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */; };
 		F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A46272102E100FF8DE7 /* Persistence.swift */; };
 		F5D54A4A272102E100FF8DE7 /* MacroApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A48272102E100FF8DE7 /* MacroApp.xcdatamodeld */; };
+		F5EF6CE5273A615500693636 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F5EF6CE4273A615500693636 /* Shimmer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5EF6CE5273A615500693636 /* Shimmer in Frameworks */,
 				CD56FA77270DE535FBB7D529 /* Pods_MacroApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +295,9 @@
 			dependencies = (
 			);
 			name = MacroApp;
+			packageProductDependencies = (
+				F5EF6CE4273A615500693636 /* Shimmer */,
+			);
 			productName = MacroApp;
 			productReference = F5D54A3A272102DE00FF8DE7 /* MacroApp.app */;
 			productType = "com.apple.product-type.application";
@@ -322,8 +327,7 @@
 			);
 			mainGroup = F5D54A31272102DE00FF8DE7;
 			packageReferences = (
-				F53AE81B2732E750009E9853 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				F53AE81C2732E88E009E9853 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				F5EF6CE3273A615500693636 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 			);
 			productRefGroup = F5D54A3B272102DE00FF8DE7 /* Products */;
 			projectDirPath = "";
@@ -635,23 +639,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F53AE81B2732E750009E9853 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		F5EF6CE3273A615500693636 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		F53AE81C2732E88E009E9853 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5EF6CE4273A615500693636 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5EF6CE3273A615500693636 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F5D54A48272102E100FF8DE7 /* MacroApp.xcdatamodeld */ = {

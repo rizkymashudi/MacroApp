@@ -6,18 +6,12 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct MainView: View {
     
-    let api = ApiYudistira()
-    
     var body: some View{
-        Text("gudbye world")
+        PasteViewScene()
     }
-        
-    
-    
 }
 
 

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Shimmer
 
 struct YudistiraListViewSupport: View {
     
@@ -63,6 +64,7 @@ struct YudistiraListViewSupport: View {
         }
         .listStyle(PlainListStyle())
         .environment(\.defaultMinListRowHeight, 130)
+        
     }
 }
 

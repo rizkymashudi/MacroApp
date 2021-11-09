@@ -36,12 +36,7 @@ struct GrowingSearchButton: ButtonStyle {
 
 struct StartSearchButton: View {
     var body: some View {
-        ZStack{
-            Button("Pindai teks dan mulai pencarian"){
-                print("button pressed")
-            }
-            .buttonStyle(GrowingSearchButton())
-        }
+       Text(" ")
     }
 }
 

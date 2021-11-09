@@ -26,8 +26,6 @@ struct CopastView: View {
                 }
                 .padding(.top)
             }
-    
-    
         }
         .frame(width: 350, height: 420, alignment: .center)
     }
