@@ -7,13 +7,13 @@
 
 import SwiftUI
 
+
 struct YudistiraListView: View {
     var body: some View {
-        NavigationView{
-            YudistiraListViewSupport()
-                .navigationTitle("Hasil Pencarian")
-                .navigationBarTitleDisplayMode(.inline)
-        }
+        YudistiraListViewSupport()
+            .navigationTitle("Hasil Pencarian")
+            .navigationBarTitleDisplayMode(.inline)
+
     }
 }
 
