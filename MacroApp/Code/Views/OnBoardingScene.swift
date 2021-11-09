@@ -29,8 +29,8 @@ struct OnBoardingScene: View {
     }
 }
 
-//struct OnBoardingScene_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OnBoardingScene(shouldShowOnboarding: <#T##Binding<Bool>#>)
-//    }
-//}
+struct OnBoardingScene_Previews: PreviewProvider {
+    static var previews: some View {
+        OnBoardingScene()
+    }
+}
