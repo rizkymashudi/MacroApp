@@ -18,7 +18,11 @@ class ApiYudistira: ObservableObject {
     //untuk tampung data setelah di looping
     @Published var finalNews = [NewsYudistira]()
     
+    @Published var isLoading: Bool = false
+    
     init() {
+        
+        isLoading = true
         
         let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
         let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
@@ -54,9 +58,10 @@ class ApiYudistira: ObservableObject {
                         let date = i.tanggal
                         let conclusion = i.conclusion
 
-                        DispatchQueue.main.async {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                             //tampung ke model yudistira var finalItems
                             self.finalNews.append(NewsYudistira(id: id, authors: authors, title: title, content: content, fact: fact, references: resRef, imgUrl: imgUrl, date: date, conclusion: conclusion))
+                            self.isLoading = false
                         }
                     }
 
