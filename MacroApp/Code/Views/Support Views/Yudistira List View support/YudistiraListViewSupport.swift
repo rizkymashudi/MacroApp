@@ -12,6 +12,7 @@ import Shimmer
 struct YudistiraListViewSupport: View {
     
     @ObservedObject var newsYudistira = ApiYudistira()
+    @StateObject private var loadingState = ApiYudistira()
     
     var body: some View {
         List(newsYudistira.finalNews){ newsItemsData in
@@ -60,7 +61,10 @@ struct YudistiraListViewSupport: View {
                     }
 
                 }
+                .redacted(reason: loadingState.isLoading ? .placeholder : [])
+                .foregroundColor(loadingState.isLoading ? .blue : .black)
             }
+            .disabled(loadingState.isLoading)
         }
         .listStyle(PlainListStyle())
         .environment(\.defaultMinListRowHeight, 130)
