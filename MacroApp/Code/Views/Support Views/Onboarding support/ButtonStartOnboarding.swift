@@ -36,12 +36,17 @@ struct GrowingButton: ButtonStyle {
 
 
 struct ButtonStartOnboarding: View {
-   
+//    @Binding var shouldShowOnboarding: Bool
+    @AppStorage("Onboard") var shouldShowOnboarding: Bool = true
     
     var body: some View {
         ZStack{
-            Button("Ayo mulai"){
-                print("button pressed")
+            Button(action: {
+//                shouldShowOnboarding.toggle()
+                shouldShowOnboarding = false
+                print("move")
+            }){
+                Text("Ayo mulai!")
             }
             .buttonStyle(GrowingButton())
         }
@@ -49,8 +54,8 @@ struct ButtonStartOnboarding: View {
     }
 }
 
-struct ButtonStartOnboarding_Previews: PreviewProvider {
-    static var previews: some View {
-        ButtonStartOnboarding()
-    }
-}
+//struct ButtonStartOnboarding_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ButtonStartOnboarding(shouldShowOnboarding: <#T##Binding<Bool>#>)
+//    }
+//}
