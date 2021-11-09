@@ -21,8 +21,8 @@ struct PasteViewScene: View {
                 Spacer()
                     .frame(height: 190)
                 CopastView()
-                StartSearchButton()
-                    .position(x: 195, y: 90)
+//                StartSearchButton()
+//                    .position(x: 195, y: 90)
             }
         }.onTapGesture {
             self.hideKeyboard()
@@ -31,11 +31,11 @@ struct PasteViewScene: View {
     
 }
 
-struct PasteViewScene_Previews: PreviewProvider {
-    static var previews: some View {
-        PasteViewScene()
-    }
-}
+//struct PasteViewScene_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PasteViewScene()
+//    }
+//}
 
 #if canImport(UIKit)
 extension View {

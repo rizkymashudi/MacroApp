@@ -32,23 +32,3 @@ struct GrowingSearchButton: ButtonStyle {
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
 }
-
-
-struct StartSearchButton: View {
-//    @ObservedObject var copastView = CopastView()
-    var body: some View {
-        ZStack{
-            Button("Mulai Pencarian"){
-                print("button pressed")
-            }
-            .buttonStyle(GrowingSearchButton())
-//            .disabled(yourText == "")
-        }
-    }
-}
-
-//struct StartSearchButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StartSearchButton()
-//    }
-//}
