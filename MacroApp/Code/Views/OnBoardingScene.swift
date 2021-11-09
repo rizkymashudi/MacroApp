@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OnBoardingScene: View {
+//    @Binding var shouldShowOnboarding: Bool
+    
     var body: some View {
         ZStack{
             Color(UIColor.systemBackground)
@@ -27,8 +29,8 @@ struct OnBoardingScene: View {
     }
 }
 
-struct OnBoardingScene_Previews: PreviewProvider {
-    static var previews: some View {
-        OnBoardingScene()
-    }
-}
+//struct OnBoardingScene_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnBoardingScene(shouldShowOnboarding: <#T##Binding<Bool>#>)
+//    }
+//}
