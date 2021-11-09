@@ -48,7 +48,7 @@ struct CardOnboarding: View {
                             .font(.headline)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.black)
-                        Text("Menampilkan hasi pencarian sejenis dari Mafindo dan Search Engine")
+                        Text("Menampilkan hasil pencarian sejenis dari Mafindo dan Search Engine")
                             .foregroundColor(.black)
                             .multilineTextAlignment(.leading)
                             .padding(.trailing, 10)
