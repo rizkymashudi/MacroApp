@@ -11,6 +11,8 @@ struct CopastView: View {
 
     private let placeHolderString = "Tempelkan / Paste Informasi yang anda dapat disini"
     @State var yourText = ""
+    @State var scrollViewOffset: CGFloat = 0
+    @State var startOffset: CGFloat = 0
 
     var body: some View {
         VStack{
@@ -19,12 +21,48 @@ struct CopastView: View {
                     .fill(Color.white)
                     .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
 
-                ScrollView(.vertical, showsIndicators: true){
-                    VStack{
+                ScrollView(.vertical, showsIndicators: false){
+                    VStack(){
                         CustomTextEditor.init(placeHolder: placeHolderString, yourText: $yourText)
                     }
-                    .padding(.top)
+//                    .padding(.top)
+                    .padding()
+                    .overlay(
+                        GeometryReader{proxy -> Color in
+//                            let offset = proxy.frame(in: .global).minY
+//                            print(offset)
+//                            //237.0
+
+                            DispatchQueue.main.async {
+                                if startOffset == 0 {
+                                    self.startOffset = proxy.frame(in: .global).minY
+                                }
+
+                                let offset = proxy.frame(in: .global).minY
+                                self.scrollViewOffset = offset - startOffset
+
+                                print(self.scrollViewOffset)
+                            }
+                            return Color.clear
+                        }.frame(width: 0, height: 0)
+                        ,alignment: .top
+                    )
                 }
+                .overlay(
+                    Button {
+                        print("Button Bersihkan was tapped")
+                        yourText = ""
+                    } label: {
+                        Label("Bersihkan", systemImage: "trash")
+                    }
+                        .buttonStyle(buttonClear())
+                        .padding(.trailing)
+                        .padding(.bottom, getSafeArea().bottom == 0.1 ? 0.1 : 0)
+                        .opacity(-scrollViewOffset > 0 ? 1 : 0)
+                        .animation(.easeInOut)
+                    ,alignment: .bottomTrailing
+
+                )
             }
             .frame(width: 350, height: 420, alignment: .center)
 
@@ -38,7 +76,6 @@ struct CopastView: View {
 struct CustomTextEditor: View {
     let placeHolder: String
     @Binding var yourText: String
-//    @Binding var isPasted: Bool
 
     var body: some View {
         VStack {
@@ -47,6 +84,7 @@ struct CustomTextEditor: View {
                     Text(placeHolder)
                     .opacity(0.3)
                 }
+
                 TextEditor(text: $yourText)
                     .frame(width: 320, height: 390, alignment: .center)
                     .cornerRadius(8)
@@ -57,22 +95,19 @@ struct CustomTextEditor: View {
                 UITextView.appearance().backgroundColor = nil
             }
 
-            if !yourText.isEmpty {
-                ZStack(alignment: .bottomLeading) {
-                    Button {
-                        print("Button Reset was tapped")
-                        yourText = ""
-                    } label: {
-                        Label("Bersihkan", systemImage: "trash")
-                    }.buttonStyle(buttonClear())
-                }
-            }
+//            if !yourText.isEmpty {
+//                    Button {
+//                        print("Button Bersihkan was tapped")
+//                        yourText = ""
+//                    } label: {
+//                        Label("Bersihkan", systemImage: "trash")
+//                    }.buttonStyle(buttonClear())
+//            }
         }
     }
 }
 
 struct StartSearchButton: View {
-//    @ObservedObject var copastView = CopastView()
     @Binding var yourText: String
 
     var body: some View {
@@ -92,6 +127,12 @@ struct StartSearchButton: View {
 struct CopastView_Previews: PreviewProvider {
     static var previews: some View {
         CopastView()
+    }
+}
+
+extension View {
+    func getSafeArea()->UIEdgeInsets {
+        return UIApplication.shared.windows.first?.safeAreaInsets ?? UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 
