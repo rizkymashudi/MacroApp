@@ -45,8 +45,6 @@ struct CopastView: View {
 }
 
 
-
-
 //
 //struct CopastView_Previews: PreviewProvider {
 //    static var previews: some View {
