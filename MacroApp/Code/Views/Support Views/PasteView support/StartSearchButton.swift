@@ -32,3 +32,16 @@ struct GrowingSearchButton: ButtonStyle {
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
 }
+
+struct StartSearchButton: View {
+    var body: some View {
+       Text(" ")
+    }
+}
+
+struct StartSearchButton_Previews: PreviewProvider {
+    static var previews: some View {
+        StartSearchButton()
+    }
+}
+

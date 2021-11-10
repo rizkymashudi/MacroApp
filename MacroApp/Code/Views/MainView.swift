@@ -6,11 +6,38 @@
 //
 
 import SwiftUI
-import CoreData
+
+///Jangan dihapus
+//struct MainView: View {
+//    @State var shouldShowOnboarding: Bool = true
+//
+//    var body: some View{
+//        ZStack{
+//            PasteViewScene()
+//
+//        }
+//        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
+//            OnBoardingScene(shouldShowOnboarding: $shouldShowOnboarding)
+//                .transition(.move(edge: .trailing))
+//        })
+//        .animation(.default)
+//
+//    }
+//}
 
 struct MainView: View {
+    @AppStorage("Onboard") var shouldShowOnboarding: Bool = true
+    
     var body: some View{
-        Text("gudbye world")
+        VStack{
+            if shouldShowOnboarding {
+                OnBoardingScene()
+            } else {
+                PasteViewScene()
+                    .transition(.move(edge: .trailing))
+            }
+        }
+        .animation(.default)
     }
 }
 

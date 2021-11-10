@@ -37,10 +37,11 @@ struct CopastView: View {
                     ,alignment: .bottomLeading
                 )
             }
-            .frame(width: 350, height: 420)
 
-            StartSearchButton(yourText: $yourText)
-                .position(x: 195, y: 90)
+//             .frame(width: 350, height: 420)
+
+//             StartSearchButton(yourText: $yourText)
+//                 .position(x: 195, y: 90)
 
         }
     }

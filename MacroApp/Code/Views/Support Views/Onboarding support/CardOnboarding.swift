@@ -14,56 +14,55 @@ struct CardOnboarding: View {
                 .fill(Color.white)
                 .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
             
-            HStack(alignment: .center, spacing: 10){
-                VStack(alignment: .center){
+            VStack(alignment: .leading, spacing: 30){
+                HStack{
                     Image(systemName: "doc.on.clipboard")
-                        .foregroundColor(colorPallete.primary)
-                        .font(.system(size: 45))
-                        .padding(.leading, 15)
-                        .padding(.bottom, 30)
-                        .padding(.top)
-                    Image(systemName: "magnifyingglass.circle.fill")
-                        .foregroundColor(colorPallete.primary)
-                        .font(.system(size: 45))
-                        .padding(.leading, 15)
-                        .padding(.bottom, 30)
-                        .padding(.top, 15)
-                    Image(systemName: "square.and.arrow.up.on.square.fill")
-                        .foregroundColor(colorPallete.primary)
-                        .font(.system(size: 45))
-                        .padding(.leading, 15)
-                        .padding(.bottom, 30)
-                        .padding(.top, 15)
-                }
-                .padding(.leading, 5)
-                .padding(.trailing, 2)
-                
-                
-                VStack(alignment: .leading){
-                    VStack(alignment: .leading){
+                           .foregroundColor(colorPallete.primary)
+                           .font(.system(size: 45))
+                           .padding(.leading, 10)
+                           .padding(.trailing,10)
+                           .padding(.bottom)
+                           .padding(.top)
+                    VStack(alignment: .leading, spacing: 10){
                         Text("Tempelkan Informasi")
-                            .font(.headline)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .foregroundColor(.black)
+                                .font(.headline)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.black)
                         Text("Masukkan informasi yang ingin kamu cari tahu kebenaranya")
-                            .foregroundColor(.black)
-                            .multilineTextAlignment(.leading)
+                                .foregroundColor(.black)
+                                .multilineTextAlignment(.leading)
+                                .padding(.trailing, 10)
                     }
-                    .padding(.bottom, 40)
-                    .padding(.top)
                     
-                    VStack(alignment: .leading){
+                }
+                HStack{
+                    Image(systemName: "magnifyingglass.circle.fill")
+                            .foregroundColor(colorPallete.primary)
+                            .font(.system(size: 48))
+                            .padding(.leading, 10)
+                            .padding(.trailing, 10)
+                            .padding(.bottom)
+                            .padding(.top, 10)
+                    VStack(alignment: .leading, spacing: 10){
                         Text("Lakukan Pencarian")
                             .font(.headline)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.black)
-                        Text("Menampilkan hasi pencarian sejenis dari Mafindo dan Search Engine")
+                        Text("Menampilkan hasil pencarian sejenis dari Mafindo dan Search Engine")
                             .foregroundColor(.black)
                             .multilineTextAlignment(.leading)
+                            .padding(.trailing, 10)
                     }
-                    .padding(.bottom, 25)
-                    
-                    VStack(alignment: .leading){
+                }
+                HStack{
+                    Image(systemName: "square.and.arrow.up.on.square.fill")
+                            .foregroundColor(colorPallete.primary)
+                            .font(.system(size: 45))
+                            .padding(.leading, 10)
+                            .padding(.trailing, 10)
+                            .padding(.bottom)
+                            .padding(.top)
+                    VStack(alignment: .leading, spacing: 10){
                         Text("Bagi ke orang terdekat")
                             .font(.headline)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -71,10 +70,9 @@ struct CardOnboarding: View {
                         Text("Bagi kebenarannya dengan orang terdekat kamu")
                             .foregroundColor(.black)
                             .multilineTextAlignment(.leading)
+                            .padding(.trailing, 20)
                     }
-                    .padding(.bottom, 30)
                 }
-                .padding(.trailing, 10)
             }
         }
         .frame(width: 350, height: 420, alignment: .center)

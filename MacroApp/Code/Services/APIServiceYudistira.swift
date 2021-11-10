@@ -7,96 +7,72 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 
 class ApiYudistira: ObservableObject {
     
-//    @Published var news: [News] = []
+    //var news untuk tampung data dari url
+    @Published var news: [WelcomeElement] = []
     
-    let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/"
-    let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
+    //untuk tampung data setelah di looping
+    @Published var finalNews = [NewsYudistira]()
     
+    @Published var isLoading: Bool = false
+    
+    init() {
+        
+        isLoading = true
+        
+        let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
+        let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
+        
+//        func fetch() {
+            
+            //declare body
+            let body : [String:Any] = ["key": acessKey, "method": "content", "value": "pemilu", "limit" : 49]
+            let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
+            
+            //request method post dengan alamofire
+            AF.request(baseUrl, method: .post, parameters: body, headers: headers).responseJSON { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.data else { return }
+                    let news = try! JSONDecoder().decode([WelcomeElement].self, from: data)
+                    print(news.count)
 
-    
-    func fetch() {
-        guard let url = URL(string:baseUrl) else {
-            return
-        }
-        
-        let urlSession = URLSession(configuration: .ephemeral)
-        
-        //body
-        let body : [String:Any] = ["key": acessKey]
-        let bodyData = try? JSONSerialization.data(withJSONObject: body)
-        
-        var req = URLRequest(url: url)
-        req.httpMethod = "POST"
-        req.httpBody = bodyData
-//        print(req.self)
-        
-        let task = urlSession.dataTask(with: req) { [weak self] (data, response, error) in
-            let httpResponse = response as! HTTPURLResponse
-            httpResponse.statusCode
-            
-            print(httpResponse.statusCode)
-            guard let self = self else {return}
-            if let d  = data{
-               print(d)
-                do{
-                    let decode = try JSONDecoder().decode([Test].self, from: d)
-                    print(decode)
-            
-                    // nil handling omitted for brevity
-//                    let jsonString = try! JSONDecoder().decode(String.self, from: d)
-//                    let jsonData = jsonString.data(using: .utf8)!
-//                    let sub = try! JSONDecoder().decode([NewsObject].self, from: jsonData)
-                    
-                    
-                }catch{
-                    print(error)
+                    //di loop index dalam array news
+                    for i in news {
+                        
+                        let id = i.id
+                        let authors = i.authors
+                        let title = i.title
+                        let content = i.content
+                        let fact = i.fact
+                        
+                        let ref = i.references
+                        let arrRef = ref.components(separatedBy: "\r\n")
+                        let resRef = arrRef[0]
+                        
+                        let imgUrl = i.picture1
+                        let date = i.tanggal
+                        let conclusion = i.conclusion
+
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            //tampung ke model yudistira var finalItems
+                            self.finalNews.append(NewsYudistira(id: id, authors: authors, title: title, content: content, fact: fact, references: resRef, imgUrl: imgUrl, date: date, conclusion: conclusion))
+                            self.isLoading = false
+                        }
+                    }
+
+                case .failure:
+                    print("Error Connect to Server")
                 }
-                
-                
-            }
+
+//            }
         }
-        
-        
-//        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-//            guard let data = data, error == nil else {
-//                return
-//            }
-//
-//            //convert to JSON
-//            do {
-//                let news = try JSONDecoder().decode([News].self, from: data)
-//                DispatchQueue.main.async {
-//                    self?.news = news
-//                }
-//                print(news)
-//            } catch {
-//                print(error)
-//            }
-//        }
-        task.resume()
     }
-}
 
-struct Test: Decodable {
-    let authors: String
 }
 
 
-
-struct News:Decodable{
-    let list : [NewsObject]
-}
-
-struct NewsObject: Decodable{
-    let id, authors, status, classification: String
-    let title, content, fact: String
-    let references: String
-    let sourceIssue: String
-    let sourceLink: String
-    let picture1: String
-    let picture2, tanggal, tags, conclusion: String
-}

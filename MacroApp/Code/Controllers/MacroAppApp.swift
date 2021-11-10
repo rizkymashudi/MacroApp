@@ -13,8 +13,10 @@ struct MacroAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            MainView()
-            PasteViewScene()
+//            OnBoardingScene()
+//            DummyListView()
+//            YudistiraListView()
+            MainView()
         }
     }
 }
