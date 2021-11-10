@@ -17,7 +17,6 @@ struct MacroAppApp: App {
 //            DummyListView()
 //            YudistiraListView()
             MainView()
-            
         }
     }
 }

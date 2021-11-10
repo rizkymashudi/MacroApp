@@ -10,6 +10,7 @@ import SwiftUI
 
 struct colorPallete {
     static let primary = Color("Primary")
-    static let button = Color("YellowButton")
+    static let button = Color("YellowButton"
+    static let buttonClearColor = Color("clearButton")
     static let labelColor = Color("Label")
 }
