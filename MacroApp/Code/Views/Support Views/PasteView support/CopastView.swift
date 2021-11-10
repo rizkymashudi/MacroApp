@@ -11,8 +11,6 @@ struct CopastView: View {
 
     private let placeHolderString = "Tempelkan / Paste Informasi yang anda dapat disini"
     @State var yourText = ""
-    @State var scrollViewOffset: CGFloat = 0
-    @State var startOffset: CGFloat = 0
 
     var body: some View {
         VStack{
@@ -25,28 +23,7 @@ struct CopastView: View {
                     VStack(){
                         CustomTextEditor.init(placeHolder: placeHolderString, yourText: $yourText)
                     }
-//                    .padding(.top)
-                    .padding()
-                    .overlay(
-                        GeometryReader{proxy -> Color in
-//                            let offset = proxy.frame(in: .global).minY
-//                            print(offset)
-//                            //237.0
-
-                            DispatchQueue.main.async {
-                                if startOffset == 0 {
-                                    self.startOffset = proxy.frame(in: .global).minY
-                                }
-
-                                let offset = proxy.frame(in: .global).minY
-                                self.scrollViewOffset = offset - startOffset
-
-                                print(self.scrollViewOffset)
-                            }
-                            return Color.clear
-                        }.frame(width: 0, height: 0)
-                        ,alignment: .top
-                    )
+                    .padding(.top)
                 }
                 .overlay(
                     Button {
@@ -57,14 +34,10 @@ struct CopastView: View {
                     }
                         .buttonStyle(buttonClear())
                         .padding(.trailing)
-                        .padding(.bottom, getSafeArea().bottom == 0.1 ? 0.1 : 0)
-                        .opacity(-scrollViewOffset > 0 ? 1 : 0)
-                        .animation(.easeInOut)
-                    ,alignment: .bottomTrailing
-
+                    ,alignment: .bottomLeading
                 )
             }
-            .frame(width: 350, height: 420, alignment: .center)
+            .frame(width: 350, height: 420)
 
             StartSearchButton(yourText: $yourText)
                 .position(x: 195, y: 90)
