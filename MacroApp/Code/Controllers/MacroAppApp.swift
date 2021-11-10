@@ -9,8 +9,7 @@ import SwiftUI
 
 @main
 struct MacroAppApp: App {
-    let persistenceController = PersistenceController.shared
-
+  
     var body: some Scene {
         WindowGroup {
 //            OnBoardingScene()

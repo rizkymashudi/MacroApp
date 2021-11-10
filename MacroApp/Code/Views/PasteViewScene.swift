@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PasteViewScene: View {
 
-    @State private var isShowingDetailView = false
+    @State var yourText = ""
+    @State var isShowingDetailView = false
   
     var body: some View {
         NavigationView{
@@ -31,13 +32,16 @@ struct PasteViewScene: View {
                         Spacer()
                     }
                     .frame(width: 250, height: 140)
-                    CopastView()
+                    CopastView(yourText: $yourText)
                     Spacer(minLength: 50)
+                    
                     Button("Pindai teks dan mulai pencarian"){
                         print("button pressed")
                         isShowingDetailView = true
                     }
                     .buttonStyle(GrowingSearchButton())
+                    .disabled(yourText.isEmpty)
+                    .opacity(yourText.isEmpty ? 0.5 : 1)
                         .position(x: 195, y: 50)
                     Spacer(minLength: 90)
                 }
@@ -49,11 +53,38 @@ struct PasteViewScene: View {
     
 }
 
-//struct PasteViewScene_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PasteViewScene()
-//    }
-//}
+struct PasteViewScene_Previews: PreviewProvider {
+    static var previews: some View {
+        PasteViewScene()
+    }
+}
+
+struct CustomTextEditor: View {
+    let placeHolder: String
+    @Binding var yourText: String
+
+    var body: some View {
+    
+        ZStack(alignment: .topLeading) {
+            if yourText.isEmpty {
+                Text(placeHolder)
+                .opacity(0.3)
+                .padding(.top, 10)
+            }
+
+            TextEditor(text: $yourText)
+                .frame(width: 320, height: 390, alignment: .center)
+                .cornerRadius(8)
+        }
+        .onAppear() {
+            UITextView.appearance().backgroundColor = .clear
+        }.onDisappear() {
+            UITextView.appearance().backgroundColor = nil
+        }
+
+    }
+}
+
 
 #if canImport(UIKit)
 extension View {

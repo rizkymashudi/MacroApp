@@ -10,7 +10,7 @@ import SwiftUI
 struct CopastView: View {
 
     private let placeHolderString = "Tempelkan / Paste Informasi yang anda dapat disini"
-    @State var yourText = ""
+    @Binding var yourText: String
 
     var body: some View {
         VStack{
@@ -23,7 +23,7 @@ struct CopastView: View {
                     VStack(){
                         CustomTextEditor.init(placeHolder: placeHolderString, yourText: $yourText)
                     }
-                    .padding(.top)
+                    .padding(.top, 10)
                 }
                 .overlay(
                     Button {
@@ -37,72 +37,22 @@ struct CopastView: View {
                     ,alignment: .bottomLeading
                 )
             }
+            .frame(width: 350, height: 420)
 
-//             .frame(width: 350, height: 420)
 
-//             StartSearchButton(yourText: $yourText)
-//                 .position(x: 195, y: 90)
-
-        }
-    }
-}
-
-struct CustomTextEditor: View {
-    let placeHolder: String
-    @Binding var yourText: String
-
-    var body: some View {
-        VStack {
-            ZStack(alignment: .topLeading) {
-                if yourText.isEmpty {
-                    Text(placeHolder)
-                    .opacity(0.3)
-                }
-
-                TextEditor(text: $yourText)
-                    .frame(width: 320, height: 390, alignment: .center)
-                    .cornerRadius(8)
-            }
-            .onAppear() {
-                UITextView.appearance().backgroundColor = .clear
-            }.onDisappear() {
-                UITextView.appearance().backgroundColor = nil
-            }
-
-//            if !yourText.isEmpty {
-//                    Button {
-//                        print("Button Bersihkan was tapped")
-//                        yourText = ""
-//                    } label: {
-//                        Label("Bersihkan", systemImage: "trash")
-//                    }.buttonStyle(buttonClear())
-//            }
-        }
-    }
-}
-
-struct StartSearchButton: View {
-    @Binding var yourText: String
-
-    var body: some View {
-        ZStack{
-            Button("Mulai Pencarian"){
-                print("button pressed")
-            }
-            .buttonStyle(GrowingSearchButton())
-            .disabled(yourText.isEmpty)
-            .opacity(yourText.isEmpty ? 0.5 : 1)
         }
     }
 }
 
 
 
-struct CopastView_Previews: PreviewProvider {
-    static var previews: some View {
-        CopastView()
-    }
-}
+
+//
+//struct CopastView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CopastView()
+//    }
+//}
 
 extension View {
     func getSafeArea()->UIEdgeInsets {

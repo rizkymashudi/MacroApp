@@ -27,6 +27,7 @@ import SwiftUI
 
 struct MainView: View {
     @AppStorage("Onboard") var shouldShowOnboarding: Bool = true
+//    @Binding var yourText: String
     
     var body: some View{
         VStack{
