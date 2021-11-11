@@ -11,7 +11,7 @@ import SwiftUI
 struct YudistiraListView: View {
     var body: some View {
         YudistiraListViewSupport()
-            .navigationTitle("Hasil Pencarian")
+            .navigationTitle("Hasil pencarian")
             .navigationBarTitleDisplayMode(.inline)
 
     }
