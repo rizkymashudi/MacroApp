@@ -15,14 +15,22 @@ struct CustomTextEditor: View {
     
         ZStack(alignment: .topLeading) {
             if yourText.isEmpty {
-                Text(placeHolder)
-                .opacity(0.3)
-                .padding(.top, 10)
+                VStack {
+                    Label("", systemImage: "hand.tap")
+                        .font(.system(size: 75))
+                        .foregroundColor(colorPallete.symbol)
+
+                    Text(placeHolder)
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 17))
+                }
+
             }
 
             TextEditor(text: $yourText)
                 .frame(width: 320, height: 390, alignment: .center)
                 .cornerRadius(8)
+
         }
         .onAppear() {
             UITextView.appearance().backgroundColor = .clear

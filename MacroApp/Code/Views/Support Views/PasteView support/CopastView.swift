@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CopastView: View {
 
-    private let placeHolderString = "Tempelkan / Paste Informasi yang anda dapat disini"
+    private let placeHolderString = "Ketuk untuk menampilkan informasi yang anda salin"
     @Binding var yourText: String
 
     var body: some View {
@@ -23,7 +23,7 @@ struct CopastView: View {
                     VStack(){
                         CustomTextEditor.init(placeHolder: placeHolderString, yourText: $yourText)
                     }
-                    .padding(.top, 10)
+//                    .padding(.top, 10)
                 }
                 .overlay(
                     VStack{

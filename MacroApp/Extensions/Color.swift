@@ -14,4 +14,6 @@ struct colorPallete {
     static let buttonClearColor = Color("clearButton")
     static let labelColor = Color("Label")
     static let trashColor = Color("trash")
+    static let symbol = Color("symbol")
+
 }
