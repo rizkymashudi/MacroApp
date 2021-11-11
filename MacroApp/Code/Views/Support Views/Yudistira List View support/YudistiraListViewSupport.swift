@@ -62,6 +62,7 @@ struct YudistiraListViewSupport: View {
 
                 }
                 .redacted(reason: loadingState.isLoading ? .placeholder : [])
+                .shimmering(active: loadingState.isLoading)
                 .foregroundColor(loadingState.isLoading ? .blue : .black)
             }
             .disabled(loadingState.isLoading)

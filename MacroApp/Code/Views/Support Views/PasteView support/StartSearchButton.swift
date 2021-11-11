@@ -33,11 +33,7 @@ struct GrowingSearchButton: ButtonStyle {
     }
 }
 
-//struct StartSearchButton: View {
-//    var body: some View {
-//       Text(" ")
-//    }
-//}
+
 
 //struct StartSearchButton_Previews: PreviewProvider {
 //    static var previews: some View {
