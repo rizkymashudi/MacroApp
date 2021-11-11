@@ -13,41 +13,44 @@ struct PasteViewScene: View {
     @State var isShowingDetailView = false
   
     var body: some View {
-        NavigationView{
-            ZStack{
-                HeaderView()
-                VStack{
-                    NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ YudistiraListView() }
-                    .navigationBarHidden(true)
-                    VStack(alignment: .leading){
-                        Text("Temukan fakta dengan cepat dan mudah")
-                            .font(.system(size: 28, weight: .medium))
-                            .foregroundColor(.white)
-                            .frame(width: 350, alignment: .leading)
-                            .padding(.bottom, 1)
-                        Text("Cukup tempelkan informasi yang anda dapat dan temukan faktanya.")
-                            .font(.system(size: 15, weight: .regular))
-                            .foregroundColor(.white)
-                            .frame(width: 350, alignment: .leading)
-                        Spacer()
+        ZStack{
+            NavigationView{
+                ZStack{
+                    HeaderView()
+                    VStack{
+                        NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ YudistiraListView() }
+                        .hidden()
+                        VStack(alignment: .leading){
+                            Text("Temukan fakta dengan cepat dan mudah")
+                                .font(.system(size: 28, weight: .medium))
+                                .foregroundColor(.white)
+                                .frame(width: 350, alignment: .leading)
+                                .padding(.bottom, 1)
+                            Text("Cukup tempelkan informasi yang anda dapat dan temukan faktanya.")
+                                .font(.system(size: 15, weight: .regular))
+                                .foregroundColor(.white)
+                                .frame(width: 350, alignment: .leading)
+                            Spacer()
+                        }
+                        .frame(width: 250, height: 140)
+                        CopastView(yourText: $yourText)
+                        Spacer(minLength: 50)
+                        
+                        Button("Pindai teks dan mulai pencarian"){
+                            print("button pressed")
+                            isShowingDetailView = true
+                        }
+                        .buttonStyle(GrowingSearchButton())
+                        .disabled(yourText.isEmpty)
+                        .opacity(yourText.isEmpty ? 0.5 : 1)
+                            .position(x: 195, y: 50)
+                        Spacer(minLength: 90)
                     }
-                    .frame(width: 250, height: 140)
-                    CopastView(yourText: $yourText)
-                    Spacer(minLength: 50)
-                    
-                    Button("Pindai teks dan mulai pencarian"){
-                        print("button pressed")
-                        isShowingDetailView = true
-                    }
-                    .buttonStyle(GrowingSearchButton())
-                    .disabled(yourText.isEmpty)
-                    .opacity(yourText.isEmpty ? 0.5 : 1)
-                        .position(x: 195, y: 50)
-                    Spacer(minLength: 90)
                 }
+                .navigationBarHidden(true)
+            }.onTapGesture {
+                self.hideKeyboard()
             }
-        }.onTapGesture {
-            self.hideKeyboard()
         }
     }
     

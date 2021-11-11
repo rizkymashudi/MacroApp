@@ -58,7 +58,7 @@ class ApiYudistira: ObservableObject {
                         let date = i.tanggal
                         let conclusion = i.conclusion
 
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        DispatchQueue.main.async {
                             //tampung ke model yudistira var finalItems
                             self.finalNews.append(NewsYudistira(id: id, authors: authors, title: title, content: content, fact: fact, references: resRef, imgUrl: imgUrl, date: date, conclusion: conclusion))
                             self.isLoading = false
