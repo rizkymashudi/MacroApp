@@ -38,6 +38,7 @@
 		F5D54A45272102E100FF8DE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */; };
 		F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A46272102E100FF8DE7 /* Persistence.swift */; };
 		F5D54A4A272102E100FF8DE7 /* MacroApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A48272102E100FF8DE7 /* MacroApp.xcdatamodeld */; };
+		F5E504A1273D3A850088FDE1 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E504A0273D3A850088FDE1 /* CustomTextEditor.swift */; };
 		F5EF6CE5273A615500693636 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F5EF6CE4273A615500693636 /* Shimmer */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5D54A46272102E100FF8DE7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F5D54A49272102E100FF8DE7 /* MacroApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacroApp.xcdatamodel; sourceTree = "<group>"; };
+		F5E504A0273D3A850088FDE1 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		FC88C803D73D6DA6AD292E25 /* Pods-MacroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroApp.debug.xcconfig"; path = "Target Support Files/Pods-MacroApp/Pods-MacroApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				F53AE81027328B1E009E9853 /* CopastView.swift */,
 				F53AE81227328B32009E9853 /* StartSearchButton.swift */,
 				6D387B9027389AEE002F406A /* ClearButton.swift */,
+				F5E504A0273D3A850088FDE1 /* CustomTextEditor.swift */,
 			);
 			path = "PasteView support";
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				F5B61CC12738F23900F1EF38 /* ListDetailViewSupport.swift in Sources */,
 				F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
+				F5E504A1273D3A850088FDE1 /* CustomTextEditor.swift in Sources */,
 				F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */,
 				F53AE80F27328B0B009E9853 /* HeaderView.swift in Sources */,
 				6D387B9127389AEE002F406A /* ClearButton.swift in Sources */,

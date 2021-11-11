@@ -26,15 +26,21 @@ struct CopastView: View {
                     .padding(.top, 10)
                 }
                 .overlay(
-                    Button {
-                        print("Button Bersihkan was tapped")
-                        yourText = ""
-                    } label: {
-                        Label("Bersihkan", systemImage: "trash")
+                    VStack{
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Button {
+                                print("Button Bersihkan was tapped")
+                                yourText = ""
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                                .buttonStyle(GrowingClearButton())
+                        }
+                        .padding(.trailing, 10)
+                        .padding(.bottom, 20)
                     }
-                        .buttonStyle(buttonClear())
-                        .padding(.trailing)
-                    ,alignment: .bottomLeading
                 )
             }
             .frame(width: 350, height: 420)
@@ -52,9 +58,9 @@ struct CopastView: View {
 //    }
 //}
 
-extension View {
-    func getSafeArea()->UIEdgeInsets {
-        return UIApplication.shared.windows.first?.safeAreaInsets ?? UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-}
+//extension View {
+//    func getSafeArea()->UIEdgeInsets {
+//        return UIApplication.shared.windows.first?.safeAreaInsets ?? UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//    }
+//}
 
