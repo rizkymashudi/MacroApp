@@ -17,4 +17,5 @@ struct colorPallete {
     static let navBarColor = Color("Navbar")
     static let mafindoLabel = Color("LabelMafindo")
     static let bgListview = Color("BackgroundListView")
+    static let symbol = Color("symbol")
 }

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct CopastView: View {
 
-    private let placeHolderString = "Tempelkan / Paste Informasi yang anda dapat disini"
+    private let placeHolderString = "Ketuk untuk menampilkan informasi \n yang anda salin"
     @Binding var yourText: String
+    @State private var showingAlert = false
 
     var body: some View {
         VStack{
@@ -21,12 +22,43 @@ struct CopastView: View {
 
                 ScrollView(.vertical, showsIndicators: false){
                     VStack(){
-                        CustomTextEditor.init(placeHolder: placeHolderString, yourText: $yourText)
+                        TextEditor(text: $yourText)
+                            .frame(width: 320, height: 390, alignment: .center)
+                            .cornerRadius(8)
                     }
-                    .padding(.top, 10)
                 }
                 .overlay(
                     VStack{
+                        Spacer()
+                        if yourText.isEmpty {
+                            Button {
+                                print("Button hand.tap was tapped")
+                                let pasteboard = UIPasteboard.general
+                                if pasteboard.hasStrings {
+                                    yourText = pasteboard.string!
+                                    showingAlert = false
+                                }
+                                else {
+                                    showingAlert = true
+                                }
+                            } label: {
+                                Image(systemName: "hand.tap")
+                                    .foregroundColor(colorPallete.symbol)
+                                    .font(.system(size: 75))
+                            }
+                            .alert(isPresented: $showingAlert) {
+                                Alert(
+                                    title: Text("Clipboard Kosong"),
+                                    message: Text("salin/copy teks terlebih dahulu untuk \n ditempel/paste"),
+                                    dismissButton: .default(Text("Oke"))
+                                )
+                            }
+
+                            Text(placeHolderString)
+                                .multilineTextAlignment(.center)
+                                .font(.system(size: 17))
+                        }
+
                         Spacer()
                         HStack{
                             Spacer()
