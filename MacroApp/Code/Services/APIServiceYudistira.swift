@@ -30,7 +30,7 @@ class ApiYudistira: ObservableObject {
 //        func fetch() {
             
             //declare body
-            let body : [String:Any] = ["key": acessKey, "method": "content", "value": "pemilu", "limit" : 49]
+            let body : [String:Any] = ["key": acessKey, "method": "content", "value": "gatot", "limit" : 49]
             let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
             
             //request method post dengan alamofire
@@ -60,7 +60,7 @@ class ApiYudistira: ObservableObject {
 
                         DispatchQueue.main.async {
                             //tampung ke model yudistira var finalItems
-                            self.finalNews.append(NewsYudistira(id: id, authors: authors, title: title, content: content, fact: fact, references: resRef, imgUrl: imgUrl, date: date, conclusion: conclusion))
+                            self.finalNews.append(NewsYudistira(id: id ?? "-", authors: authors ?? "-", title: title ?? "-", content: content ?? "-", fact: fact ?? "-", references: resRef, imgUrl: imgUrl, date: date ?? "-", conclusion: conclusion ?? "-"))
                             self.isLoading = false
                         }
                     }

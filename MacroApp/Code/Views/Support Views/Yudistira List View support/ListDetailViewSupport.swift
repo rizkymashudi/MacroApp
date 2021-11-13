@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import SwiftUINavigationBarStyling
 
 struct ListDetailViewSupport: View {
     
@@ -81,13 +82,15 @@ struct ListDetailViewSupport: View {
                         actionSheet()
                     }) {
                         Image(systemName: "square.and.arrow.up").imageScale(.large)
-                            .foregroundColor(colorPallete.primary)
+                            .foregroundColor(.white)
                     }
                 }
             }
         }
         .navigationBarTitle("Detail Hasil Pencarian")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
+        
     }
     
     func actionSheet() {

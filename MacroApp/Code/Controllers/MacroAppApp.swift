@@ -12,9 +12,7 @@ struct MacroAppApp: App {
   
     var body: some Scene {
         WindowGroup {
-//            OnBoardingScene()
-//            DummyListView()
-//            YudistiraListView()
+//            YudistiraListViewSupport()
             MainView()
         }
     }

@@ -16,9 +16,10 @@ struct PasteViewScene: View {
             NavigationView{
                 ZStack{
                     HeaderView()
-                    VStack{
-                        NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ YudistiraListView() }
+                    VStack(alignment: .center, spacing: 10){
+                        NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ }
                         .hidden()
+                        Spacer(minLength: 30)
                         VStack(alignment: .leading){
                             Text("Temukan fakta dengan cepat dan mudah")
                                 .font(.system(size: 28, weight: .medium))
@@ -33,7 +34,7 @@ struct PasteViewScene: View {
                         }
                         .frame(width: 250, height: 140)
                         CopastView(yourText: $yourText)
-                        Spacer(minLength: 50)
+                        Spacer(minLength: 20)
                         
                         Button("Pindai teks dan mulai pencarian"){
                             print("button pressed")
@@ -51,7 +52,8 @@ struct PasteViewScene: View {
                     self.hideKeyboard()
                 }
         }
-            }
+    
+    }
     
 }
 

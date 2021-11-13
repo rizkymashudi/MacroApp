@@ -11,13 +11,13 @@ import Foundation
 
 // MARK: - WelcomeElement
 struct WelcomeElement: Decodable, Identifiable {
-    let id, authors, status, classification: String
-    let title, content, fact: String
+    let id, authors, status, classification: String?
+    let title, content, fact: String?
     let references: String
     let sourceIssue: String
     let sourceLink: String
     let picture1: String
-    let picture2, tanggal, tags, conclusion: String
+    let picture2, tanggal, tags, conclusion: String?
 //    let claimReview: [JSONAny]
 //    let media: [[JSONAny]]
 

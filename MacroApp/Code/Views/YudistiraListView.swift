@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import SwiftUINavigationBarStyling
 
 
 struct YudistiraListView: View {
     var body: some View {
         YudistiraListViewSupport()
-            .navigationTitle("Hasil pencarian")
+            .navigationTitle("Hasil pencarian hoax")
             .navigationBarTitleDisplayMode(.inline)
-
+            .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
     }
 }
 
@@ -22,3 +23,4 @@ struct YudistiraListView_Previews: PreviewProvider {
         YudistiraListView()
     }
 }
+
