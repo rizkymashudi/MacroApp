@@ -30,6 +30,7 @@
 		F5645BBB27400F4B00D5859E /* LabelMafindo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BBA27400F4B00D5859E /* LabelMafindo.swift */; };
 		F5645BBD27402AF100D5859E /* RoundedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BBC27402AF100D5859E /* RoundedExtension.swift */; };
 		F5645BC0274052A500D5859E /* TopListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BBF274052A500D5859E /* TopListDetailView.swift */; };
+		F5645BC3274077E400D5859E /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BC2274077E400D5859E /* LaunchScreen.swift */; };
 		F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */; };
 		F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */; };
 		F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */; };
@@ -73,6 +74,7 @@
 		F5645BBA27400F4B00D5859E /* LabelMafindo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelMafindo.swift; sourceTree = "<group>"; };
 		F5645BBC27402AF100D5859E /* RoundedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedExtension.swift; sourceTree = "<group>"; };
 		F5645BBF274052A500D5859E /* TopListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListDetailView.swift; sourceTree = "<group>"; };
+		F5645BC2274077E400D5859E /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIYudistiraModel.swift; sourceTree = "<group>"; };
 		F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceYudistira.swift; sourceTree = "<group>"; };
 		F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YudistiraListViewSupport.swift; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 				F5645BBF274052A500D5859E /* TopListDetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		F5645BC1274077CD00D5859E /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				F5645BC2274077E400D5859E /* LaunchScreen.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		F5B61CBD2738F1DF00F1EF38 /* Yudistira List View support */ = {
@@ -294,6 +304,7 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5645BC1274077CD00D5859E /* Launch */,
 				F5645BBE2740528000D5859E /* Detail */,
 				F53AE8142732D734009E9853 /* Dummy ListView Support */,
 				F5B61CBD2738F1DF00F1EF38 /* Yudistira List View support */,
@@ -432,6 +443,7 @@
 				F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */,
 				F53AE81127328B1E009E9853 /* CopastView.swift in Sources */,
 				F53AE802273281FE009E9853 /* Color.swift in Sources */,
+				F5645BC3274077E400D5859E /* LaunchScreen.swift in Sources */,
 				F53AE8182732DE3D009E9853 /* DummyApiService.swift in Sources */,
 				F53AE8242733971F009E9853 /* DummyListView.swift in Sources */,
 				F53AE8282733A85E009E9853 /* DetailViewSupport.swift in Sources */,
@@ -590,16 +602,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = JFAH6YB752;
+				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PerLu;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,16 +636,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = JFAH6YB752;
+				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PerLu;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

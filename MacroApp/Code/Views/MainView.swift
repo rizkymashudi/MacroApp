@@ -27,18 +27,30 @@ import SwiftUI
 
 struct MainView: View {
     @AppStorage("Onboard") var shouldShowOnboarding: Bool = true
-//    @Binding var yourText: String
+    @State var isActive : Bool = false
+    @State var animate : Bool = false
     
     var body: some View{
         VStack{
-            if shouldShowOnboarding {
-                OnBoardingScene()
+            if isActive {
+                if shouldShowOnboarding {
+                    OnBoardingScene()
+                } else {
+                    PasteViewScene()
+                }
             } else {
-                PasteViewScene()
-                    .transition(.move(edge: .trailing))
+                LaunchScreen(animate: $animate)
             }
         }
-        .animation(.default)
+        .edgesIgnoringSafeArea(.all)
+        .onAppear{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                withAnimation{
+                    isActive = true
+                    animate.toggle()
+                }
+            }
+        }
     }
 }
 
