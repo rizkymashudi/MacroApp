@@ -65,12 +65,15 @@ struct CopastView: View {
                     .onTapGesture {
                         let pasteboard = UIPasteboard.general
                         if pasteboard.hasStrings {
+                            print("clipboard contain value")
                             yourText = pasteboard.string!
                             showingAlert = false
                             hideTapToPasteIcon = true
                         } else {
                             showingAlert = true
+                            print("doesnt contain value")
                         }
+                        
                     }
                     .opacity(hideTapToPasteIcon ? 0 : 1)
                     .alert(isPresented: $showingAlert) {
