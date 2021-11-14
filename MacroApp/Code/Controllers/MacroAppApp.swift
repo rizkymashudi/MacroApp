@@ -12,7 +12,6 @@ struct MacroAppApp: App {
   
     var body: some Scene {
         WindowGroup {
-//            YudistiraListViewSupport()
             MainView()
         }
     }

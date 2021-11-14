@@ -12,16 +12,18 @@ struct CopastView: View {
     private let placeHolderString = "Ketuk untuk menampilkan informasi \n yang anda salin"
     @Binding var yourText: String
     @State private var showingAlert = false
-
+    @State var hideTapToPasteIcon = false
+    
     var body: some View {
         VStack{
             ZStack{
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .fill(Color.white)
                     .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
-
+                
                 ScrollView(.vertical, showsIndicators: false){
-                    VStack(){
+                    VStack{
+                        Spacer(minLength: 10)
                         TextEditor(text: $yourText)
                             .frame(width: 320, height: 390, alignment: .center)
                             .cornerRadius(8)
@@ -30,41 +32,12 @@ struct CopastView: View {
                 .overlay(
                     VStack{
                         Spacer()
-                        if yourText.isEmpty {
-                            Button {
-                                print("Button hand.tap was tapped")
-                                let pasteboard = UIPasteboard.general
-                                if pasteboard.hasStrings {
-                                    yourText = pasteboard.string!
-                                    showingAlert = false
-                                }
-                                else {
-                                    showingAlert = true
-                                }
-                            } label: {
-                                Image(systemName: "hand.tap")
-                                    .foregroundColor(colorPallete.symbol)
-                                    .font(.system(size: 75))
-                            }
-                            .alert(isPresented: $showingAlert) {
-                                Alert(
-                                    title: Text("Clipboard Kosong"),
-                                    message: Text("salin/copy teks terlebih dahulu untuk \n ditempel/paste"),
-                                    dismissButton: .default(Text("Oke"))
-                                )
-                            }
-
-                            Text(placeHolderString)
-                                .multilineTextAlignment(.center)
-                                .font(.system(size: 17))
-                        }
-
-                        Spacer()
                         HStack{
                             Spacer()
                             Button {
                                 print("Button Bersihkan was tapped")
                                 yourText = ""
+                                hideTapToPasteIcon = false
                             } label: {
                                 Image(systemName: "trash")
                             }
@@ -74,6 +47,41 @@ struct CopastView: View {
                         .padding(.bottom, 20)
                     }
                 )
+                .overlay(
+                    VStack(alignment: .center, spacing: 10){
+                        if yourText.isEmpty {
+                            VStack{
+                                Image(systemName: "hand.tap")
+                                    .foregroundColor(colorPallete.symbol)
+                                    .font(.system(size: 75))
+                                Text(placeHolderString)
+                                    .multilineTextAlignment(.center)
+                                    .font(.system(size: 17))
+                            }
+                        }
+                    }
+                    .frame(width: 350, height: 420, alignment: .center)
+                    .background(RoundedRectangle(cornerRadius: 8, style: .continuous).fill(colorPallete.bgListview))
+                    .onTapGesture {
+                        let pasteboard = UIPasteboard.general
+                        if pasteboard.hasStrings {
+                            yourText = pasteboard.string!
+                            showingAlert = false
+                            hideTapToPasteIcon = true
+                        } else {
+                            showingAlert = true
+                        }
+                    }
+                    .opacity(hideTapToPasteIcon ? 0 : 1)
+                    .alert(isPresented: $showingAlert) {
+                        Alert(
+                            title: Text("Clipboard Kosong"),
+                            message: Text("salin/copy teks terlebih dahulu untuk \n ditempel/paste"),
+                            dismissButton: .default(Text("Oke"))
+                        )
+                    }
+                    
+                )
             }
             .frame(width: 350, height: 420)
 
@@ -82,6 +90,13 @@ struct CopastView: View {
     }
 }
 
+#if canImport(UIKit)
+extension View {
+    func disappearKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
 
 //
 //struct CopastView_Previews: PreviewProvider {
