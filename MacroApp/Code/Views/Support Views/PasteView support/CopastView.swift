@@ -13,7 +13,7 @@ struct CopastView: View {
     @Binding var yourText: String
     @State private var showingAlert = false
     @State var hideTapToPasteArea = false
-    
+
     var body: some View {
         VStack{
             ZStack{
@@ -70,17 +70,25 @@ struct CopastView: View {
                                 return
                             }
 
-                            yourText = pasteText
-
-                            if yourText == "" {
+                            if pasteText == "" {
                                 showingAlert = true
+                            } else {
+                                yourText = pasteText
+                                hideTapToPasteArea = true
                             }
-                            hideTapToPasteArea = true
+
+////                            yourText = pasteText
+////
+////                            if yourText == "" {
+////                                hideTapToPasteArea = false
+////                                showingAlert = true
+////                            }
+////                            hideTapToPasteArea = true
                         } else {
                             showingAlert = true
                             print("doesnt contain value")
                         }
-                        
+
                     }
                     .opacity(hideTapToPasteArea ? 0 : 1)
                     .alert(isPresented: $showingAlert) {
@@ -90,7 +98,7 @@ struct CopastView: View {
                             dismissButton: .default(
                                 Text("Oke"), action: {
                                     print("Button Alert Oke was tapped")
-                                    hideTapToPasteArea = false
+//                                    hideTapToPasteArea = false
                                 }
                             )
                         )
