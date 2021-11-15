@@ -11,7 +11,7 @@ struct CopastView: View {
 
     private let placeHolderString = "Ketuk untuk menampilkan informasi \n yang anda salin"
     @Binding var yourText: String
-    @State private var showingAlert = false
+    @State private var showingAlert = true
     @State var hideTapToPasteIcon = false
     
     var body: some View {

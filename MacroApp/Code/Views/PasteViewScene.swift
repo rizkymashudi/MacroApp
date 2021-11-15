@@ -36,7 +36,7 @@ struct PasteViewScene: View {
                         CopastView(yourText: $yourText)
                         Spacer(minLength: 20)
                         
-                        Button("Pindai teks dan mulai pencarian"){
+                        Button("Mulai Pencarian"){
                             print("button pressed")
                             isShowingDetailView = true
                         }
