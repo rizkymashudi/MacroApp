@@ -17,7 +17,7 @@ struct ListDetailViewSupport: View {
     var body: some View {
         ZStack{
             ScrollView{
-                VStack(spacing: 5){
+                VStack{
                     if newsItems.imgUrl != "" {
                         WebImage(url: URL(string: newsItems.imgUrl)!)
                             .resizable()
@@ -38,9 +38,14 @@ struct ListDetailViewSupport: View {
                             .fontWeight(.bold)
                             .font(.system(size: 20))
                             .lineLimit(8)
-//                            .frame(width: 355)
                             .multilineTextAlignment(.leading)
-                            .padding(.trailing)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(width: 355, alignment: .leading)
+                    }
+                    .frame(width: 355)
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 5){
                         Label{
                             Text("Dibuat: \(newsItems.date)")
                                 .multilineTextAlignment(.leading)
@@ -57,10 +62,10 @@ struct ListDetailViewSupport: View {
                         }
                         .font(.system(size: 13).weight(.regular))
                     }
-                    .aspectRatio(2, contentMode: .fit)
-                    .padding(.trailing, 15)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(width: 355, alignment: .leading)
+                    Spacer()
                     
-                    Spacer(minLength: -5)
                     VStack(alignment: .leading){
                         Text(newsItems.content)
                             .multilineTextAlignment(.leading)
@@ -75,6 +80,8 @@ struct ListDetailViewSupport: View {
                             .lineLimit(nil)
                             .padding(16)
                     }
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(width: 385, alignment: .leading)
                     Spacer()
                 }
                 .toolbar{

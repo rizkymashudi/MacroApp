@@ -14,7 +14,7 @@ struct YudistiraListViewSupport: View {
     @ObservedObject var newsYudistira = ApiYudistira()
     @StateObject private var loadingState = ApiYudistira()
     @State var isCardTapped = false
-    
+ 
     var body: some View {
         VStack{
             Spacer()
