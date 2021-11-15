@@ -12,7 +12,7 @@ struct CopastView: View {
     private let placeHolderString = "Ketuk untuk menampilkan informasi \n yang anda salin"
     @Binding var yourText: String
     @State private var showingAlert = false
-    @State var hideTapToPasteIcon = false
+    @State var hideTapToPasteArea = false
     
     var body: some View {
         VStack{
@@ -37,7 +37,7 @@ struct CopastView: View {
                             Button {
                                 print("Button Bersihkan was tapped")
                                 yourText = ""
-                                hideTapToPasteIcon = false
+                                hideTapToPasteArea = false
                             } label: {
                                 Image(systemName: "trash")
                             }
@@ -69,20 +69,30 @@ struct CopastView: View {
                             guard let pasteText = pasteboard.string else {
                                 return
                             }
+
                             yourText = pasteText
-                            hideTapToPasteIcon = true
+
+                            if yourText == "" {
+                                showingAlert = true
+                            }
+                            hideTapToPasteArea = true
                         } else {
                             showingAlert = true
                             print("doesnt contain value")
                         }
                         
                     }
-                    .opacity(hideTapToPasteIcon ? 0 : 1)
+                    .opacity(hideTapToPasteArea ? 0 : 1)
                     .alert(isPresented: $showingAlert) {
                         Alert(
                             title: Text("Clipboard Kosong"),
                             message: Text("salin/copy teks terlebih dahulu untuk \n ditempel/paste"),
-                            dismissButton: .default(Text("Oke"))
+                            dismissButton: .default(
+                                Text("Oke"), action: {
+                                    print("Button Alert Oke was tapped")
+                                    hideTapToPasteArea = false
+                                }
+                            )
                         )
                     }
                     
