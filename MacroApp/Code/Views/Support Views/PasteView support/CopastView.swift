@@ -11,7 +11,7 @@ struct CopastView: View {
 
     private let placeHolderString = "Ketuk untuk menampilkan informasi \n yang anda salin"
     @Binding var yourText: String
-    @State private var showingAlert = true
+    @State private var showingAlert = false
     @State var hideTapToPasteIcon = false
     
     var body: some View {
@@ -66,8 +66,10 @@ struct CopastView: View {
                         let pasteboard = UIPasteboard.general
                         if pasteboard.hasStrings {
                             print("clipboard contain value")
-                            yourText = pasteboard.string!
-                            showingAlert = false
+                            guard let pasteText = pasteboard.string else {
+                                return
+                            }
+                            yourText = pasteText
                             hideTapToPasteIcon = true
                         } else {
                             showingAlert = true
