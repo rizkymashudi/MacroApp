@@ -21,7 +21,7 @@ struct PasteViewScene: View {
                         .hidden()
                         Spacer(minLength: 30)
                         VStack(alignment: .leading){
-                            Text("Temukan fakta dengan cepat dan mudah")
+                            Text("Temukan hoax dengan cepat dan mudah")
                                 .font(.system(size: 28, weight: .medium))
                                 .foregroundColor(.white)
                                 .frame(width: 350, alignment: .leading)

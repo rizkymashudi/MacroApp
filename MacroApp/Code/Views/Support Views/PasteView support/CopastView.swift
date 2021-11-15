@@ -19,7 +19,8 @@ struct CopastView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .fill(Color.white)
-                    .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
+//                    .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
+                    .background(RoundedRectangle(cornerRadius: 8.0).stroke(colorPallete.primary, lineWidth: 4.0))
                 
                 ScrollView(.vertical, showsIndicators: false){
                     VStack{
