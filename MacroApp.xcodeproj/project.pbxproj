@@ -31,6 +31,9 @@
 		F5645BBD27402AF100D5859E /* RoundedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BBC27402AF100D5859E /* RoundedExtension.swift */; };
 		F5645BC0274052A500D5859E /* TopListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BBF274052A500D5859E /* TopListDetailView.swift */; };
 		F5645BC3274077E400D5859E /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BC2274077E400D5859E /* LaunchScreen.swift */; };
+		F5645BEA2743E3A500D5859E /* OfflineStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BE92743E3A400D5859E /* OfflineStateView.swift */; };
+		F5645BEC2743E67000D5859E /* NotfoundStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BEB2743E67000D5859E /* NotfoundStateView.swift */; };
+		F5645BEF2743E8B300D5859E /* SearchEngineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5645BEE2743E8B300D5859E /* SearchEngineButton.swift */; };
 		F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */; };
 		F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */; };
 		F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */; };
@@ -75,6 +78,9 @@
 		F5645BBC27402AF100D5859E /* RoundedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedExtension.swift; sourceTree = "<group>"; };
 		F5645BBF274052A500D5859E /* TopListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListDetailView.swift; sourceTree = "<group>"; };
 		F5645BC2274077E400D5859E /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		F5645BE92743E3A400D5859E /* OfflineStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineStateView.swift; sourceTree = "<group>"; };
+		F5645BEB2743E67000D5859E /* NotfoundStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotfoundStateView.swift; sourceTree = "<group>"; };
+		F5645BEE2743E8B300D5859E /* SearchEngineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngineButton.swift; sourceTree = "<group>"; };
 		F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIYudistiraModel.swift; sourceTree = "<group>"; };
 		F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceYudistira.swift; sourceTree = "<group>"; };
 		F5B61CBE2738F21D00F1EF38 /* YudistiraListViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YudistiraListViewSupport.swift; sourceTree = "<group>"; };
@@ -198,6 +204,14 @@
 			path = "Dummy services";
 			sourceTree = "<group>";
 		};
+		F5645BED2743E87E00D5859E /* Notfound State support */ = {
+			isa = PBXGroup;
+			children = (
+				F5645BEE2743E8B300D5859E /* SearchEngineButton.swift */,
+			);
+			path = "Notfound State support";
+			sourceTree = "<group>";
+		};
 		F5B61CBD2738F1DF00F1EF38 /* List View support */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +320,8 @@
 			isa = PBXGroup;
 			children = (
 				F5D54A582721054700FF8DE7 /* Support Views */,
+				F5645BEB2743E67000D5859E /* NotfoundStateView.swift */,
+				F5645BE92743E3A400D5859E /* OfflineStateView.swift */,
 				F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */,
 				F53AE80C27328AE7009E9853 /* PasteViewScene.swift */,
 				F5D54A3F272102DE00FF8DE7 /* MainView.swift */,
@@ -327,6 +343,7 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5645BED2743E87E00D5859E /* Notfound State support */,
 				F5645BE62743E1BE00D5859E /* Dummy page */,
 				F53AE8142732D734009E9853 /* Dummy ListView Support */,
 				F5645BC1274077CD00D5859E /* Launch */,
@@ -479,6 +496,7 @@
 				F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */,
 				F53AE8212732EEEC009E9853 /* NewsApiService.swift in Sources */,
 				F5E504A3273D65050088FDE1 /* Theme.swift in Sources */,
+				F5645BEF2743E8B300D5859E /* SearchEngineButton.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
 				F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */,
 				F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */,
@@ -487,11 +505,13 @@
 				F5B61CC12738F23900F1EF38 /* ListDetailViewSupport.swift in Sources */,
 				F5645BBD27402AF100D5859E /* RoundedExtension.swift in Sources */,
 				F5645BC0274052A500D5859E /* TopListDetailView.swift in Sources */,
+				F5645BEC2743E67000D5859E /* NotfoundStateView.swift in Sources */,
 				F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
 				F5E504A1273D3A850088FDE1 /* CustomTextEditor.swift in Sources */,
 				F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */,
 				F53AE80F27328B0B009E9853 /* HeaderView.swift in Sources */,
+				F5645BEA2743E3A500D5859E /* OfflineStateView.swift in Sources */,
 				6D387B9127389AEE002F406A /* ClearButton.swift in Sources */,
 				F5B61CC327395A8100F1EF38 /* YudistiraListView.swift in Sources */,
 				F5B61CC527395C5000F1EF38 /* NewsYudistiraModel.swift in Sources */,
