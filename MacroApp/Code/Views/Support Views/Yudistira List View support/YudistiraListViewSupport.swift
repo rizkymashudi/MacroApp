@@ -15,6 +15,7 @@ struct YudistiraListViewSupport: View {
     @StateObject private var loadingState = ApiYudistira()
     @State var isCardTapped = false
  
+    let imageNotFound = "https://dummyimage.com/358x172/d1d1d1/757575.png&text=Image+not+found"
     
     var body: some View {
         VStack{
@@ -30,12 +31,22 @@ struct YudistiraListViewSupport: View {
                 }
                 
                 VStack{
-                    Image(newsYudistira.selectedNews?.imgUrl ?? "Notfound")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(RoundedRectangle(cornerRadius: 6.0))
-                        .background(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 6).fill(Color.gray))
-                
+                    if newsYudistira.selectedNews?.imgUrl != "" {
+                        WebImage(url: URL(string: newsYudistira.selectedNews?.imgUrl ?? imageNotFound))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 358, height: 172)
+                            .background(Color.secondary)
+                            .cornerRadius(6)
+                    } else {
+                        Image("Notfound")
+                            .resizable()
+                            .clipShape(RoundedRectangle(cornerRadius: 6.0))
+                            .background(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 6).fill(Color.gray))
+                            .frame(width: 358, height: 172)
+                            .clipped()
+                    }
+                    
                     VStack(alignment: .leading){
                         Text(newsYudistira.selectedNews?.title ?? "title")
                             .fontWeight(.semibold)
@@ -49,7 +60,7 @@ struct YudistiraListViewSupport: View {
                                 Image(systemName: "calendar")
                                     .padding(.bottom, 4)
                                     .foregroundColor(colorPallete.labelColor)
-                                Text("Dibuat : 2021-11-13")
+                                Text("Dibuat : \(newsYudistira.selectedNews?.date ?? "date")")
                                     .font(.system(size: 13).weight(.regular))
                             }
                             HStack(spacing: 3){

@@ -6,27 +6,35 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct TopListDetailView: View {
     
     var relatedNews: NewsYudistira?
+    let imageNotFound = "https://dummyimage.com/358x172/d1d1d1/757575.png&text=Image+not+found"
     
     var body: some View {
         ZStack{
             ScrollView{
                 VStack{
-                    Image(relatedNews?.imgUrl ?? " ")
-                        .resizable()
-                        .frame(width: 390, height: 212)
-                        .background(Color.secondary)
-//                    Image(systemName: "exclamationmark.shield")
-//                        .resizable()
-//                        .frame(width: 80, height: 100, alignment: .center)
-//                        .foregroundColor(colorPallete.primary)
-//                    Text("Page under construction").fontWeight(.medium)
+                    if relatedNews?.imgUrl != "" {
+                        WebImage(url: URL(string: relatedNews?.imgUrl ?? imageNotFound))
+                            .resizable()
+                            .frame(width: 390, height: 212)
+                            .scaledToFill()
+                            .background(Color.secondary)
+                            .padding(.top, 16)
+                            .border(Color.secondary, width: 0.3)
+                    } else {
+                        Image("Notfound")
+                            .resizable()
+                            .frame(width: 390, height: 212)
+                            .background(Color.secondary)
+                    }
+                    
                     
                     VStack(alignment: .leading, spacing: 5){
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+                        Text(relatedNews?.title ?? "Title")
                             .fontWeight(.bold)
                             .font(.system(size: 20))
                             .lineLimit(8)
@@ -39,7 +47,7 @@ struct TopListDetailView: View {
                     
                     VStack(alignment: .leading, spacing: 5){
                         Label{
-                            Text("Dibuat: tanggal")
+                            Text("Dibuat: \(relatedNews?.date ?? "date not found")")
                                 .multilineTextAlignment(.leading)
                         } icon: {
                             Image(systemName: "calendar")
@@ -47,7 +55,7 @@ struct TopListDetailView: View {
                         .font(.system(size: 13).weight(.regular))
                         
                         Label{
-                            Text("Penulis: who")
+                            Text("Penulis: \(relatedNews?.authors ?? "authors not found")")
                                 .multilineTextAlignment(.leading)
                         } icon: {
                             Image(systemName: "person.fill")
@@ -59,15 +67,15 @@ struct TopListDetailView: View {
                 }
                 Spacer()
                 VStack(alignment: .leading){
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
+                    Text(relatedNews?.content ?? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                         .padding(16)
-                    Text("Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?")
+                    Text(relatedNews?.fact ?? "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?")
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                         .padding(16)
-                    Text("At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.")
+                    Text(relatedNews?.conclusion ?? "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.")
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                         .padding(16)
@@ -92,14 +100,14 @@ struct TopListDetailView: View {
     }
     
     func actionSheet() {
-        guard let urlShare = URL(string: "https://www.w3.org/Provider/Style/dummy.html") else { return }
+        guard let urlShare = URL(string: relatedNews?.references ?? "https://www.w3.org/Provider/Style/dummy.html") else { return }
         let activeVc = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController?.present(activeVc, animated: true, completion: nil)
     }
 }
-//
-//struct TopListDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopListDetailView(relatedNews: NewsYudistira())
-//    }
-//}
+
+struct TopListDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        TopListDetailView()
+    }
+}
