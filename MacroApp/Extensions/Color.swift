@@ -18,4 +18,10 @@ struct colorPallete {
     static let mafindoLabel = Color("LabelMafindo")
     static let bgListview = Color("BackgroundListView")
     static let symbol = Color("symbol")
+    
+    //HEADER BUBBLE GRADIENT
+    static let primaryBright = Color("PrimaryBright")
+    static let primaryMedium = Color("PrimaryMedium")
+    static let primarySoft = Color("PrimarySoft")
+    static let primarySoftMed = Color("PrimarySoftMedium")
 }

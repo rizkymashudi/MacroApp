@@ -11,20 +11,26 @@ struct OnBoardingScene: View {
 //    @Binding var shouldShowOnboarding: Bool
     
     var body: some View {
-        ZStack{
-            Color(UIColor.systemBackground)
-                .ignoresSafeArea()
-            VStack{
-                HeaderOnboarding()
-                Spacer()
+        VStack{
+            ZStack{
+                Color(UIColor.systemBackground)
+                    .ignoresSafeArea()
+                VStack{
+                    ZStack{
+                        HeaderView()
+                        Image("Onboard Illustration")
+                            .padding(.top, 40)
+                    }
+                    Spacer()
+                }
+                VStack{
+                    CardOnboarding()
+                        .padding(.top, 250)
+                    ButtonStartOnboarding()
+                        .padding(30)
+                }
             }
-            VStack{
-                Spacer()
-                    .frame(height: 230)
-                CardOnboarding()
-                ButtonStartOnboarding()
-                    .position(x: 195, y: 50)
-            }
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
