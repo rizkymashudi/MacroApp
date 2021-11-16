@@ -37,20 +37,14 @@ struct HeaderView: View {
                     .position(x: 350, y: 410)
                     .clipped()
             }
-            .frame(width: 390, height: 320)
-            .edgesIgnoringSafeArea(.leading)
-            .edgesIgnoringSafeArea(.trailing)
+            .frame(height: 320)
         }
-        .ignoresSafeArea()
-        
-
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        GeometryReader { proxy in
-            HeaderView()
-        }
+        HeaderView()
     }
 }

@@ -13,8 +13,6 @@ struct OnBoardingScene: View {
     var body: some View {
         VStack{
             ZStack{
-                Color(UIColor.systemBackground)
-                    .ignoresSafeArea()
                 VStack{
                     ZStack{
                         HeaderView()
@@ -25,10 +23,12 @@ struct OnBoardingScene: View {
                 }
                 VStack{
                     CardOnboarding()
-                        .padding(.top, 250)
+                        .padding(.top, 100)
+
                     ButtonStartOnboarding()
-                        .padding(30)
+                        .padding(.top, 30)
                 }
+                .edgesIgnoringSafeArea(.all)
             }
             .edgesIgnoringSafeArea(.all)
         }

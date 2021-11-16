@@ -13,7 +13,6 @@ struct CardOnboarding: View {
             RoundedRectangle(cornerRadius: 8, style: .continuous)
                 .fill(Color.white)
                 .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
-            
             VStack(alignment: .leading, spacing: 30){
                 HStack{
                     Image(systemName: "doc.on.clipboard")
@@ -74,9 +73,12 @@ struct CardOnboarding: View {
                     }
                 }
             }
+            .padding(.top, 30)
+            .padding(.bottom, 30)
         }
-        .frame(width: 344, height: 420)
-        .fixedSize()
+        .frame(width: 345)
+        .fixedSize(horizontal: false, vertical: true)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
