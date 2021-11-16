@@ -15,6 +15,7 @@ struct YudistiraListViewSupport: View {
     @StateObject private var loadingState = ApiYudistira()
     @State var isCardTapped = false
  
+    
     var body: some View {
         VStack{
             Spacer()
@@ -29,14 +30,14 @@ struct YudistiraListViewSupport: View {
                 }
                 
                 VStack{
-                    Image("Notfound")
+                    Image(newsYudistira.selectedNews?.imgUrl ?? "kosong")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipShape(RoundedRectangle(cornerRadius: 6.0))
                         .background(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 6).fill(Color.gray))
                 
                     VStack(alignment: .leading){
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+                        Text(newsYudistira.selectedNews?.title ?? "title")
                             .fontWeight(.semibold)
                             .font(.system(size: 17))
                             .lineLimit(2)
@@ -66,7 +67,7 @@ struct YudistiraListViewSupport: View {
                 .onTapGesture {
                     isCardTapped = true
                 }.disabled(loadingState.isLoading)
-                NavigationLink(destination: TopListDetailView(), isActive: $isCardTapped) {}
+                NavigationLink(destination: TopListDetailView(relatedNews: newsYudistira.selectedNews), isActive: $isCardTapped) {}
                 
                 Spacer()
                 List(newsYudistira.finalNews){ newsItemsData in

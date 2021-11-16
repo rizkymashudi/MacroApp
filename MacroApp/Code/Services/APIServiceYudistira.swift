@@ -20,6 +20,8 @@ class ApiYudistira: ObservableObject {
     
     @Published var isLoading: Bool = false
     
+    @Published var selectedNews: NewsYudistira?
+    
     init() {
         
         isLoading = true
@@ -61,7 +63,12 @@ class ApiYudistira: ObservableObject {
                         DispatchQueue.main.async {
                             //tampung ke model yudistira var finalItems
                             self.finalNews.append(NewsYudistira(id: id ?? "-", authors: authors ?? "-", title: title ?? "-", content: content ?? "-", fact: fact ?? "-", references: resRef, imgUrl: imgUrl, date: date ?? "-", conclusion: conclusion ?? "-"))
+                            
+                            if self.finalNews.count > 0 {
+                                self.selectedNews = self.finalNews[0]
+                            }
                             self.isLoading = false
+                            print(self.finalNews)
                         }
                         
                     }

@@ -68,6 +68,7 @@ struct CopastView: View {
                         if pasteboard.hasStrings {
                             print("clipboard contain value")
                             guard let pasteText = pasteboard.string else {
+                                showingAlert = true
                                 return
                             }
 
@@ -78,13 +79,6 @@ struct CopastView: View {
                                 hideTapToPasteArea = true
                             }
 
-////                            yourText = pasteText
-////
-////                            if yourText == "" {
-////                                hideTapToPasteArea = false
-////                                showingAlert = true
-////                            }
-////                            hideTapToPasteArea = true
                         } else {
                             showingAlert = true
                             print("doesnt contain value")

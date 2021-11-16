@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct TopListDetailView: View {
+    
+    var relatedNews: NewsYudistira?
+    
     var body: some View {
         ZStack{
             ScrollView{
                 VStack{
-                    Image("Notfound")
+                    Image(relatedNews?.imgUrl ?? " ")
                         .resizable()
                         .frame(width: 390, height: 212)
                         .background(Color.secondary)
@@ -94,9 +97,9 @@ struct TopListDetailView: View {
         UIApplication.shared.windows.first?.rootViewController?.present(activeVc, animated: true, completion: nil)
     }
 }
-
-struct TopListDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        TopListDetailView()
-    }
-}
+//
+//struct TopListDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TopListDetailView(relatedNews: NewsYudistira())
+//    }
+//}
