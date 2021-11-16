@@ -75,7 +75,8 @@ struct CardOnboarding: View {
                 }
             }
         }
-        .frame(width: 350, height: 420, alignment: .center)
+        .frame(width: 344, height: 420)
+        .fixedSize()
     }
 }
 

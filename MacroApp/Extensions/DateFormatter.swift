@@ -24,7 +24,7 @@ class DateShortFormat {
         let dateString = dateFormatter.string(from: date)
 
         
-        return  dateFormatter.string(from: date)
+        return dateString
         
     }
     

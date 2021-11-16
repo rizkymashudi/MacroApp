@@ -36,7 +36,6 @@ struct GrowingButton: ButtonStyle {
 
 
 struct ButtonStartOnboarding: View {
-//    @Binding var shouldShowOnboarding: Bool
     @AppStorage("Onboard") var shouldShowOnboarding: Bool = true
     
     var body: some View {

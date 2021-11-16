@@ -37,25 +37,24 @@
       "size" : "40x40"
     },
     {
-      "filename" : "Group 4 Copy@2x.png",
+      "filename" : "iphone app 60pt@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "Group 4 Copy@3x.png",
+      "filename" : "iphone app 60pt@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "App Store icon 1024pt dup.png",
+      "filename" : "App Store icon 1024pt-1.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
     },
     {
-      "filename" : "iphone notification 24pt@2x.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -63,7 +62,6 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "iphone notification 55pt copy.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -71,21 +69,18 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "iphone notification 29pt@2x-2.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "iphone notification 43,5pt copy.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "iphone notification 33pt@2x.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -93,7 +88,6 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "iphone notification 40pt@2x-1.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -101,7 +95,6 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "iphone notification 44pt@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -109,7 +102,6 @@
       "subtype" : "40mm"
     },
     {
-      "filename" : "iphone notification 46pt@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -117,7 +109,6 @@
       "subtype" : "41mm"
     },
     {
-      "filename" : "iphone notification 50pt@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -125,7 +116,6 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "iphone notification 51pt@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -133,7 +123,6 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "iphone notification 86pt@2x.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -141,7 +130,6 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "iphone notification 98pt@2x.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -149,7 +137,6 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "iphone notification 108pt@2x.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -157,7 +144,6 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "iphone notification 117pt@2x.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -165,7 +151,6 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "watch 512pt@2x .png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

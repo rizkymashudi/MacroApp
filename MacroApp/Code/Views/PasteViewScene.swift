@@ -15,11 +15,13 @@ struct PasteViewScene: View {
     var body: some View {
             NavigationView{
                 ZStack{
-                    HeaderView()
+                    VStack{
+                        HeaderView()
+                        Spacer()
+                    }
                     VStack(alignment: .center, spacing: 10){
                         NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ }
                         .hidden()
-                        Spacer(minLength: 30)
                         VStack(alignment: .leading){
                             Text("Temukan hoax dengan cepat dan mudah")
                                 .font(.system(size: 28, weight: .medium))
@@ -30,11 +32,14 @@ struct PasteViewScene: View {
                                 .font(.system(size: 15, weight: .regular))
                                 .foregroundColor(.white)
                                 .frame(width: 350, alignment: .leading)
-                            Spacer()
+//                            Spacer()
                         }
                         .frame(width: 250, height: 140)
+                        .padding(.top, 40)
+                        .padding(.bottom, 10)
+        
                         CopastView(yourText: $yourText)
-                        Spacer(minLength: 20)
+                        Spacer()
                         
                         Button("Mulai Pencarian"){
                             print("button pressed")
@@ -43,9 +48,10 @@ struct PasteViewScene: View {
                         .buttonStyle(GrowingSearchButton())
                         .disabled(yourText.isEmpty)
                         .opacity(yourText.isEmpty ? 0.5 : 1)
-                            .position(x: 195, y: 50)
-                        Spacer(minLength: 90)
+//                            .position(x: 195, y: 50)
+                        Spacer()
                     }
+                    .ignoresSafeArea(.all)
                 }
                 .navigationBarHidden(true)
                 .onTapGesture {
