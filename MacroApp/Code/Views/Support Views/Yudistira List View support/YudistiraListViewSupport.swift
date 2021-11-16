@@ -30,7 +30,7 @@ struct YudistiraListViewSupport: View {
                 }
                 
                 VStack{
-                    Image(newsYudistira.selectedNews?.imgUrl ?? "kosong")
+                    Image(newsYudistira.selectedNews?.imgUrl ?? "Notfound")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipShape(RoundedRectangle(cornerRadius: 6.0))
