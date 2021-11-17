@@ -10,6 +10,7 @@ import SwiftUINavigationBarStyling
 
 
 struct YudistiraListView: View {
+    
     var body: some View {
         YudistiraListViewSupport()
             .navigationTitle("Hasil pencarian hoax")

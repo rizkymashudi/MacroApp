@@ -30,7 +30,7 @@ class ApiYudistira: ObservableObject {
         let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
         
         //declare body
-        let body : [String:Any] = ["key": acessKey, "method": "content", "value": "gatot", "limit" : 49]
+        let body : [String:Any] = ["key": acessKey, "method": "content", "value": "gatot", "limit" : 2]
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
         
         //request method post dengan alamofire
@@ -40,6 +40,7 @@ class ApiYudistira: ObservableObject {
                 guard let data = response.data else { return }
                 let news = try! JSONDecoder().decode([WelcomeElement].self, from: data)
                 print(news.count)
+                print(news)
                 
                 //di loop index dalam array news
                 for i in news {
