@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6D387B9127389AEE002F406A /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D387B9027389AEE002F406A /* ClearButton.swift */; };
+		6D4A3A4627446F5D00958B4E /* APIGoogleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */; };
+		6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */; };
+		6D4A3A4A2744AF1A00958B4E /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A492744AF1A00958B4E /* SearchResultModel.swift */; };
 		F53AE802273281FE009E9853 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE801273281FE009E9853 /* Color.swift */; };
 		F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE803273282A4009E9853 /* HeaderOnboarding.swift */; };
 		F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE805273282BB009E9853 /* CardOnboarding.swift */; };
@@ -54,6 +57,9 @@
 /* Begin PBXFileReference section */
 		61057E017D6A5E501E5DB495 /* Pods_MacroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D387B9027389AEE002F406A /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
+		6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGoogleModel.swift; sourceTree = "<group>"; };
+		6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceGoogle.swift; sourceTree = "<group>"; };
+		6D4A3A492744AF1A00958B4E /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroApp.release.xcconfig"; path = "Target Support Files/Pods-MacroApp/Pods-MacroApp.release.xcconfig"; sourceTree = "<group>"; };
 		F53AE801273281FE009E9853 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F53AE803273282A4009E9853 /* HeaderOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboarding.swift; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 			children = (
 				F5645BE82743E20200D5859E /* Dummy services */,
 				F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */,
+				6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -335,6 +342,8 @@
 			children = (
 				F5645BE72743E1E000D5859E /* Dummy models */,
 				F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */,
+				6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */,
+				6D4A3A492744AF1A00958B4E /* SearchResultModel.swift */,
 				F5B61CC427395C5000F1EF38 /* NewsYudistiraModel.swift */,
 			);
 			path = Models;
@@ -493,6 +502,7 @@
 				F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */,
 				F53AE82627339888009E9853 /* DummyListSupport.swift in Sources */,
 				F53AE81F2732ECEF009E9853 /* NewsAPIModel.swift in Sources */,
+				6D4A3A4627446F5D00958B4E /* APIGoogleModel.swift in Sources */,
 				F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */,
 				F53AE8212732EEEC009E9853 /* NewsApiService.swift in Sources */,
 				F5E504A3273D65050088FDE1 /* Theme.swift in Sources */,
@@ -507,8 +517,10 @@
 				F5645BC0274052A500D5859E /* TopListDetailView.swift in Sources */,
 				F5645BEC2743E67000D5859E /* NotfoundStateView.swift in Sources */,
 				F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */,
+				6D4A3A4A2744AF1A00958B4E /* SearchResultModel.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
 				F5E504A1273D3A850088FDE1 /* CustomTextEditor.swift in Sources */,
+				6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */,
 				F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */,
 				F53AE80F27328B0B009E9853 /* HeaderView.swift in Sources */,
 				F5645BEA2743E3A500D5859E /* OfflineStateView.swift in Sources */,

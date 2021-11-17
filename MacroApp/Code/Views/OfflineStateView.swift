@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OfflineStateView: View {
+    @ObservedObject var apiGoogle = ApiServiceGoogle()
+    
     var body: some View {
         VStack{
             Image(systemName: "wifi.exclamationmark")
