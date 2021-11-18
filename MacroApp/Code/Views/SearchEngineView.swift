@@ -1,27 +1,26 @@
 //
-//  YudistiraListView.swift
+//  SearchEngineView.swift
 //  MacroApp
 //
-//  Created by Rizky Mashudi on 08/11/21.
+//  Created by Tenti Atika Putri on 18/11/21.
 //
 
 import SwiftUI
 import SwiftUINavigationBarStyling
 
-
-struct YudistiraListView: View {
-
+struct SearchEngineView: View {
     var body: some View {
-        YudistiraListViewSupport()
-            .navigationTitle("Hasil pencarian hoax")
+        WebView(url: "https://www.google.com")
+            .navigationTitle("Hasil Pencarian")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
     }
 }
 
-struct YudistiraListView_Previews: PreviewProvider {
+struct SearchEngineView_Previews: PreviewProvider {
     static var previews: some View {
-        YudistiraListView()
+        SearchEngineView()
     }
 }
+
 
