@@ -10,7 +10,9 @@
 		6D387B9127389AEE002F406A /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D387B9027389AEE002F406A /* ClearButton.swift */; };
 		6D4A3A4627446F5D00958B4E /* APIGoogleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */; };
 		6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */; };
-		6D4A3A4A2744AF1A00958B4E /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A492744AF1A00958B4E /* SearchResultModel.swift */; };
+		6DF41AA12745C0AB00E2AD4B /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AA02745C0AB00E2AD4B /* SearchResultModel.swift */; };
+		6DF41AA72745C34B00E2AD4B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AA62745C34B00E2AD4B /* WebView.swift */; };
+		6DF41AAB2745CC4900E2AD4B /* SearchEngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */; };
 		F53AE802273281FE009E9853 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE801273281FE009E9853 /* Color.swift */; };
 		F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE803273282A4009E9853 /* HeaderOnboarding.swift */; };
 		F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE805273282BB009E9853 /* CardOnboarding.swift */; };
@@ -59,7 +61,9 @@
 		6D387B9027389AEE002F406A /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGoogleModel.swift; sourceTree = "<group>"; };
 		6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceGoogle.swift; sourceTree = "<group>"; };
-		6D4A3A492744AF1A00958B4E /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
+		6DF41AA02745C0AB00E2AD4B /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
+		6DF41AA62745C34B00E2AD4B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngineView.swift; sourceTree = "<group>"; };
 		BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroApp.release.xcconfig"; path = "Target Support Files/Pods-MacroApp/Pods-MacroApp.release.xcconfig"; sourceTree = "<group>"; };
 		F53AE801273281FE009E9853 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F53AE803273282A4009E9853 /* HeaderOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboarding.swift; sourceTree = "<group>"; };
@@ -125,6 +129,14 @@
 				BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6DF41AA52745C33C00E2AD4B /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				6DF41AA62745C34B00E2AD4B /* WebView.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		F53AE800273281E0009E9853 /* Onboarding support */ = {
@@ -333,6 +345,7 @@
 				F53AE80C27328AE7009E9853 /* PasteViewScene.swift */,
 				F5D54A3F272102DE00FF8DE7 /* MainView.swift */,
 				F53AE80927328364009E9853 /* OnBoardingScene.swift */,
+				6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,8 +356,8 @@
 				F5645BE72743E1E000D5859E /* Dummy models */,
 				F57ED64E272DBD960076DA18 /* APIYudistiraModel.swift */,
 				6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */,
-				6D4A3A492744AF1A00958B4E /* SearchResultModel.swift */,
 				F5B61CC427395C5000F1EF38 /* NewsYudistiraModel.swift */,
+				6DF41AA02745C0AB00E2AD4B /* SearchResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,6 +365,7 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
+				6DF41AA52745C33C00E2AD4B /* WebView */,
 				F5645BED2743E87E00D5859E /* Notfound State support */,
 				F5645BE62743E1BE00D5859E /* Dummy page */,
 				F53AE8142732D734009E9853 /* Dummy ListView Support */,
@@ -497,6 +511,7 @@
 				F53AE8182732DE3D009E9853 /* DummyApiService.swift in Sources */,
 				F53AE8242733971F009E9853 /* DummyListView.swift in Sources */,
 				F53AE8282733A85E009E9853 /* DetailViewSupport.swift in Sources */,
+				6DF41AAB2745CC4900E2AD4B /* SearchEngineView.swift in Sources */,
 				F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */,
 				F5645BBB27400F4B00D5859E /* LabelMafindo.swift in Sources */,
 				F593A68E272FAEF800B065AB /* ApiServiceYudistira.swift in Sources */,
@@ -509,6 +524,7 @@
 				F5645BEF2743E8B300D5859E /* SearchEngineButton.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
 				F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */,
+				6DF41AA72745C34B00E2AD4B /* WebView.swift in Sources */,
 				F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */,
 				F53AE80D27328AE7009E9853 /* PasteViewScene.swift in Sources */,
 				F53AE8162732D76E009E9853 /* SearchListView.swift in Sources */,
@@ -517,7 +533,7 @@
 				F5645BC0274052A500D5859E /* TopListDetailView.swift in Sources */,
 				F5645BEC2743E67000D5859E /* NotfoundStateView.swift in Sources */,
 				F53AE80A27328364009E9853 /* OnBoardingScene.swift in Sources */,
-				6D4A3A4A2744AF1A00958B4E /* SearchResultModel.swift in Sources */,
+				6DF41AA12745C0AB00E2AD4B /* SearchResultModel.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
 				F5E504A1273D3A850088FDE1 /* CustomTextEditor.swift in Sources */,
 				6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */,
@@ -659,7 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
@@ -694,7 +710,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
