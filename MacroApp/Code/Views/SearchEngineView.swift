@@ -10,7 +10,7 @@ import SwiftUINavigationBarStyling
 
 struct SearchEngineView: View {
     var body: some View {
-        WebView(url: "https://www.google.com")
+        WebView(url: "https://www.google.com/search?q=gatot+subroto+kanker")
             .navigationTitle("Hasil Pencarian")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
