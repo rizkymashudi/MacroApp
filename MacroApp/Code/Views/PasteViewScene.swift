@@ -20,7 +20,7 @@ struct PasteViewScene: View {
                         Spacer()
                     }
                     VStack(alignment: .center, spacing: 10){
-                        NavigationLink(destination: SearchEngineView(), isActive: $isShowingDetailView){ }
+                        NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ }
                         .hidden()
                         VStack(alignment: .leading){
                             Text("Temukan hoax dengan cepat dan mudah")
