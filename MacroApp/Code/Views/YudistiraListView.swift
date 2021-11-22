@@ -13,7 +13,7 @@ struct YudistiraListView: View {
     
     @ObservedObject var newsYudistira = ApiYudistira()
     @State var isNotfoundStateHidden = true
-    
+
     var body: some View {
         Group{
             if newsYudistira.finalNews.isEmpty {
