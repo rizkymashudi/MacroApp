@@ -10,7 +10,7 @@ import Combine
 import Alamofire
 
 class ApiServiceGoogle: ObservableObject {
-    @Published var googleSearchResult: [googleAPIModel] = []
+//    @Published var googleSearchResult: [googleAPIModel] = []
 
     @Published var loading = false
 
@@ -20,30 +20,30 @@ class ApiServiceGoogle: ObservableObject {
 
     init() {
         loading = true
-        loadDataGoogle()
+//        loadDataGoogle()
     }
 
-    func loadDataGoogle() {
-        AF.request(link)
-            .responseJSON { response in
-                switch response.result {
-                case .success:
-                    guard let data = response.data else { return }
-                    let googleData = try! JSONDecoder().decode(googleAPIModel.self, from: data)
-                    print(googleData)
-
-//                    for i in googleData {
-//                        let position = i.po
-//                    }
-//                    DispatchQueue.main.async {
-//                        self.googleSearchResult.append(contentsOf: googleAPIModel(position: <#T##Int#>, title: <#T##String#>, link: <#T##String#>, displayedLink: <#T##String#>, snippet: <#T##String#>, cachedPageLink: <#T##String#>, date: <#T##String?#>))
-//                        self.loading = false
-//                    }
-                case .failure:
-                    print("Error Connect to Server")
-                }
-        }
-    }
+//    func loadDataGoogle() {
+//        AF.request(link)
+//            .responseJSON { response in
+//                switch response.result {
+//                case .success:
+//                    guard let data = response.data else { return }
+//                    let googleData = try! JSONDecoder().decode(googleAPIModel.self, from: data)
+//                    print(googleData)
+//
+////                    for i in googleData {
+////                        let position = i.po
+////                    }
+////                    DispatchQueue.main.async {
+////                        self.googleSearchResult.append(contentsOf: googleAPIModel(position: <#T##Int#>, title: <#T##String#>, link: <#T##String#>, displayedLink: <#T##String#>, snippet: <#T##String#>, cachedPageLink: <#T##String#>, date: <#T##String?#>))
+////                        self.loading = false
+////                    }
+//                case .failure:
+//                    print("Error Connect to Server")
+//                }
+//        }
+//    }
 
 
 }
