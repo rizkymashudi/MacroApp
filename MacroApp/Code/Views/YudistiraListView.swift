@@ -10,17 +10,18 @@ import SwiftUINavigationBarStyling
 
 
 struct YudistiraListView: View {
+    @Binding var yourText: String
     var body: some View {
-        YudistiraListViewSupport()
+        YudistiraListViewSupport(yourText: $yourText)
             .navigationTitle("Hasil pencarian hoax")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
     }
 }
 
-struct YudistiraListView_Previews: PreviewProvider {
-    static var previews: some View {
-        YudistiraListView()
-    }
-}
+//struct YudistiraListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        YudistiraListView(yourText: $yourText)
+//    }
+//}
 

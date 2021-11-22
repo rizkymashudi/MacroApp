@@ -10,11 +10,10 @@ import SDWebImageSwiftUI
 import Shimmer
 
 struct YudistiraListViewSupport: View {
-    
+    @Binding var yourText: String
     @ObservedObject var newsYudistira = ApiYudistira()
     @StateObject private var loadingState = ApiYudistira()
     @State var isCardTapped = false
- 
     
     var body: some View {
         VStack{
@@ -133,10 +132,10 @@ struct YudistiraListViewSupport: View {
     }
 }
 
-struct YudistiraListViewSupport_Previews: PreviewProvider {
-    static var previews: some View {
-        YudistiraListViewSupport()
-    }
-}
+//struct YudistiraListViewSupport_Previews: PreviewProvider {
+//    static var previews: some View {
+//        YudistiraListViewSupport()
+//    }
+//}
 
 

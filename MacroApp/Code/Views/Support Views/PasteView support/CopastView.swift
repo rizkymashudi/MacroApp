@@ -13,6 +13,7 @@ struct CopastView: View {
     @Binding var yourText: String
     @State private var showingAlert = false
     @State var hideTapToPasteArea = false
+    @Binding var rawTexts : String
 
     var body: some View {
         VStack{
@@ -76,6 +77,7 @@ struct CopastView: View {
                                 showingAlert = true
                             } else {
                                 yourText = pasteText
+                                rawTexts = pasteText
                                 hideTapToPasteArea = true
                             }
 

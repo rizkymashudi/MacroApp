@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42E07ED42747EB3F0011C60C /* ApiServiceBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E07ED32747EB3F0011C60C /* ApiServiceBackend.swift */; };
 		6D387B9127389AEE002F406A /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D387B9027389AEE002F406A /* ClearButton.swift */; };
 		F53AE802273281FE009E9853 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE801273281FE009E9853 /* Color.swift */; };
 		F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE803273282A4009E9853 /* HeaderOnboarding.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42E07ED32747EB3F0011C60C /* ApiServiceBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceBackend.swift; sourceTree = "<group>"; };
 		61057E017D6A5E501E5DB495 /* Pods_MacroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D387B9027389AEE002F406A /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroApp.release.xcconfig"; path = "Target Support Files/Pods-MacroApp/Pods-MacroApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */,
 				F53AE8172732DE3D009E9853 /* DummyApiService.swift */,
 				F53AE8202732EEEC009E9853 /* NewsApiService.swift */,
+				42E07ED32747EB3F0011C60C /* ApiServiceBackend.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				F5E504A3273D65050088FDE1 /* Theme.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
 				F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */,
+				42E07ED42747EB3F0011C60C /* ApiServiceBackend.swift in Sources */,
 				F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */,
 				F53AE80D27328AE7009E9853 /* PasteViewScene.swift in Sources */,
 				F53AE8162732D76E009E9853 /* SearchListView.swift in Sources */,
@@ -603,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = UPHGSM79H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
@@ -638,7 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = UPHGSM79H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
