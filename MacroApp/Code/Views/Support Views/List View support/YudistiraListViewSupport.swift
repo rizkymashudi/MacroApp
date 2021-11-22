@@ -11,8 +11,7 @@ import Shimmer
 
 struct YudistiraListViewSupport: View {
     
-    @ObservedObject var newsYudistira = ApiYudistira()
-    @StateObject private var loadingState = ApiYudistira()
+    @ObservedObject var newsYudistira : ApiYudistira
     @State var isCardTapped = false
  
     let imageNotFound = "https://dummyimage.com/358x172/d1d1d1/757575.png&text=Image+not+found"
@@ -28,8 +27,8 @@ struct YudistiraListViewSupport: View {
                         .frame(width: 350, alignment: .leading)
                         .lineLimit(6)
                 }
-                .redacted(reason: loadingState.isLoading ? .placeholder : [])
-                .shimmering(active: loadingState.isLoading)
+                .redacted(reason: newsYudistira.isLoading ? .placeholder : [])
+                .shimmering(active: newsYudistira.isLoading)
                 
                 VStack{
                     if newsYudistira.selectedNews?.imgUrl != "" {
@@ -72,13 +71,13 @@ struct YudistiraListViewSupport: View {
                     }
                 }
                 .frame(width: 358)
-                .redacted(reason: loadingState.isLoading ? .placeholder : [])
-                .shimmering(active: loadingState.isLoading)
-                .foregroundColor(loadingState.isLoading ? .blue : .black)
+                .redacted(reason: newsYudistira.isLoading ? .placeholder : [])
+                .shimmering(active: newsYudistira.isLoading)
+                .foregroundColor(newsYudistira.isLoading ? .blue : .black)
                 .background(RoundedRectangle(cornerRadius: 6.0).fill(.white))
                 .onTapGesture {
                     isCardTapped = true
-                }.disabled(loadingState.isLoading)
+                }.disabled(newsYudistira.isLoading)
                 NavigationLink(destination: TopListDetailView(relatedNews: newsYudistira.selectedNews), isActive: $isCardTapped) {}
                 
                 Spacer()
@@ -127,11 +126,11 @@ struct YudistiraListViewSupport: View {
                             }
 
                         }
-                        .redacted(reason: loadingState.isLoading ? .placeholder : [])
-                        .shimmering(active: loadingState.isLoading)
-                        .foregroundColor(loadingState.isLoading ? .blue : .black)
+                        .redacted(reason: newsYudistira.isLoading ? .placeholder : [])
+                        .shimmering(active: newsYudistira.isLoading)
+                        .foregroundColor(newsYudistira.isLoading ? .blue : .black)
                     }
-                    .disabled(loadingState.isLoading)
+                    .disabled(newsYudistira.isLoading)
                     .listRowBackground(colorPallete.bgListview)
                 }
                 .listStyle(PlainListStyle())
@@ -147,7 +146,7 @@ struct YudistiraListViewSupport: View {
 
 struct YudistiraListViewSupport_Previews: PreviewProvider {
     static var previews: some View {
-        YudistiraListViewSupport()
+        YudistiraListViewSupport(newsYudistira: ApiYudistira())
     }
 }
 

@@ -33,7 +33,7 @@ class ApiYudistira: ObservableObject {
         })
     }
     
-    
+
     func fetch(completion: @escaping (Bool) -> Void) {
         
         isLoading = true
@@ -42,11 +42,8 @@ class ApiYudistira: ObservableObject {
         
         let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
         let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
-        
-        //declare body
         let body : [String:Any] = ["key": acessKey, "method": "content", "value": "gatot", "limit" : 49]
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
-        
         
         guard let url = URL(string: baseUrl) else {
             print("Cannot create url")
@@ -54,14 +51,19 @@ class ApiYudistira: ObservableObject {
             return
         }
         
-        
         //request method post dengan alamofire
         AF.request(url, method: .post, parameters: body, headers: headers).responseJSON(completionHandler:  { response in
             switch response.result {
             case .success:
                 guard let data = response.data else { return }
                 let news = try! JSONDecoder().decode([WelcomeElement].self, from: data)
+                
                 print(news.count)
+                
+                if news.isEmpty {
+                    self.isLoading = false
+                    completion(true)
+                }
                 
                 //di loop index dalam array news
                 for i in news {
@@ -101,6 +103,7 @@ class ApiYudistira: ObservableObject {
                 group.notify(queue: .main) {
                         print("Finished all requests.")
                 }
+                
             case .failure:
                 print("Error Connect to Server")
                 completion(false)
@@ -124,6 +127,7 @@ class ApiYudistira: ObservableObject {
         currentIndex += 1
         }
     }
+    
 }
 
 

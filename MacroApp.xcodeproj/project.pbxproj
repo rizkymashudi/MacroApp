@@ -10,11 +10,9 @@
 		6D387B9127389AEE002F406A /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D387B9027389AEE002F406A /* ClearButton.swift */; };
 		6D4A3A4627446F5D00958B4E /* APIGoogleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */; };
 		6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */; };
-
 		6DF41AA12745C0AB00E2AD4B /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AA02745C0AB00E2AD4B /* SearchResultModel.swift */; };
 		6DF41AA72745C34B00E2AD4B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AA62745C34B00E2AD4B /* WebView.swift */; };
 		6DF41AAB2745CC4900E2AD4B /* SearchEngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */; };
-
 		F53AE802273281FE009E9853 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE801273281FE009E9853 /* Color.swift */; };
 		F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE803273282A4009E9853 /* HeaderOnboarding.swift */; };
 		F53AE806273282BB009E9853 /* CardOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AE805273282BB009E9853 /* CardOnboarding.swift */; };
@@ -64,11 +62,9 @@
 		6D387B9027389AEE002F406A /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGoogleModel.swift; sourceTree = "<group>"; };
 		6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceGoogle.swift; sourceTree = "<group>"; };
-
 		6DF41AA02745C0AB00E2AD4B /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		6DF41AA62745C34B00E2AD4B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngineView.swift; sourceTree = "<group>"; };
-
 		BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroApp.release.xcconfig"; path = "Target Support Files/Pods-MacroApp/Pods-MacroApp.release.xcconfig"; sourceTree = "<group>"; };
 		F53AE801273281FE009E9853 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F53AE803273282A4009E9853 /* HeaderOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboarding.swift; sourceTree = "<group>"; };
@@ -683,7 +679,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = JFAH6YB752;
+				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
@@ -718,7 +714,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = JFAH6YB752;
+				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;

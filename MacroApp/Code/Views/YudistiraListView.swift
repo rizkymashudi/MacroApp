@@ -7,37 +7,35 @@
 
 import SwiftUI
 import SwiftUINavigationBarStyling
+import Shimmer
 
 
 struct YudistiraListView: View {
     
-    @ObservedObject var newsYudistira = ApiYudistira()
+    @StateObject var newsYudistira = ApiYudistira()
     @State var isNotfoundStateHidden = true
 
     var body: some View {
+        
         Group{
-            if newsYudistira.finalNews.isEmpty {
-                if isNotfoundStateHidden {
+            if newsYudistira.isLoading{
+                YudistiraListViewSupport(newsYudistira: newsYudistira)
+                    .navigationTitle("Hasil pencarian hoax")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
+                    
+            }else{
+                if newsYudistira.finalNews.isEmpty {
                     NotfoundStateView()
-                        .hidden()
                         .navigationTitle("Hasil pencarian hoax")
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
                 } else {
-                    NotfoundStateView()
+                    YudistiraListViewSupport(newsYudistira: newsYudistira)
                         .navigationTitle("Hasil pencarian hoax")
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
                 }
-            } else {
-                YudistiraListViewSupport()
-                    .navigationTitle("Hasil pencarian hoax")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
-            }
-        }.onAppear{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                isNotfoundStateHidden = false
             }
         }
     }
