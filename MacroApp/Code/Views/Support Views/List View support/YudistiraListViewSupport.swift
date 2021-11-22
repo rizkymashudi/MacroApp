@@ -27,8 +27,9 @@ struct YudistiraListViewSupport: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(width: 350, alignment: .leading)
                         .lineLimit(6)
-//                        .padding(.top, 0.5)
                 }
+                .redacted(reason: loadingState.isLoading ? .placeholder : [])
+                .shimmering(active: loadingState.isLoading)
                 
                 VStack{
                     if newsYudistira.selectedNews?.imgUrl != "" {
