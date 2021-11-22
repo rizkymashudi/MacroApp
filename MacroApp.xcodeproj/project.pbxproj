@@ -10,6 +10,7 @@
 		6D387B9127389AEE002F406A /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D387B9027389AEE002F406A /* ClearButton.swift */; };
 		6D4A3A4627446F5D00958B4E /* APIGoogleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */; };
 		6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */; };
+		6DE54EDC274C59330034C23F /* WebViewStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE54EDB274C59330034C23F /* WebViewStateModel.swift */; };
 		6DF41AA12745C0AB00E2AD4B /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AA02745C0AB00E2AD4B /* SearchResultModel.swift */; };
 		6DF41AA72745C34B00E2AD4B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AA62745C34B00E2AD4B /* WebView.swift */; };
 		6DF41AAB2745CC4900E2AD4B /* SearchEngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */; };
@@ -62,6 +63,7 @@
 		6D387B9027389AEE002F406A /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGoogleModel.swift; sourceTree = "<group>"; };
 		6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceGoogle.swift; sourceTree = "<group>"; };
+		6DE54EDB274C59330034C23F /* WebViewStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewStateModel.swift; sourceTree = "<group>"; };
 		6DF41AA02745C0AB00E2AD4B /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		6DF41AA62745C34B00E2AD4B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngineView.swift; sourceTree = "<group>"; };
@@ -133,12 +135,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		6DF41AA52745C33C00E2AD4B /* WebView */ = {
+		6DF41AA52745C33C00E2AD4B /* WebView Support */ = {
 			isa = PBXGroup;
 			children = (
 				6DF41AA62745C34B00E2AD4B /* WebView.swift */,
+				6DE54EDB274C59330034C23F /* WebViewStateModel.swift */,
 			);
-			path = WebView;
+			path = "WebView Support";
 			sourceTree = "<group>";
 		};
 		F53AE800273281E0009E9853 /* Onboarding support */ = {
@@ -368,7 +371,7 @@
 		F5D54A582721054700FF8DE7 /* Support Views */ = {
 			isa = PBXGroup;
 			children = (
-				6DF41AA52745C33C00E2AD4B /* WebView */,
+				6DF41AA52745C33C00E2AD4B /* WebView Support */,
 				F5645BED2743E87E00D5859E /* Notfound State support */,
 				F5645BE62743E1BE00D5859E /* Dummy page */,
 				F53AE8142732D734009E9853 /* Dummy ListView Support */,
@@ -513,6 +516,7 @@
 				F5645BC3274077E400D5859E /* LaunchScreen.swift in Sources */,
 				F53AE8182732DE3D009E9853 /* DummyApiService.swift in Sources */,
 				F53AE8242733971F009E9853 /* DummyListView.swift in Sources */,
+				6DE54EDC274C59330034C23F /* WebViewStateModel.swift in Sources */,
 				F53AE8282733A85E009E9853 /* DetailViewSupport.swift in Sources */,
 				6DF41AAB2745CC4900E2AD4B /* SearchEngineView.swift in Sources */,
 				F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */,
@@ -679,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
@@ -714,7 +718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 72B4ASD893;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
