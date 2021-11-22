@@ -9,8 +9,10 @@ import SwiftUI
 import SwiftUINavigationBarStyling
 
 struct SearchEngineView: View {
+    @ObservedObject var webViewStateModel: WebViewStateModel = WebViewStateModel()
+
     var body: some View {
-        WebView(url: "https://www.kominfo.go.id/content/detail/20086/hoaks-broadcast-pengobatan-gratis-kanker-tanpa-operasi-dan-kemo-rspad/0/laporan_isu_hoaks")
+        WebView(webViewStateModel: webViewStateModel)
             .navigationTitle("Hasil Pencarian")
             .toolbar{
                 Button(action: {
@@ -26,6 +28,7 @@ struct SearchEngineView: View {
                 ToolbarItem(placement: ToolbarItemPlacement.bottomBar){
                     HStack {
                         Button(action: {
+                            webViewStateModel.goBack = true
                             print("Go Back")
                         }, label: {
                             Image(systemName: "chevron.left")
@@ -34,6 +37,7 @@ struct SearchEngineView: View {
                         Spacer()
 
                         Button(action: {
+                            webViewStateModel.goForward = true
                             print("Go Forward")
                         }, label: {
                             Image(systemName: "chevron.right")
