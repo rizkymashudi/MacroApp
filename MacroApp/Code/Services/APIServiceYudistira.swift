@@ -17,7 +17,7 @@ class ApiYudistira: ObservableObject {
     
     //untuk tampung data setelah di looping
     @Published var finalNews = [NewsYudistira]()
-    
+   
     @Published var isLoading: Bool = false
     
     @Published var selectedNews: NewsYudistira?
@@ -45,7 +45,7 @@ class ApiYudistira: ObservableObject {
         let body : [String:Any] = ["key": acessKey, "method": "content", "value": "gatot", "limit" : 49]
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
         
-        guard let url = URL(string: baseUrl) else {
+        guard let url = URL(string: baseUrl) else { 
             print("Cannot create url")
             completion(false)
             return

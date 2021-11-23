@@ -14,7 +14,6 @@ struct YudistiraListView: View {
     
     @StateObject var newsYudistira = ApiYudistira()
     @State var isNotfoundStateHidden = true
-
     var body: some View {
         
         Group{

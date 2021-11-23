@@ -11,6 +11,7 @@ struct PasteViewScene: View {
 
     @State var yourText = ""
     @State var isShowingDetailView = false
+    @StateObject var apiBackend = ApiBackend ()
   
     var body: some View {
             NavigationView{
@@ -41,14 +42,15 @@ struct PasteViewScene: View {
                         CopastView(yourText: $yourText)
                         Spacer()
                         
-                        Button("Mulai Pencarian"){
-                            print("button pressed")
+                        Button(action: {
                             isShowingDetailView = true
+                            apiBackend.passRawText(copasTeks: yourText)
+                        }){
+                            Text("Mulai Pencarian")
                         }
                         .buttonStyle(GrowingSearchButton())
                         .disabled(yourText.isEmpty)
                         .opacity(yourText.isEmpty ? 0.5 : 1)
-//                            .position(x: 195, y: 50)
                         Spacer()
                     }
                     .ignoresSafeArea(.all)
@@ -63,11 +65,11 @@ struct PasteViewScene: View {
     
 }
 
-struct PasteViewScene_Previews: PreviewProvider {
-    static var previews: some View {
-        PasteViewScene()
-    }
-}
+//struct PasteViewScene_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PasteViewScene()
+//    }
+//}
 
 #if canImport(UIKit)
 extension View {
