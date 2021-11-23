@@ -12,4 +12,5 @@ class WebViewStateModel: ObservableObject {
     @Published var goToPage: Bool = false
     @Published var goBack: Bool = false
     @Published var goForward: Bool = false
+    @Published var reload: Bool = false
 }

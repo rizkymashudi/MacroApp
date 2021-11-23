@@ -16,7 +16,8 @@ struct SearchEngineView: View {
             .navigationTitle("Hasil Pencarian")
             .toolbar{
                 Button(action: {
-                    print("share tapped")
+                    webViewStateModel.reload = true
+                    print("reload tapped")
                 }) {
                     Image(systemName: "arrow.clockwise").imageScale(.large)
                         .foregroundColor(.white)
