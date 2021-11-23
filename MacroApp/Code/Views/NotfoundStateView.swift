@@ -11,6 +11,8 @@ import Shimmer
 struct NotfoundStateView: View {
     @State var showingAlert: Bool = false
     @State var isLoading = false
+    @State var isShowingSearchEngineView = false
+
     
     var body: some View {
         VStack{
@@ -114,6 +116,8 @@ struct NotfoundStateView: View {
                         .multilineTextAlignment(.center)
                 }
                 .padding(.bottom, 100)
+                NavigationLink(destination: SearchEngineView(), isActive: $isShowingSearchEngineView){ }
+                .hidden()
                 Button(action: {
                     print("alert")
                     showingAlert = true
@@ -127,6 +131,7 @@ struct NotfoundStateView: View {
                         message: Text("apakah anda ingin  melanjutkan pencarian melalui search engine?"),
                         primaryButton: .default(Text("Ya")) {
                                            print("Move to web view")
+                                           isShowingSearchEngineView = true
                                        },
                         secondaryButton: .cancel(Text("Nanti saja")) {
                             print("Cancel")
