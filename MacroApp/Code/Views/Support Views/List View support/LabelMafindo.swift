@@ -18,7 +18,7 @@ struct LabelMafindo: View {
             Text("adalah lembaga nirlaba anti hoax").fontWeight(.regular).font(.system(size: 12))
                 .padding(.trailing, 15)
             Button(action: {
-                print("share tapped")
+                print("close label tapped")
                 hideLabel.toggle()
             }) {
                 Image(systemName: "xmark.circle").imageScale(.large)
