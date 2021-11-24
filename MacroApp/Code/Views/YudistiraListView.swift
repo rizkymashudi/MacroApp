@@ -13,6 +13,7 @@ import Shimmer
 struct YudistiraListView: View {
     
     @StateObject var newsYudistira = ApiYudistira()
+    @StateObject var apiServiceGoogle = ApiServiceGoogle()
     @State var isNotfoundStateHidden = true
 
     var body: some View {
@@ -37,6 +38,8 @@ struct YudistiraListView: View {
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
                 }
             }
+        }.onAppear{
+            apiServiceGoogle.fetchGoogle()
         }
     }
 }

@@ -42,7 +42,7 @@ class ApiYudistira: ObservableObject {
         
         let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
         let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
-        let body : [String:Any] = ["key": acessKey, "method": "content", "value": "gatot", "limit" : 49]
+        let body : [String:Any] = ["key": acessKey, "method": "content", "value": "ffgatot", "limit" : 49]
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
         
         guard let url = URL(string: baseUrl) else {
@@ -57,6 +57,8 @@ class ApiYudistira: ObservableObject {
             case .success:
                 guard let data = response.data else { return }
                 let news = try! JSONDecoder().decode([WelcomeElement].self, from: data)
+                
+//                print(news)
                 
                 print(news.count)
                 
