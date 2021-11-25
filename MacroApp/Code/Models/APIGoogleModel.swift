@@ -19,50 +19,51 @@ struct tagsDeveloper: Codable {
     let searchMetadata: tagsSearchMetadata
     let searchParameters: tagsSearchParameters
     let searchInformation: tagsSearchInformation
-//    let inlineImages: [tagsInlineImage]
-//    let organicResults: [tagsOrganicResult]
-//    let relatedSearches: [tagsRelatedSearch]
+    let inlineImages: [tagsInlineImage]
+    let organicResults: [tagsOrganicResult]
+    let relatedSearches: [tagsRelatedSearch]
     let pagination, serpapiPagination: tagsPagination
 
     enum CodingKeys: String, CodingKey {
         case searchMetadata = "search_metadata"
         case searchParameters = "search_parameters"
         case searchInformation = "search_information"
-//        case inlineImages = "inline_images"
-//        case organicResults = "organic_results"
-//        case relatedSearches = "related_searches"
+        case inlineImages = "inline_images"
+        case organicResults = "organic_results"
+        case relatedSearches = "related_searches"
         case pagination
         case serpapiPagination = "serpapi_pagination"
     }
 }
 
-//// MARK: - tagsInlineImage
-//struct tagsInlineImage: Codable {
-//    let link: String
-//    let thumbnail: String
-//}
-//
-//// MARK: - tagsOrganicResult
-//struct tagsOrganicResult: Codable {
-//    let position: Int
-//    let title: String
-//    let link, displayedLink: String
-//    let snippet: String
-//    let aboutThisResult: tagsOrganicResultAboutThisResult
-//    let cachedPageLink: String
-//    let relatedResults: [tagsRelatedResult]?
-//    let date: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case position, title, link
-//        case displayedLink = "displayed_link"
-//        case snippet
-//        case aboutThisResult = "about_this_result"
-//        case cachedPageLink = "cached_page_link"
-//        case relatedResults = "related_results"
-//        case date
-//    }
-//}
+// MARK: - tagsInlineImage
+struct tagsInlineImage: Codable {
+    let link: String
+    let thumbnail: String
+}
+
+
+// MARK: - tagsOrganicResult
+struct tagsOrganicResult: Codable {
+    let position: Int
+    let title: String
+    let link, displayedLink: String
+    let snippet: String
+    let aboutThisResult: tagsOrganicResultAboutThisResult
+    let cachedPageLink: String
+    let relatedResults: [tagsRelatedResult]?
+    let date: String?
+
+    enum CodingKeys: String, CodingKey {
+        case position, title, link
+        case displayedLink = "displayed_link"
+        case snippet
+        case aboutThisResult = "about_this_result"
+        case cachedPageLink = "cached_page_link"
+        case relatedResults = "related_results"
+        case date
+    }
+}
 
 // MARK: - tagsOrganicResultAboutThisResult
 struct tagsOrganicResultAboutThisResult: Codable {
@@ -98,25 +99,25 @@ struct tagsSource: Codable {
     }
 }
 
-//// MARK: - tagsRelatedResult
-//struct tagsRelatedResult: Codable {
-//    let position: Int
-//    let title: String
-//    let link, displayedLink: String
-//    let snippet: String
-//    let aboutThisResult: tagsRelatedResultAboutThisResult
-//    let cachedPageLink: String
-//    let date: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case position, title, link
-//        case displayedLink = "displayed_link"
-//        case snippet
-//        case aboutThisResult = "about_this_result"
-//        case cachedPageLink = "cached_page_link"
-//        case date
-//    }
-//}
+// MARK: - tagsRelatedResult
+struct tagsRelatedResult: Codable {
+    let position: Int
+    let title: String
+    let link, displayedLink: String
+    let snippet: String
+    let aboutThisResult: tagsRelatedResultAboutThisResult
+    let cachedPageLink: String
+    let date: String?
+
+    enum CodingKeys: String, CodingKey {
+        case position, title, link
+        case displayedLink = "displayed_link"
+        case snippet
+        case aboutThisResult = "about_this_result"
+        case cachedPageLink = "cached_page_link"
+        case date
+    }
+}
 
 // MARK: - tagsRelatedResultAboutThisResult
 struct tagsRelatedResultAboutThisResult: Codable {
