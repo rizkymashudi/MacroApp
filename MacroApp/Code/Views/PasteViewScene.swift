@@ -11,7 +11,8 @@ struct PasteViewScene: View {
 
     @State var yourText = ""
     @State var isShowingDetailView = false
-    @StateObject var apiBackend = ApiBackend ()
+    @StateObject var apiBackend = ApiBackend()
+    @ObservedObject var apiYudistira = ApiYudistira()
   
     var body: some View {
             NavigationView{
@@ -21,7 +22,7 @@ struct PasteViewScene: View {
                         Spacer()
                     }
                     VStack(alignment: .center, spacing: 10){
-                        NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ }
+                        NavigationLink(destination: YudistiraListView(text: yourText), isActive: $isShowingDetailView){ }
                         .hidden()
                         VStack(alignment: .leading){
                             Text("Temukan hoax dengan cepat dan mudah")
@@ -44,7 +45,6 @@ struct PasteViewScene: View {
                         
                         Button(action: {
                             isShowingDetailView = true
-                            apiBackend.passRawText(copasTeks: yourText)
                         }){
                             Text("Mulai Pencarian")
                         }

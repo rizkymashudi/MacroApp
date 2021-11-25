@@ -22,28 +22,35 @@ class ApiYudistira: ObservableObject {
     
     @Published var selectedNews: NewsYudistira?
     
+   
+    
     
     init() {
-        fetch(completion: { (success) -> Void in
-            if success {
-                print("fetch completed")
-            }else{
-                print("fetch error")
-            }
-        })
+//        fetch(completion: { (success) -> Void in
+//            if success {
+//                print("fetch completed")
+//            }else{
+//                print("fetch error")
+//            }
+//        })
     }
     
 
-    func fetch(completion: @escaping (Bool) -> Void) {
-        
+    func fetch(userRawText: String, completion: @escaping (Bool) -> Void) {
+        print("Text: ", userRawText)
         isLoading = true
         
         let group = DispatchGroup()
         
-        let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
-        let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
-        let body : [String:Any] = ["key": acessKey, "method": "content", "value": "gatot", "limit" : 49]
+//        let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
+//        let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
+//        let body : [String:Any] = ["key": acessKey, "method": "content", "value": "Gatot", "limit" : 49]
+//        let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
+        
+        let baseUrl : String = "https://keywordsproject.herokuapp.com/api/keyword/"
+        let body : [String:Any] = ["text": userRawText]
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
+    
         
         guard let url = URL(string: baseUrl) else { 
             print("Cannot create url")
@@ -58,9 +65,8 @@ class ApiYudistira: ObservableObject {
                 guard let data = response.data else { return }
                 let news = try! JSONDecoder().decode([WelcomeElement].self, from: data)
                 
-                print(news.count)
-                
                 if news.isEmpty {
+                    print("Empty")
                     self.isLoading = false
                     completion(true)
                 }
@@ -102,6 +108,7 @@ class ApiYudistira: ObservableObject {
                 
                 group.notify(queue: .main) {
                         print("Finished all requests.")
+                    print("Final News: \(self.finalNews.count)")
                 }
                 
             case .failure:
