@@ -20,7 +20,7 @@ struct CopastView: View {
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .fill(Color.white)
 //                    .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
-                    .background(RoundedRectangle(cornerRadius: 8.0).stroke(colorPallete.primary, lineWidth: 4.0))
+                    .background(RoundedRectangle(cornerRadius: 8.0).stroke(colorPallete.symbol, lineWidth: 4.0))
                 
                 ScrollView(.vertical, showsIndicators: false){
                     VStack{
@@ -52,9 +52,14 @@ struct CopastView: View {
                     VStack(alignment: .center, spacing: 10){
                         if yourText.isEmpty {
                             VStack{
-                                Image(systemName: "hand.tap")
-                                    .foregroundColor(colorPallete.symbol)
-                                    .font(.system(size: 75))
+                                ZStack{
+                                    Image(systemName: "hand.tap")
+                                        .foregroundColor(colorPallete.symbol)
+                                        .font(.system(size: 75))
+                                    Image("BgTapIcon")
+                                        .resizable()
+                                        .frame(width: 200, height: 200)
+                                }
                                 Text(placeHolderString)
                                     .multilineTextAlignment(.center)
                                     .font(.system(size: 17))

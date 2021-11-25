@@ -13,8 +13,8 @@ struct buttonStart: ButtonStyle {
         configuration.label
             .padding()
             .font(.system(size: 17, weight: .medium))
-            .background(colorPallete.button)
-            .foregroundColor(.black)
+            .background(colorPallete.symbol)
+            .foregroundColor(colorPallete.button)
             .cornerRadius(6)
             .frame(width: 344, height: 56)
     }
@@ -26,8 +26,8 @@ struct GrowingButton: ButtonStyle {
             .padding()
             .font(.system(size: 17, weight: .medium))
             .frame(width: 344, height: 56)
-            .background(colorPallete.button)
-            .foregroundColor(.black)
+            .background(colorPallete.symbol)
+            .foregroundColor(colorPallete.button)
             .cornerRadius(6)
             .scaleEffect(configuration.isPressed ? 1.1 : 1)
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)

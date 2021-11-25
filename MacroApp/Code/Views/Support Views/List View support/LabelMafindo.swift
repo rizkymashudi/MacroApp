@@ -12,7 +12,7 @@ struct LabelMafindo: View {
     
     var body: some View {
         HStack(spacing: 4){
-            Image(systemName: "info.circle.fill").imageScale(.large).foregroundColor(colorPallete.primary)
+            Image(systemName: "info.circle.fill").imageScale(.large).foregroundColor(colorPallete.symbol)
                 .padding(.trailing, 2)
             Text("MAFINDO").fontWeight(.bold).font(.system(size: 12))
             Text("adalah lembaga nirlaba anti hoax").fontWeight(.regular).font(.system(size: 12))
@@ -26,7 +26,7 @@ struct LabelMafindo: View {
             }
         }
         .frame(width: hideLabel ? 0 : 350, height: hideLabel ? 0 : 41)
-        .background(RoundedRectangle(cornerRadius: 6.0).stroke(colorPallete.primary, lineWidth: 1))
+        .background(RoundedRectangle(cornerRadius: 6.0).stroke(.gray, lineWidth: 1))
         .background(colorPallete.mafindoLabel)
         .cornerRadius(6.0)
         .opacity(hideLabel ? 0 : 1)

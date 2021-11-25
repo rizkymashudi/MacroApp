@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct PasteViewScene: View {
 
     @State var yourText = ""
     @State var isShowingDetailView = false
-  
+    @State var isShowingActivationView = false
+    
     var body: some View {
             NavigationView{
                 ZStack{
@@ -19,26 +21,43 @@ struct PasteViewScene: View {
                         HeaderView()
                         Spacer()
                     }
+                    VStack(alignment: .trailing){
+                        NavigationLink(destination: KeyboardActivationView(), isActive: $isShowingActivationView) {}
+                        .hidden()
+                        Button(action: {
+                            isShowingActivationView = true
+                            print("Keyboard Setting tapped")
+                        }){
+                            Image(systemName: "keyboard.badge.ellipsis")
+                                .foregroundColor(colorPallete.symbol)
+                                .font(.system(size: 25))
+                        }
+                        .frame(width: 44, height: 44)
+                        .position(x: 350, y: 30)
+                    }
+                    
                     VStack(alignment: .center, spacing: 10){
                         NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ }
                         .hidden()
+                        Spacer()
                         VStack(alignment: .leading){
-                            Text("Temukan hoax dengan cepat dan mudah")
+                            Spacer()
+                            Text("Periksa informasi dengan cepat dan mudah")
                                 .font(.system(size: 28, weight: .medium))
-                                .foregroundColor(.white)
+                                .foregroundColor(colorPallete.symbol)
                                 .frame(width: 350, alignment: .leading)
                                 .padding(.bottom, 1)
                             Text("Cukup tempelkan informasi yang anda dapat dan temukan faktanya.")
                                 .font(.system(size: 15, weight: .regular))
-                                .foregroundColor(.white)
+                                .foregroundColor(colorPallete.symbol)
                                 .frame(width: 350, alignment: .leading)
 //                            Spacer()
                         }
                         .frame(width: 250, height: 140)
-                        .padding(.top, 40)
-                        .padding(.bottom, 10)
-        
+                        .padding(.bottom, 30)
+                        
                         CopastView(yourText: $yourText)
+                        
                         Spacer()
                         
                         Button("Mulai Pencarian"){
@@ -48,14 +67,13 @@ struct PasteViewScene: View {
                         .buttonStyle(GrowingSearchButton())
                         .disabled(yourText.isEmpty)
                         .opacity(yourText.isEmpty ? 0.5 : 1)
-//                            .position(x: 195, y: 50)
                         Spacer()
                     }
                     .ignoresSafeArea(.all)
                 }
                 .navigationBarHidden(true)
                 .onTapGesture {
-                    self.hideKeyboard()
+                    hideKeyboard()
                 }
         }
     
@@ -68,6 +86,7 @@ struct PasteViewScene_Previews: PreviewProvider {
         PasteViewScene()
     }
 }
+
 
 #if canImport(UIKit)
 extension View {
