@@ -90,7 +90,7 @@ struct TopListDetailView: View {
                     actionSheet()
                 }) {
                     Image(systemName: "square.and.arrow.up").imageScale(.large)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                 }
             }
         }

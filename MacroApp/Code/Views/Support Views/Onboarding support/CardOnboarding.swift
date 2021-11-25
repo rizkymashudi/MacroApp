@@ -12,11 +12,11 @@ struct CardOnboarding: View {
         ZStack{
             RoundedRectangle(cornerRadius: 8, style: .continuous)
                 .fill(Color.white)
-                .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
+                .background(RoundedRectangle(cornerRadius: 8.0).stroke(.gray, lineWidth: 1))
             VStack(alignment: .leading, spacing: 30){
                 HStack{
                     Image(systemName: "doc.on.clipboard")
-                           .foregroundColor(colorPallete.primary)
+                           .foregroundColor(colorPallete.symbol)
                            .font(.system(size: 45))
                            .padding(.leading, 10)
                            .padding(.trailing,10)
@@ -36,7 +36,7 @@ struct CardOnboarding: View {
                 }
                 HStack{
                     Image(systemName: "magnifyingglass.circle.fill")
-                            .foregroundColor(colorPallete.primary)
+                            .foregroundColor(colorPallete.symbol)
                             .font(.system(size: 48))
                             .padding(.leading, 10)
                             .padding(.trailing, 10)
@@ -55,7 +55,7 @@ struct CardOnboarding: View {
                 }
                 HStack{
                     Image(systemName: "square.and.arrow.up.on.square.fill")
-                            .foregroundColor(colorPallete.primary)
+                            .foregroundColor(colorPallete.symbol)
                             .font(.system(size: 45))
                             .padding(.leading, 10)
                             .padding(.trailing, 10)

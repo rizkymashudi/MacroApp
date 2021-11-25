@@ -47,6 +47,21 @@
 		F5B61CC12738F23900F1EF38 /* ListDetailViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CC02738F23900F1EF38 /* ListDetailViewSupport.swift */; };
 		F5B61CC327395A8100F1EF38 /* YudistiraListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */; };
 		F5B61CC527395C5000F1EF38 /* NewsYudistiraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B61CC427395C5000F1EF38 /* NewsYudistiraModel.swift */; };
+		F5CF59B4274EEC42005E3639 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5CF59B3274EEC42005E3639 /* KeyboardKit */; };
+		F5CF59B7274EECEA005E3639 /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5CF59B6274EECEA005E3639 /* SwiftUIKit */; };
+		F5CF59BF274EED3D005E3639 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59BE274EED3D005E3639 /* KeyboardViewController.swift */; };
+		F5CF59C3274EED3D005E3639 /* PerLuKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5CF59BC274EED3D005E3639 /* PerLuKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5CF59C9274EED7C005E3639 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5CF59C8274EED7C005E3639 /* KeyboardKit */; };
+		F5CF59CB274EED82005E3639 /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5CF59CA274EED82005E3639 /* SwiftUIKit */; };
+		F5CF59D2274EEE3B005E3639 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59D1274EEE3B005E3639 /* KeyboardView.swift */; };
+		F5CF59D4274EEF0F005E3639 /* PerluKeyboardLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59D3274EEF0F005E3639 /* PerluKeyboardLayoutProvider.swift */; };
+		F5CF59D6274EEF51005E3639 /* FakeAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59D5274EEF51005E3639 /* FakeAutocompleteProvider.swift */; };
+		F5CF59D8274EEF87005E3639 /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59D7274EEF87005E3639 /* KeyboardToolbar.swift */; };
+		F5CF59DA274EEFC7005E3639 /* PerluAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59D9274EEFC6005E3639 /* PerluAppearance.swift */; };
+		F5CF59DC274EEFED005E3639 /* PerluKeyboardActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59DB274EEFED005E3639 /* PerluKeyboardActionHandler.swift */; };
+		F5CF59DD274EF68D005E3639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A41272102E100FF8DE7 /* Assets.xcassets */; };
+		F5CF59DF274F2A5E005E3639 /* KeyboardPasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59DE274F2A5E005E3639 /* KeyboardPasteView.swift */; };
+		F5CF59E1274FC831005E3639 /* KeyboardActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF59E0274FC831005E3639 /* KeyboardActivationView.swift */; };
 		F5CF72AD27464CB6008BBB77 /* tf_idf.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF72AC27464CB6008BBB77 /* tf_idf.swift */; };
 		F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */; };
 		F5D54A40272102DE00FF8DE7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A3F272102DE00FF8DE7 /* MainView.swift */; };
@@ -54,11 +69,36 @@
 		F5D54A45272102E100FF8DE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */; };
 		F5D54A47272102E100FF8DE7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A46272102E100FF8DE7 /* Persistence.swift */; };
 		F5D54A4A272102E100FF8DE7 /* MacroApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D54A48272102E100FF8DE7 /* MacroApp.xcdatamodeld */; };
+		F5DB18C4274FF6C100282EEB /* OnBoardingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DB18C3274FF6C100282EEB /* OnBoardingKeyboard.swift */; };
 		F5E504A1273D3A850088FDE1 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E504A0273D3A850088FDE1 /* CustomTextEditor.swift */; };
 		F5E504A3273D65050088FDE1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E504A2273D65050088FDE1 /* Theme.swift */; };
 		F5EF6CE5273A615500693636 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F5EF6CE4273A615500693636 /* Shimmer */; };
 		F5F9A7C8274D58970079FDD6 /* GoogleLinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9A7C7274D58970079FDD6 /* GoogleLinksModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5CF59C1274EED3D005E3639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5D54A32272102DE00FF8DE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5CF59BB274EED3D005E3639;
+			remoteInfo = PerLuKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5CF59C7274EED3D005E3639 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F5CF59C3274EED3D005E3639 /* PerLuKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		42485739274BC45C00CD49A4 /* ApiBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBackend.swift; sourceTree = "<group>"; };
@@ -103,6 +143,17 @@
 		F5B61CC02738F23900F1EF38 /* ListDetailViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewSupport.swift; sourceTree = "<group>"; };
 		F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YudistiraListView.swift; sourceTree = "<group>"; };
 		F5B61CC427395C5000F1EF38 /* NewsYudistiraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsYudistiraModel.swift; sourceTree = "<group>"; };
+		F5CF59BC274EED3D005E3639 /* PerLuKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PerLuKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CF59BE274EED3D005E3639 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		F5CF59C0274EED3D005E3639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CF59D1274EEE3B005E3639 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		F5CF59D3274EEF0F005E3639 /* PerluKeyboardLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerluKeyboardLayoutProvider.swift; sourceTree = "<group>"; };
+		F5CF59D5274EEF51005E3639 /* FakeAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAutocompleteProvider.swift; sourceTree = "<group>"; };
+		F5CF59D7274EEF87005E3639 /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
+		F5CF59D9274EEFC6005E3639 /* PerluAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerluAppearance.swift; sourceTree = "<group>"; };
+		F5CF59DB274EEFED005E3639 /* PerluKeyboardActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerluKeyboardActionHandler.swift; sourceTree = "<group>"; };
+		F5CF59DE274F2A5E005E3639 /* KeyboardPasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPasteView.swift; sourceTree = "<group>"; };
+		F5CF59E0274FC831005E3639 /* KeyboardActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardActivationView.swift; sourceTree = "<group>"; };
 		F5CF72AC27464CB6008BBB77 /* tf_idf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tf_idf.swift; sourceTree = "<group>"; };
 		F5D54A3A272102DE00FF8DE7 /* MacroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D54A3D272102DE00FF8DE7 /* MacroAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAppApp.swift; sourceTree = "<group>"; };
@@ -111,6 +162,7 @@
 		F5D54A44272102E100FF8DE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5D54A46272102E100FF8DE7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F5D54A49272102E100FF8DE7 /* MacroApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacroApp.xcdatamodel; sourceTree = "<group>"; };
+		F5DB18C3274FF6C100282EEB /* OnBoardingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingKeyboard.swift; sourceTree = "<group>"; };
 		F5E504A0273D3A850088FDE1 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		F5E504A2273D65050088FDE1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		F5F9A7C7274D58970079FDD6 /* GoogleLinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLinksModel.swift; sourceTree = "<group>"; };
@@ -118,11 +170,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F5CF59B9274EED3D005E3639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CF59C9274EED7C005E3639 /* KeyboardKit in Frameworks */,
+				F5CF59CB274EED82005E3639 /* SwiftUIKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5D54A37272102DE00FF8DE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F5EF6CE5273A615500693636 /* Shimmer in Frameworks */,
+				F5CF59B7274EECEA005E3639 /* SwiftUIKit in Frameworks */,
+				F5CF59B4274EEC42005E3639 /* KeyboardKit in Frameworks */,
 				F5645BB927400B1200D5859E /* SwiftUINavigationBarStyling in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,10 +311,67 @@
 			path = "List View support";
 			sourceTree = "<group>";
 		};
+		F5CF59BD274EED3D005E3639 /* PerLuKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F5CF59CC274EEDAE005E3639 /* Actions */,
+				F5CF59CD274EEDB8005E3639 /* Appearance */,
+				F5CF59CE274EEDC3005E3639 /* AddOns */,
+				F5CF59D0274EEDF8005E3639 /* Assets */,
+				F5CF59CF274EEDEF005E3639 /* Layout */,
+				F5CF59BE274EED3D005E3639 /* KeyboardViewController.swift */,
+				F5CF59D1274EEE3B005E3639 /* KeyboardView.swift */,
+				F5CF59DE274F2A5E005E3639 /* KeyboardPasteView.swift */,
+				F5CF59C0274EED3D005E3639 /* Info.plist */,
+			);
+			path = PerLuKeyboard;
+			sourceTree = "<group>";
+		};
+		F5CF59CC274EEDAE005E3639 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				F5CF59DB274EEFED005E3639 /* PerluKeyboardActionHandler.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		F5CF59CD274EEDB8005E3639 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				F5CF59D9274EEFC6005E3639 /* PerluAppearance.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		F5CF59CE274EEDC3005E3639 /* AddOns */ = {
+			isa = PBXGroup;
+			children = (
+				F5CF59D5274EEF51005E3639 /* FakeAutocompleteProvider.swift */,
+				F5CF59D7274EEF87005E3639 /* KeyboardToolbar.swift */,
+			);
+			path = AddOns;
+			sourceTree = "<group>";
+		};
+		F5CF59CF274EEDEF005E3639 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				F5CF59D3274EEF0F005E3639 /* PerluKeyboardLayoutProvider.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		F5CF59D0274EEDF8005E3639 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		F5D54A31272102DE00FF8DE7 = {
 			isa = PBXGroup;
 			children = (
 				F5D54A3C272102DE00FF8DE7 /* MacroApp */,
+				F5CF59BD274EED3D005E3639 /* PerLuKeyboard */,
 				F5D54A3B272102DE00FF8DE7 /* Products */,
 				F53AE82227337D53009E9853 /* Frameworks */,
 				398AC3E6EB7F343180CBA9E9 /* Pods */,
@@ -262,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D54A3A272102DE00FF8DE7 /* MacroApp.app */,
+				F5CF59BC274EED3D005E3639 /* PerLuKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -349,13 +470,14 @@
 		F5D54A562721038F00FF8DE7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5DB18C2274FF66F00282EEB /* Onboarding */,
 				F5D54A582721054700FF8DE7 /* Support Views */,
+				F5CF59E0274FC831005E3639 /* KeyboardActivationView.swift */,
 				F5645BEB2743E67000D5859E /* NotfoundStateView.swift */,
 				F5645BE92743E3A400D5859E /* OfflineStateView.swift */,
 				F5B61CC227395A8100F1EF38 /* YudistiraListView.swift */,
 				F53AE80C27328AE7009E9853 /* PasteViewScene.swift */,
 				F5D54A3F272102DE00FF8DE7 /* MainView.swift */,
-				F53AE80927328364009E9853 /* OnBoardingScene.swift */,
 				6DF41AAA2745CC4900E2AD4B /* SearchEngineView.swift */,
 			);
 			path = Views;
@@ -390,9 +512,39 @@
 			path = "Support Views";
 			sourceTree = "<group>";
 		};
+		F5DB18C2274FF66F00282EEB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F53AE80927328364009E9853 /* OnBoardingScene.swift */,
+				F5DB18C3274FF6C100282EEB /* OnBoardingKeyboard.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F5CF59BB274EED3D005E3639 /* PerLuKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CF59C4274EED3D005E3639 /* Build configuration list for PBXNativeTarget "PerLuKeyboard" */;
+			buildPhases = (
+				F5CF59B8274EED3D005E3639 /* Sources */,
+				F5CF59B9274EED3D005E3639 /* Frameworks */,
+				F5CF59BA274EED3D005E3639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerLuKeyboard;
+			packageProductDependencies = (
+				F5CF59C8274EED7C005E3639 /* KeyboardKit */,
+				F5CF59CA274EED82005E3639 /* SwiftUIKit */,
+			);
+			productName = PerLuKeyboard;
+			productReference = F5CF59BC274EED3D005E3639 /* PerLuKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F5D54A39272102DE00FF8DE7 /* MacroApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5D54A4D272102E100FF8DE7 /* Build configuration list for PBXNativeTarget "MacroApp" */;
@@ -402,15 +554,19 @@
 				F5D54A37272102DE00FF8DE7 /* Frameworks */,
 				F5D54A38272102DE00FF8DE7 /* Resources */,
 				79047CC6631BB39A77BEE8AB /* [CP] Embed Pods Frameworks */,
+				F5CF59C7274EED3D005E3639 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F5CF59C2274EED3D005E3639 /* PBXTargetDependency */,
 			);
 			name = MacroApp;
 			packageProductDependencies = (
 				F5EF6CE4273A615500693636 /* Shimmer */,
 				F5645BB827400B1200D5859E /* SwiftUINavigationBarStyling */,
+				F5CF59B3274EEC42005E3639 /* KeyboardKit */,
+				F5CF59B6274EECEA005E3639 /* SwiftUIKit */,
 			);
 			productName = MacroApp;
 			productReference = F5D54A3A272102DE00FF8DE7 /* MacroApp.app */;
@@ -423,9 +579,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					F5CF59BB274EED3D005E3639 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					F5D54A39272102DE00FF8DE7 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -443,17 +602,28 @@
 			packageReferences = (
 				F5EF6CE3273A615500693636 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 				F5645BB727400B1200D5859E /* XCRemoteSwiftPackageReference "swiftui-navigation-bar-styling" */,
+				F5CF59B2274EEC42005E3639 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+				F5CF59B5274EECEA005E3639 /* XCRemoteSwiftPackageReference "SwiftUIKit" */,
 			);
 			productRefGroup = F5D54A3B272102DE00FF8DE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F5D54A39272102DE00FF8DE7 /* MacroApp */,
+				F5CF59BB274EED3D005E3639 /* PerLuKeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F5CF59BA274EED3D005E3639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CF59DD274EF68D005E3639 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5D54A38272102DE00FF8DE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +678,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F5CF59B8274EED3D005E3639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CF59DA274EEFC7005E3639 /* PerluAppearance.swift in Sources */,
+				F5CF59BF274EED3D005E3639 /* KeyboardViewController.swift in Sources */,
+				F5CF59D8274EEF87005E3639 /* KeyboardToolbar.swift in Sources */,
+				F5CF59DF274F2A5E005E3639 /* KeyboardPasteView.swift in Sources */,
+				F5CF59DC274EEFED005E3639 /* PerluKeyboardActionHandler.swift in Sources */,
+				F5CF59D6274EEF51005E3639 /* FakeAutocompleteProvider.swift in Sources */,
+				F5CF59D2274EEE3B005E3639 /* KeyboardView.swift in Sources */,
+				F5CF59D4274EEF0F005E3639 /* PerluKeyboardLayoutProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5D54A36272102DE00FF8DE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,6 +727,7 @@
 				6DF41AA72745C34B00E2AD4B /* WebView.swift in Sources */,
 				F53AE81327328B32009E9853 /* StartSearchButton.swift in Sources */,
 				F53AE80D27328AE7009E9853 /* PasteViewScene.swift in Sources */,
+				F5CF59E1274FC831005E3639 /* KeyboardActivationView.swift in Sources */,
 				F53AE8162732D76E009E9853 /* SearchListView.swift in Sources */,
 				F5B61CC12738F23900F1EF38 /* ListDetailViewSupport.swift in Sources */,
 				F5645BBD27402AF100D5859E /* RoundedExtension.swift in Sources */,
@@ -551,6 +737,7 @@
 				6DF41AA12745C0AB00E2AD4B /* SearchResultModel.swift in Sources */,
 				F57ED64F272DBD960076DA18 /* APIYudistiraModel.swift in Sources */,
 				F5E504A1273D3A850088FDE1 /* CustomTextEditor.swift in Sources */,
+				F5DB18C4274FF6C100282EEB /* OnBoardingKeyboard.swift in Sources */,
 				6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */,
 				F5B61CBF2738F21E00F1EF38 /* YudistiraListViewSupport.swift in Sources */,
 				F5F9A7C8274D58970079FDD6 /* GoogleLinksModel.swift in Sources */,
@@ -564,7 +751,67 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F5CF59C2274EED3D005E3639 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5CF59BB274EED3D005E3639 /* PerLuKeyboard */;
+			targetProxy = F5CF59C1274EED3D005E3639 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F5CF59C5274EED3D005E3639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 72B4ASD893;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PerLuKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PerLuKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = id.infiniteLearning.MacroApp.PerLuKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5CF59C6274EED3D005E3639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 72B4ASD893;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PerLuKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PerLuKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = id.infiniteLearning.MacroApp.PerLuKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F5D54A4B272102E100FF8DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -685,13 +932,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC88C803D73D6DA6AD292E25 /* Pods-MacroApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = UPHGSM79H9;
+				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
@@ -720,13 +968,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEE1CD981035C37D840A3069 /* Pods-MacroApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = UPHGSM79H9;
+
+				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroApp/Info.plist;
@@ -754,6 +1004,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F5CF59C4274EED3D005E3639 /* Build configuration list for PBXNativeTarget "PerLuKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CF59C5274EED3D005E3639 /* Debug */,
+				F5CF59C6274EED3D005E3639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F5D54A35272102DE00FF8DE7 /* Build configuration list for PBXProject "MacroApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -783,6 +1042,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		F5CF59B2274EEC42005E3639 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F5CF59B5274EECEA005E3639 /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielsaidi/SwiftUIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		F5EF6CE3273A615500693636 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
@@ -798,6 +1073,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F5645BB727400B1200D5859E /* XCRemoteSwiftPackageReference "swiftui-navigation-bar-styling" */;
 			productName = SwiftUINavigationBarStyling;
+		};
+		F5CF59B3274EEC42005E3639 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5CF59B2274EEC42005E3639 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+		F5CF59B6274EECEA005E3639 /* SwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5CF59B5274EECEA005E3639 /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
+			productName = SwiftUIKit;
+		};
+		F5CF59C8274EED7C005E3639 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5CF59B2274EEC42005E3639 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+		F5CF59CA274EED82005E3639 /* SwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5CF59B5274EECEA005E3639 /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
+			productName = SwiftUIKit;
 		};
 		F5EF6CE4273A615500693636 /* Shimmer */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -11,13 +11,17 @@ struct LaunchScreen: View {
     @Binding var animate: Bool
     
     var body: some View {
-        Image("Launch")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 90, height: 90, alignment: .center)
-            .scaleEffect(animate ? 30 : 1.5)
-            .animation(Animation.easeIn(duration: 1.5))
-                       
+        ZStack{
+            LinearGradient(gradient: Gradient(colors: [colorPallete.primary, colorPallete.secondary, colorPallete.ternary, colorPallete.orangeGradient]), startPoint: .bottomLeading, endPoint: .topTrailing)
+            Image("LogoLaunch")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 60, height: 60, alignment: .center)
+                .scaleEffect(animate ? 30 : 1.5)
+                .animation(Animation.easeIn(duration: 1.5))
+        }
+        .edgesIgnoringSafeArea(.all)
+        
    }
 }
 

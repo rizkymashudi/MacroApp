@@ -23,7 +23,7 @@ struct NotfoundStateView: View {
                 Spacer()
                 VStack{
                     VStack{
-                        Image("Notfound")
+                        Image("notfoundbw")
                             .resizable()
                             .clipShape(RoundedRectangle(cornerRadius: 6.0))
                             .background(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 6).fill(Color.gray))
@@ -111,7 +111,7 @@ struct NotfoundStateView: View {
             } else {
                 Spacer()
                 VStack{
-                    Image("NotfoundIcon")
+                    Image("notfoundbw")
                     Text("Maaf, Hasil pencarian data Mafindo tidak ditemukan")
                         .multilineTextAlignment(.center)
                 }

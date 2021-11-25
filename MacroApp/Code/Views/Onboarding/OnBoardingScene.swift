@@ -21,12 +21,15 @@ struct OnBoardingScene: View {
                     }
                     Spacer()
                 }
+                
                 VStack{
+                    Spacer()
                     CardOnboarding()
-                        .padding(.top, 100)
-
+                        .padding(.top, 180)
+                    Spacer()
                     ButtonStartOnboarding()
-                        .padding(.top, 30)
+//                        .padding(.top, 30)
+                    Spacer()
                 }
                 .edgesIgnoringSafeArea(.all)
             }

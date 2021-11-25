@@ -20,8 +20,11 @@ struct colorPallete {
     static let symbol = Color("symbol")
     
     //HEADER BUBBLE GRADIENT
-    static let primaryBright = Color("PrimaryBright")
+    static let orangeGradient = Color("OrangeGradient")
     static let primaryMedium = Color("PrimaryMedium")
     static let primarySoft = Color("PrimarySoft")
     static let primarySoftMed = Color("PrimarySoftMedium")
+    
+    static let secondary = Color("Secondary")
+    static let ternary = Color("Ternary")
 }

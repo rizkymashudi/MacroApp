@@ -24,19 +24,19 @@ struct YudistiraListView: View {
                 YudistiraListViewSupport(newsYudistira: newsYudistira)
                     .navigationTitle("Hasil pencarian hoax")
                     .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
+                    .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
                     
             }else{
                 if newsYudistira.finalNews.isEmpty {
                     NotfoundStateView()
                         .navigationTitle("Hasil pencarian hoax")
                         .navigationBarTitleDisplayMode(.inline)
-                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
+                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
                 } else {
                     YudistiraListViewSupport(newsYudistira: newsYudistira)
                         .navigationTitle("Hasil pencarian hoax")
                         .navigationBarTitleDisplayMode(.inline)
-                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
+                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
                 }
             }
         }.onAppear(perform: {       newsYudistira.fetch(userRawText: text) { result in
