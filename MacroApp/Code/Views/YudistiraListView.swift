@@ -12,10 +12,11 @@ import Shimmer
 
 struct YudistiraListView: View {
     
+    @ObservedObject var newsYudistira = ApiYudistira()
     @StateObject var newsYudistira = ApiYudistira()
     @StateObject var apiServiceGoogle = ApiServiceGoogle()
     @State var isNotfoundStateHidden = true
-
+    @State var text : String = ""
     var body: some View {
         
         Group{
@@ -38,6 +39,9 @@ struct YudistiraListView: View {
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
                 }
             }
+        }.onAppear(perform: {       newsYudistira.fetch(userRawText: text) { result in
+            print(result)
+        }})
         }.onAppear{
             apiServiceGoogle.fetchGoogle()
         }

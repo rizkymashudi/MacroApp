@@ -11,7 +11,7 @@ import Shimmer
 
 struct YudistiraListViewSupport: View {
     
-    @ObservedObject var newsYudistira : ApiYudistira
+    var newsYudistira : ApiYudistira
     @State var isCardTapped = false
  
     let imageNotFound = "https://dummyimage.com/358x172/d1d1d1/757575.png&text=Image+not+found"

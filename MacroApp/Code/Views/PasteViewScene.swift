@@ -11,6 +11,8 @@ struct PasteViewScene: View {
 
     @State var yourText = ""
     @State var isShowingDetailView = false
+    @StateObject var apiBackend = ApiBackend()
+    @ObservedObject var apiYudistira = ApiYudistira()
   
     var body: some View {
             NavigationView{
@@ -20,7 +22,7 @@ struct PasteViewScene: View {
                         Spacer()
                     }
                     VStack(alignment: .center, spacing: 10){
-                        NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ }
+                        NavigationLink(destination: YudistiraListView(text: yourText), isActive: $isShowingDetailView){ }
                         .hidden()
                         VStack(alignment: .leading){
                             Text("Temukan hoax dengan cepat dan mudah")
@@ -41,14 +43,14 @@ struct PasteViewScene: View {
                         CopastView(yourText: $yourText)
                         Spacer()
                         
-                        Button("Mulai Pencarian"){
-                            print("button pressed")
+                        Button(action: {
                             isShowingDetailView = true
+                        }){
+                            Text("Mulai Pencarian")
                         }
                         .buttonStyle(GrowingSearchButton())
                         .disabled(yourText.isEmpty)
                         .opacity(yourText.isEmpty ? 0.5 : 1)
-//                            .position(x: 195, y: 50)
                         Spacer()
                     }
                     .ignoresSafeArea(.all)
@@ -63,11 +65,11 @@ struct PasteViewScene: View {
     
 }
 
-struct PasteViewScene_Previews: PreviewProvider {
-    static var previews: some View {
-        PasteViewScene()
-    }
-}
+//struct PasteViewScene_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PasteViewScene()
+//    }
+//}
 
 #if canImport(UIKit)
 extension View {
