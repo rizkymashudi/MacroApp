@@ -14,6 +14,8 @@ struct PasteViewScene: View {
     @State var isShowingDetailView = false
     @State var isShowingActivationView = false
     
+    @ObservedObject var apiYudistira = ApiYudistira()
+
     var body: some View {
             NavigationView{
                 ZStack{
@@ -37,7 +39,7 @@ struct PasteViewScene: View {
                     }
                     
                     VStack(alignment: .center, spacing: 10){
-                        NavigationLink(destination: YudistiraListView(), isActive: $isShowingDetailView){ }
+                        NavigationLink(destination: YudistiraListView(text: yourText), isActive: $isShowingDetailView){ }
                         .hidden()
                         Spacer()
                         VStack(alignment: .leading){
@@ -60,9 +62,10 @@ struct PasteViewScene: View {
                         
                         Spacer()
                         
-                        Button("Mulai Pencarian"){
-                            print("button pressed")
+                        Button(action: {
                             isShowingDetailView = true
+                        }){
+                            Text("Mulai Pencarian")
                         }
                         .buttonStyle(GrowingSearchButton())
                         .disabled(yourText.isEmpty)
@@ -81,11 +84,11 @@ struct PasteViewScene: View {
     
 }
 
-struct PasteViewScene_Previews: PreviewProvider {
-    static var previews: some View {
-        PasteViewScene()
-    }
-}
+//struct PasteViewScene_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PasteViewScene()
+//    }
+//}
 
 
 #if canImport(UIKit)

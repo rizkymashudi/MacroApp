@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4248573A274BC45C00CD49A4 /* ApiBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42485739274BC45C00CD49A4 /* ApiBackend.swift */; };
 		6D387B9127389AEE002F406A /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D387B9027389AEE002F406A /* ClearButton.swift */; };
 		6D4A3A4627446F5D00958B4E /* APIGoogleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */; };
 		6D4A3A482744700300958B4E /* ApiServiceGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42485739274BC45C00CD49A4 /* ApiBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBackend.swift; sourceTree = "<group>"; };
 		61057E017D6A5E501E5DB495 /* Pods_MacroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D387B9027389AEE002F406A /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		6D4A3A4527446F5D00958B4E /* APIGoogleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGoogleModel.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 				F5645BE82743E20200D5859E /* Dummy services */,
 				F593A68D272FAEF800B065AB /* ApiServiceYudistira.swift */,
 				6D4A3A472744700300958B4E /* ApiServiceGoogle.swift */,
+				42485739274BC45C00CD49A4 /* ApiBackend.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				6D4A3A4627446F5D00958B4E /* APIGoogleModel.swift in Sources */,
 				F53AE804273282A4009E9853 /* HeaderOnboarding.swift in Sources */,
 				F53AE8212732EEEC009E9853 /* NewsApiService.swift in Sources */,
+				4248573A274BC45C00CD49A4 /* ApiBackend.swift in Sources */,
 				F5E504A3273D65050088FDE1 /* Theme.swift in Sources */,
 				F5645BEF2743E8B300D5859E /* SearchEngineButton.swift in Sources */,
 				F5D54A3E272102DE00FF8DE7 /* MacroAppApp.swift in Sources */,
@@ -971,6 +975,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MacroApp/Resources/Preview Content\"";
+
 				DEVELOPMENT_TEAM = 72B4ASD893;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

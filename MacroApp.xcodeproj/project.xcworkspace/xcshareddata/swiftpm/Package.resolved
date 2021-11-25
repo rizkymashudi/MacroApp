@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUINavigationBarStyling",
+        "repositoryURL": "https://github.com/globulus/swiftui-navigation-bar-styling.git",
+        "state": {
+          "branch": null,
+          "revision": "c5fead346c79f64d3ad7e4e7f7b243647d8645f7",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SwiftUI-Shimmer",
+        "repositoryURL": "https://github.com/markiv/SwiftUI-Shimmer",
+        "state": {
+          "branch": null,
+          "revision": "61411771350a5a4e96666a8a202ae4b2be327a2b",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
