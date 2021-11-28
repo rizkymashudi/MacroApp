@@ -13,7 +13,6 @@ import Shimmer
 struct YudistiraListView: View {
     
     @ObservedObject var newsYudistira = ApiYudistira()
-    @StateObject var newsYudistira = ApiYudistira()
     @StateObject var apiServiceGoogle = ApiServiceGoogle()
     @State var isNotfoundStateHidden = true
     @State var text : String = ""
@@ -39,13 +38,12 @@ struct YudistiraListView: View {
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
                 }
             }
-        }.onAppear(perform: {       newsYudistira.fetch(userRawText: text) { result in
-            print(result)
+        }.onAppear(perform: { newsYudistira.fetch(userRawText: text) { result in
+//            print(result)
         }})
-        }.onAppear{
-            apiServiceGoogle.fetchGoogle()
-        }
     }
+      
+
 }
 
 struct YudistiraListView_Previews: PreviewProvider {

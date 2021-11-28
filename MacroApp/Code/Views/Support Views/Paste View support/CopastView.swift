@@ -19,7 +19,6 @@ struct CopastView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .fill(Color.white)
-//                    .shadow(color: colorPallete.primary.opacity(0.2) ,radius: 10 ,x: 1 , y: 5)
                     .background(RoundedRectangle(cornerRadius: 8.0).stroke(colorPallete.symbol, lineWidth: 4.0))
                 
                 ScrollView(.vertical, showsIndicators: false){
@@ -121,16 +120,5 @@ extension View {
 }
 #endif
 
-//
-//struct CopastView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CopastView()
-//    }
-//}
 
-//extension View {
-//    func getSafeArea()->UIEdgeInsets {
-//        return UIApplication.shared.windows.first?.safeAreaInsets ?? UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//    }
-//}
 
