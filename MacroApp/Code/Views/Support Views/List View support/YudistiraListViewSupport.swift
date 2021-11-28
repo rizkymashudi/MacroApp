@@ -13,7 +13,7 @@ struct YudistiraListViewSupport: View {
     
     var newsYudistira : ApiYudistira
     @State var isCardTapped = false
- 
+    
     let imageNotFound = "https://dummyimage.com/358x172/d1d1d1/757575.png&text=Image+not+found"
     
     var body: some View {
@@ -22,7 +22,7 @@ struct YudistiraListViewSupport: View {
             LabelMafindo()
             VStack{
                 VStack(alignment: .leading){
-                    Text("Hasil Pencarian \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\" dari data Mafindo").font(.system(size: 13))
+                    Text("Hasil Pencarian \"\" dari data Mafindo").font(.system(size: 13))
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(width: 350, alignment: .leading)
                         .lineLimit(6)
@@ -144,10 +144,10 @@ struct YudistiraListViewSupport: View {
     }
 }
 
-struct YudistiraListViewSupport_Previews: PreviewProvider {
-    static var previews: some View {
-        YudistiraListViewSupport(newsYudistira: ApiYudistira())
-    }
-}
+//struct YudistiraListViewSupport_Previews: PreviewProvider {
+//    static var previews: some View {
+//        YudistiraListViewSupport(newsYudistira: ApiYudistira())
+//    }
+//}
 
 

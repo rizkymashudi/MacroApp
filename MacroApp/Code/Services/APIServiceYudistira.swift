@@ -17,50 +17,31 @@ class ApiYudistira: ObservableObject {
     
     //untuk tampung data setelah di looping
     @Published var finalNews = [NewsYudistira]()
-   
+    @Published var relatedNews = [RelatedNewsModel]()
+    
     @Published var isLoading: Bool = false
     
     @Published var selectedNews: NewsYudistira?
     
-   
-    
-    
-    init() {
-//        fetch(completion: { (success) -> Void in
-//            if success {
-//                print("fetch completed")
-//            }else{
-//                print("fetch error")
-//            }
-//        })
-    }
-    
 
     func fetch(userRawText: String, completion: @escaping (Bool) -> Void) {
-        print("Text: ", userRawText)
         isLoading = true
-        
-        let group = DispatchGroup()
-        
 
-//        let baseUrl : String = "https://yudistira.turnbackhoax.id/api/antihoax/search/"
-//        let acessKey : String = "528b200c3b53ce5c797a881ww31b0ac2"
-//        let body : [String:Any] = ["key": acessKey, "method": "content", "value": "Gatot", "limit" : 49]
-//        let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
-        
+        let group = DispatchGroup()
+            
         let baseUrl : String = "https://keywordsproject.herokuapp.com/api/keyword/"
         let body : [String:Any] = ["text": userRawText]
-        let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
+//        let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"]
     
-        
         guard let url = URL(string: baseUrl) else { 
             print("Cannot create url")
             completion(false)
+            
             return
         }
         
         //request method post dengan alamofire
-        AF.request(url, method: .post, parameters: body, headers: headers).responseJSON(completionHandler:  { response in
+        AF.request(url, method: .post, parameters: body).responseJSON(completionHandler:  { response in
             switch response.result {
             case .success:
                 guard let data = response.data else { return }
@@ -75,28 +56,30 @@ class ApiYudistira: ObservableObject {
                 //di loop index dalam array news
                 for i in news {
                     group.enter()
-                    
+
                     let id = i.id
                     let authors = i.authors
                     let title = i.title
                     let content = i.content
                     let fact = i.fact
-                    
                     let ref = i.references
                     let arrRef = ref.components(separatedBy: "\r\n")
                     let resRef = arrRef[0]
-                    
+
                     let imgUrl = i.picture1
                     let date = i.tanggal
                     let conclusion = i.conclusion
-
+                    
                     DispatchQueue.main.async {
                         //tampung ke model yudistira var finalItems
                         self.finalNews.append(NewsYudistira(id: id ?? "-", authors: authors ?? "-", title: title ?? "-", content: content ?? "-", fact: fact ?? "-", references: resRef, imgUrl: imgUrl, date: date ?? "-", conclusion: conclusion ?? "-"))
                         
+                        self.relatedNews.append(RelatedNewsModel(relatedContent: content ?? "-"))
+                        
                         self.isLoading = false
                         completion(true)
-                        
+
+                    
                         //sementara
                         if self.finalNews.count > 0 && self.finalNews.count < 50{
                             self.selectedNews = self.finalNews[0]
@@ -105,11 +88,14 @@ class ApiYudistira: ObservableObject {
                         group.leave()
                     }
                 }
-                self.relatedData()
+                
+                self.relatedData(userRawText: userRawText)
                 
                 group.notify(queue: .main) {
-                        print("Finished all requests.")
+                    print("Finished all requests.")
                     print("Final News: \(self.finalNews.count)")
+                    print(self.relatedNews.count)
+                    
                 }
                 
             case .failure:
@@ -117,25 +103,21 @@ class ApiYudistira: ObservableObject {
                 completion(false)
             }
         })
-        
     }
     
     
-    func relatedData() {
-        
-        let searchValue = "2222"
+    func relatedData(userRawText: String) {
+
         var currentIndex = 0
-
-        for id in self.finalNews{
-            if id.id == searchValue {
-            print("Found \(id) for index \(currentIndex)")
-            break
-        }
-
-        currentIndex += 1
+        for i in self.relatedNews{
+            if i.relatedContent == "Warning..." {
+                print("found \(i.relatedContent) for index \(currentIndex)")
+                break
+            }
+            currentIndex += 1
         }
     }
-    
+
 }
 
 

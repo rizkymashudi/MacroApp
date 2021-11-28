@@ -109,10 +109,3 @@ struct ListDetailViewSupport: View {
     }
 }
 
-//struct ListDetailViewSupport_Previews: PreviewProvider {
-//    static let newsItems = NewsYudistira(id: "2222", authors: "Mafindo", title: "[HOAX] Yayasan Miracle Hope Ingin Membantu Untuk Mengobati Penderita Kanker Jenis Apapun", content: "RS Gatot Subroto Jkt, sdh mulai ada pengobatan tumor ganas/ kanker CELL CURE, tlh berhasil menyembuhkan kanker stadium 4, tanpa operasi, tanpa chemo therapy…\nEquipment tsb hibah oleh pemerintah Jerman.\n....Selengkapnya di bagian REFERENSI.", fact: "Hoax sudah beredar sejak tahun 2015, sudah debunked (terbongkar) oleh Indonesian Hoaxes Community.\nDikutip dari akun facebook  Indonesian Hoaxes Community, fani ferdiani adalah seorang marketer yang mencari database orang sebanyak banyaknya \nsilahkan cek link berikut hxxps://www[dot]facebook[dot]com/TiongHoa.Indonesia/posts/10152032145277258.\nSementara, web yayasan tersebut sudah mati. \nYayasan Harapan Mulia (Hope of Miracle)\nPaskal Hyper Square C-26\nBandung – Jawa Barat\n022-61587255 / 08112105544\n", references: "Hoax sudah beredar sejak tahun 2015, sudah debunked (terbongkar) oleh Indonesian Hoaxes Community.\nDikutip dari akun facebook  Indonesian Hoaxes Community, fani ferdiani adalah seorang marketer yang mencari database orang sebanyak banyaknya \nsilahkan cek link berikut hxxps://www[dot]facebook[dot]com/TiongHoa.Indonesia/posts/10152032145277258.\nSementara, web yayasan tersebut sudah mati. \nYayasan Harapan Mulia (Hope of Miracle)\nPaskal Hyper Square C-26\nBandung – Jawa Barat\n022-61587255 / 08112105544\n", imgUrl: "[HOAX] Yayasan Miracle Hope Ingin Membantu Untuk Mengobati Penderita Kanker Jenis Apapun", date: "2017-09-24", conclusion: "-")
-//    
-//    static var previews: some View {
-//        ListDetailViewSupport(newsItems: newsItems)
-//    }
-//}

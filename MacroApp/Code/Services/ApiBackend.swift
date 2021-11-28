@@ -9,17 +9,14 @@ import Foundation
 import Alamofire
 
 class ApiBackend : ObservableObject {
-    func passRawText (copasTeks : String) {
-        let baseUrl : String = "https://keywordsproject.herokuapp.com/api/keyword/"
+ 
+    func fetchFinalData(){
+        
+        
+        
+    }
     
-        let body : [String:Any] = ["text": copasTeks]
-        print(body)
-        guard let url = URL(string: baseUrl) else {
-            print("Cannot create url")
-            
-            return
-        }
-
+    
 //        AF.request(url, method: .post, parameters: body, encoder: JSONEncoding.default as! ParameterEncoder, headers: nil).responseJSON{ response in
 //            switch response.result {
 //            case .success:
@@ -33,5 +30,5 @@ class ApiBackend : ObservableObject {
 //            }
 //        }
          
-    }
 }
+
