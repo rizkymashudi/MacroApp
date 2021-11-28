@@ -16,12 +16,11 @@ struct SearchEngineView: View {
             .navigationTitle("Hasil Pencarian")
             .toolbar{
                 Button(action: {
-                    webViewStateModel.reload = true
-                    print("reload tapped")
-                }) {
-                    Image(systemName: "arrow.clockwise").imageScale(.large)
-                        .foregroundColor(.white)
-                }
+                    print("Button Share is pressed")
+                    MacroApp.actionSheet()
+                }, label: {
+                    Image(systemName: "square.and.arrow.up")
+                })
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
@@ -55,12 +54,12 @@ struct SearchEngineView: View {
                         Spacer()
 
                         Button(action: {
-                            print("Button Share is pressed")
-                            MacroApp.actionSheet()
+                            webViewStateModel.reload = true
+                            print("reload tapped")
                         }, label: {
-                            Image(systemName: "square.and.arrow.up")
+                            Image(systemName: "arrow.clockwise")
+
                         })
-                        
                     }
                 }
             }
