@@ -16,7 +16,7 @@ struct KeyboardToolbar: View {
                 print("button switch tapped")
                 
             }){
-                Image("keyboardButtonSm")
+                Image("ImageKeyboardButtonsm")
             }
             .padding(.top, 5)
             .padding(.leading, 5)

@@ -41,8 +41,8 @@ class KeyboardViewController: KeyboardInputViewController {
     override func viewWillSetupKeyboard() {
         super.viewWillSetupKeyboard()
         
-//         setup(with: keyboardView)
-        setup(with: keyboardPasteView)
+         setup(with: keyboardView)
+//        setup(with: keyboardPasteView)
     }
     
     
