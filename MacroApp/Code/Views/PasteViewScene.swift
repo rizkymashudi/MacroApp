@@ -23,20 +23,20 @@ struct PasteViewScene: View {
                         HeaderView()
                         Spacer()
                     }
-                    VStack(alignment: .trailing){
-                        NavigationLink(destination: KeyboardActivationView(), isActive: $isShowingActivationView) {}
-                        .hidden()
-                        Button(action: {
-                            isShowingActivationView = true
-                            print("Keyboard Setting tapped")
-                        }){
-                            Image(systemName: "keyboard.badge.ellipsis")
-                                .foregroundColor(colorPallete.symbol)
-                                .font(.system(size: 25))
-                        }
-                        .frame(width: 44, height: 44)
-                        .position(x: 350, y: 30)
-                    }
+//                    VStack(alignment: .trailing){
+//                        NavigationLink(destination: KeyboardActivationView(), isActive: $isShowingActivationView) {}
+//                        .hidden()
+//                        Button(action: {
+//                            isShowingActivationView = true
+//                            print("Keyboard Setting tapped")
+//                        }){
+//                            Image(systemName: "keyboard.badge.ellipsis")
+//                                .foregroundColor(colorPallete.symbol)
+//                                .font(.system(size: 25))
+//                        }
+//                        .frame(width: 44, height: 44)
+//                        .position(x: 350, y: 30)
+//                    }
                     
                     VStack(alignment: .center, spacing: 10){
                         NavigationLink(destination: YudistiraListView(text: yourText), isActive: $isShowingDetailView){ }
