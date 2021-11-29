@@ -18,11 +18,9 @@ class ApiYudistira: ObservableObject {
     //untuk tampung data setelah di looping
     @Published var finalNews = [NewsYudistira]()
     @Published var relatedNews = [RelatedNewsModel]()
-    
     @Published var isLoading: Bool = false
-    
     @Published var selectedNews: NewsYudistira?
-    
+    @Published var isConnected: Bool = true
 
     func fetch(userRawText: String, completion: @escaping (Bool) -> Void) {
         isLoading = true
@@ -40,6 +38,7 @@ class ApiYudistira: ObservableObject {
             return
         }
         
+
         //request method post dengan alamofire
         AF.request(url, method: .post, parameters: body).responseJSON(completionHandler:  { response in
             switch response.result {
@@ -100,7 +99,9 @@ class ApiYudistira: ObservableObject {
                 
             case .failure:
                 print("Error Connect to Server")
+                self.isConnected = false
                 completion(false)
+                break
             }
         })
     }
@@ -110,13 +111,14 @@ class ApiYudistira: ObservableObject {
 
         var currentIndex = 0
         for i in self.relatedNews{
-            if i.relatedContent == "Warning..." {
+            if i.relatedContent == userRawText {
                 print("found \(i.relatedContent) for index \(currentIndex)")
                 break
             }
             currentIndex += 1
         }
     }
+
 
 }
 
