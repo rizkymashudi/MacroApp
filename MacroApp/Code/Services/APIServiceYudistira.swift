@@ -20,7 +20,7 @@ class ApiYudistira: ObservableObject {
     @Published var relatedNews = [RelatedNewsModel]()
     @Published var isLoading: Bool = false
     @Published var selectedNews: NewsYudistira?
-    @Published var isConnected: Bool = true
+    @Published var isFail: Bool = true
 
     func fetch(userRawText: String, completion: @escaping (Bool) -> Void) {
         isLoading = true
@@ -78,7 +78,6 @@ class ApiYudistira: ObservableObject {
                         self.isLoading = false
                         completion(true)
 
-                    
                         //sementara
                         if self.finalNews.count > 0 && self.finalNews.count < 50{
                             self.selectedNews = self.finalNews[0]
@@ -99,7 +98,7 @@ class ApiYudistira: ObservableObject {
                 
             case .failure:
                 print("Error Connect to Server")
-                self.isConnected = false
+                self.isFail = false
                 completion(false)
                 break
             }

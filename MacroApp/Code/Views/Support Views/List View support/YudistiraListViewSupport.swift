@@ -13,6 +13,8 @@ struct YudistiraListViewSupport: View {
     
     var newsYudistira : ApiYudistira
     @State var isCardTapped = false
+    @Binding var yourText: String
+    
     
     let imageNotFound = "https://dummyimage.com/358x172/d1d1d1/757575.png&text=Image+not+found"
     
@@ -22,7 +24,7 @@ struct YudistiraListViewSupport: View {
             LabelMafindo()
             VStack{
                 VStack(alignment: .leading){
-                    Text("Hasil Pencarian \"\" dari data Mafindo").font(.system(size: 13))
+                    Text("Hasil Pencarian \"\(yourText)\" dari data Mafindo").font(.system(size: 13))
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(width: 350, alignment: .leading)
                         .lineLimit(6)

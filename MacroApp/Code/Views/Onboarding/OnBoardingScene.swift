@@ -16,8 +16,12 @@ struct OnBoardingScene: View {
                 VStack{
                     ZStack{
                         HeaderView()
-                        Image("Onboard Illustration")
-                            .padding(.top, 40)
+                        GeometryReader { geo in
+                            Image("Onboard Illustration")
+                                .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.25)
+                                .frame(width: geo.size.width)
+                                .offset(y: geo.size.height / 9)
+                        }
                     }
                     Spacer()
                 }
@@ -25,13 +29,11 @@ struct OnBoardingScene: View {
                 VStack{
                     Spacer()
                     CardOnboarding()
-                        .padding(.top, 180)
-                    Spacer()
+                        .padding(.top, 340)
                     ButtonStartOnboarding()
-//                        .padding(.top, 30)
+                        .padding(.bottom, 30)
                     Spacer()
                 }
-                .edgesIgnoringSafeArea(.all)
             }
             .edgesIgnoringSafeArea(.all)
         }

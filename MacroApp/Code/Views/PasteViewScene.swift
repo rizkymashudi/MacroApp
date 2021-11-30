@@ -37,10 +37,11 @@ struct PasteViewScene: View {
 //                        .frame(width: 44, height: 44)
 //                        .position(x: 350, y: 30)
 //                    }
-                    
+
                     VStack(alignment: .center, spacing: 10){
-                        NavigationLink(destination: YudistiraListView(text: yourText), isActive: $isShowingDetailView){ }
+                        NavigationLink(destination: YudistiraListView(text: yourText, yourText: $yourText), isActive: $isShowingDetailView){ }
                         .hidden()
+                        
                         Spacer()
                         VStack(alignment: .leading){
                             Spacer()
@@ -52,14 +53,12 @@ struct PasteViewScene: View {
                             Text("Cukup tempelkan informasi yang anda dapat dan temukan faktanya.")
                                 .font(.system(size: 15, weight: .regular))
                                 .foregroundColor(colorPallete.symbol)
-                                .frame(width: 350, alignment: .leading)
-//                            Spacer()
+                                .frame(width: 340, alignment: .leading)
                         }
-                        .frame(width: 250, height: 140)
-                        .padding(.bottom, 30)
-                        
+                        .frame(width: 140, height: 120)
+                   
+                        Spacer()
                         CopastView(yourText: $yourText)
-                        
                         Spacer()
                         
                         Button(action: {
@@ -70,6 +69,8 @@ struct PasteViewScene: View {
                         .buttonStyle(GrowingSearchButton())
                         .disabled(yourText.isEmpty)
                         .opacity(yourText.isEmpty ? 0.5 : 1)
+//                        .padding()
+                        .padding(.bottom, 25)
                         Spacer()
                     }
                     .ignoresSafeArea(.all)
@@ -84,11 +85,11 @@ struct PasteViewScene: View {
     
 }
 
-//struct PasteViewScene_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PasteViewScene()
-//    }
-//}
+struct PasteViewScene_Previews: PreviewProvider {
+    static var previews: some View {
+        PasteViewScene()
+    }
+}
 
 
 #if canImport(UIKit)

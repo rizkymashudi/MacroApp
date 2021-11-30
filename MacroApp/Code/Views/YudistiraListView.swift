@@ -17,12 +17,14 @@ struct YudistiraListView: View {
     @ObservedObject var networkManager = NetworkManager()
     @State var isNotfoundStateHidden = true
     @State var text : String = ""
+    @Binding var yourText: String
+    
     var body: some View {
         
         Group{
-            if networkManager.isConnected {
+            if networkManager.isConnected || newsYudistira.isFail {
                 if newsYudistira.isLoading{
-                    YudistiraListViewSupport(newsYudistira: newsYudistira)
+                    YudistiraListViewSupport(newsYudistira: newsYudistira, yourText: $yourText)
                         .navigationTitle("Hasil pencarian")
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
@@ -34,7 +36,7 @@ struct YudistiraListView: View {
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
                     } else {
-                        YudistiraListViewSupport(newsYudistira: newsYudistira)
+                        YudistiraListViewSupport(newsYudistira: newsYudistira, yourText: $yourText)
                             .navigationTitle("Hasil pencarian")
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
@@ -56,7 +58,7 @@ struct YudistiraListView: View {
 
 struct YudistiraListView_Previews: PreviewProvider {
     static var previews: some View {
-        YudistiraListView()
+        YudistiraListView(yourText: .constant(""))
     }
 }
 
