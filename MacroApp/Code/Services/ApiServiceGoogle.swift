@@ -13,7 +13,7 @@ class ApiServiceGoogle: ObservableObject {
 
 
     @Published var googleResultModel = [tagsOrganicResult]()
-    @Published var linkGoogle: String!
+    @Published var linkGoogle: String = ""
 
     func fetchGoogle(userRawText: String, completion: @escaping (Bool) -> Void) {
         let baseUrl: String = "https://serpapi.com/search.json"
@@ -35,13 +35,13 @@ class ApiServiceGoogle: ObservableObject {
 
                 do {
                     let result = try? JSONDecoder().decode(tagsDeveloper.self, from: data)
-                    self.linkGoogle = result?.organicResults[0].link
-//                    print(self.linkGoogle!)
+                    self.linkGoogle = result?.organicResults[0].link ?? "https://www.google.com"
+                    print(self.linkGoogle)
                 } catch {
                     print("Error to decode")
                 }
             case .failure(_):
-                print("Error Connect to Server")
+                print("Error Connect to Server SerpApi")
                 completion(false)
             }
         })

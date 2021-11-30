@@ -134,7 +134,7 @@ struct NotfoundStateView: View {
                         message: Text("apakah anda ingin  melanjutkan pencarian melalui search engine?"),
                         primaryButton: .default(Text("Ya")) {
                             print("Move to web view")
-                            self.webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
+                            webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
                             print(webViewStateModel.linkWebsite)
                             isShowingSearchEngineView = true
                         },
