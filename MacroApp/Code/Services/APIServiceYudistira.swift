@@ -20,7 +20,7 @@ class ApiYudistira: ObservableObject {
     @Published var relatedNews = [RelatedNewsModel]()
     @Published var isLoading: Bool = false
     @Published var selectedNews: NewsYudistira?
-    @Published var isFail: Bool = true
+    @Published var isFail: Bool = false
 
     func fetch(userRawText: String, completion: @escaping (Bool) -> Void) {
         isLoading = true
@@ -85,9 +85,6 @@ class ApiYudistira: ObservableObject {
                     }
                 }
                 
-
-//                self.relatedData(userRawText: userRawText)
-            
                 group.notify(queue: .main) {
                     print("Finished all requests.")
                     print("Final News: \(self.finalNews.count)")
@@ -96,8 +93,8 @@ class ApiYudistira: ObservableObject {
                 }
                 
             case .failure:
-                print("Error Connect to Server")
-                self.isFail = false
+                print("Error Connect to Backend Server")
+                self.isFail = true
                 completion(false)
                 break
             }

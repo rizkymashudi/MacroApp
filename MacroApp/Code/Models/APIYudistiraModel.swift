@@ -5,8 +5,6 @@
 //  Created by Rizky Mashudi on 31/10/21.
 //
 
-//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
-
 import Foundation
 
 // MARK: - WelcomeElement

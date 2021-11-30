@@ -22,7 +22,15 @@ struct YudistiraListView: View {
     var body: some View {
         
         Group{
-            if networkManager.isConnected || newsYudistira.isFail {
+           
+            if networkManager.isConnected {
+                if newsYudistira.isFail{
+                    OfflineStateView()
+                        .navigationTitle("Hasil pencarian")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
+                }
+                
                 if newsYudistira.isLoading{
                     YudistiraListViewSupport(newsYudistira: newsYudistira, yourText: $yourText)
                         .navigationTitle("Hasil pencarian")

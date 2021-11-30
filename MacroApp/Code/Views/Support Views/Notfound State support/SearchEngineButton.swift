@@ -14,8 +14,6 @@ struct SearchEngineButton: ButtonStyle {
             .font(.system(size: 13, weight: .medium))
             .background(colorPallete.symbol)
             .foregroundColor(colorPallete.primary)
-//            .cornerRadius(6)
-//            .frame(width: 344, height: 56)
     }
 }
 

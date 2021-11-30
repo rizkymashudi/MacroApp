@@ -66,19 +66,27 @@ struct ListDetailViewSupport: View {
                     .frame(width: 355, alignment: .leading)
                     Spacer()
                     
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading, spacing: 10){
                         Text(newsItems.content)
                             .multilineTextAlignment(.leading)
                             .lineLimit(nil)
                             .padding(16)
+                        
+                        Text("Fakta").fontWeight(.bold).padding(.leading, 16)
                         Text(newsItems.fact)
                             .multilineTextAlignment(.leading)
                             .lineLimit(nil)
-                            .padding(16)
+                            .padding(.leading, 16)
+                            .padding(.bottom, 16)
+                            .padding(.trailing, 16)
+                        
+                        Text("Kesimpulan").fontWeight(.bold).padding(.leading, 16)
                         Text(newsItems.conclusion)
                             .multilineTextAlignment(.leading)
                             .lineLimit(nil)
-                            .padding(16)
+                            .padding(.leading, 16)
+                            .padding(.bottom, 16)
+                            .padding(.trailing, 16)
                     }
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: 385, alignment: .leading)

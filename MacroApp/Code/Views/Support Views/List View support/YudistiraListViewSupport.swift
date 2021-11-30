@@ -24,14 +24,14 @@ struct YudistiraListViewSupport: View {
             LabelMafindo()
             VStack{
                 VStack(alignment: .leading){
-                    Text("Hasil Pencarian \"\(yourText)\" ").font(.system(size: 13))
+                    Text("Hasil Pencarian \"\(yourText)\" dari **data mafindo**").font(.system(size: 13))
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(width: 350, alignment: .leading)
                         .lineLimit(2)
-                    Text("dari data Mafindo").font(.system(size: 13))
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(width: 350, alignment: .leading)
-                        .lineLimit(6)
+//                    Text("dari data Mafindo").font(.system(size: 13))
+//                        .fixedSize(horizontal: false, vertical: true)
+//                        .frame(width: 350, alignment: .leading)
+//                        .lineLimit(6)
                 }
                 .redacted(reason: newsYudistira.isLoading ? .placeholder : [])
                 .shimmering(active: newsYudistira.isLoading)
@@ -142,19 +142,12 @@ struct YudistiraListViewSupport: View {
                 }
                 .listStyle(PlainListStyle())
                 .environment(\.defaultMinListRowHeight, 130)
-//                .mask(
-//                    LinearGradient(gradient: Gradient(colors: [colorPallete.bgListview, colorPallete.bgListview.opacity(0)]), startPoint: .bottom, endPoint: .top)
-//                )
             }
         }
         .background(colorPallete.bgListview)
     }
 }
 
-//struct YudistiraListViewSupport_Previews: PreviewProvider {
-//    static var previews: some View {
-//        YudistiraListViewSupport(newsYudistira: ApiYudistira())
-//    }
-//}
+
 
 
