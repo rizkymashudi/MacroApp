@@ -18,7 +18,7 @@ class ApiServiceGoogle: ObservableObject {
         let group = DispatchGroup()
         let baseUrl: String = "https://serpapi.com/search.json"
         let apiKeySerpApi = "39517d6f8267e5c27393fbd818c0504820975b2fe24a38f86d199f06255e1982"
-        let body: [String:Any] = ["q": userRawText, "api_key": apiKeySerpApi]
+        let body: [String:Any] = ["q": userRawText, "api_key": apiKeySerpApi, "hl": "en"]
 
         guard let url = URL(string: baseUrl) else {
             print("Cannot create url")
@@ -27,53 +27,27 @@ class ApiServiceGoogle: ObservableObject {
         }
 
         AF.request(url, parameters: body).responseJSON(completionHandler: { response in
-//            print(type(of: response))
-//            print(type(of: response))
 
             switch response.result {
             case .success:
-                print(response.result)
                 guard let data = response.data else { return }
-                print(data)
-                let result = try! JSONDecoder().decode([tagsOrganicResult].self, from: data)
-                print(result)
-//                if result.isEmpty {
-//                    print("Data Empty")
-//                    completion(true)
-//                }
+//                print("JSON String: \(String(data: data, encoding: .utf8))")
 
-//                for i in result {
-//                    group.enter()
-//
-//                    let link = i.link
-//
-////                    DispatchQueue.main.async {
-////                        <#code#>
-////                    }
-//                }
+                do {
+                    let result = try? JSONDecoder().decode(tagsDeveloper.self, from: data)
+
+//                    print(result["tagsOrganicResult"])
+                    print(result)
+
+
+                } catch {
+                    print("Error to decode")
+                }
             case .failure(_):
                 print("Error Connect to Server")
                 completion(false)
             }
         })
-
-//        AF.request(url, parameters: body)
-//            .responseJSON { response in
-//                print("Response \(response.response)")
-//                print("Request \(response.request)")
-//                print("Result \(response.result)")
-//
-//                switch response.result {
-//                case .success:
-//                    guard let data = response.data else { return }
-//                    let googleResult = try! JSONDecoder().decode([tagsOrganicResult].self, from: data)
-//                    DispatchQueue.main.async {
-//                        self.googleResultModel = googleResult
-//                    }
-//                case .failure(_):
-//                    print("Error Connect to Server")
-//                }
-//            }
     }
 
 }
