@@ -14,7 +14,7 @@ class ApiServiceGoogle: ObservableObject {
 
     @Published var googleResultModel = [tagsOrganicResult]()
     @Published var linkGoogle: String!
-    
+
     func fetchGoogle(userRawText: String, completion: @escaping (Bool) -> Void) {
         let baseUrl: String = "https://serpapi.com/search.json"
         let apiKeySerpApi = "39517d6f8267e5c27393fbd818c0504820975b2fe24a38f86d199f06255e1982"

@@ -13,9 +13,10 @@ struct NotfoundStateView: View {
     @State var isLoading = false
     @State var isShowingSearchEngineView = false
     @Binding var text: String
-//    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
 
-    
+    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
+    @ObservedObject var webViewStateModel = WebViewStateModel()
+
     var body: some View {
         VStack{
             LabelMafindo()
@@ -132,9 +133,11 @@ struct NotfoundStateView: View {
                         title: Text("Maaf, Hasil pencarian pada data Mafindo tidak ditemukan"),
                         message: Text("apakah anda ingin  melanjutkan pencarian melalui search engine?"),
                         primaryButton: .default(Text("Ya")) {
-                                           print("Move to web view")
-                                           isShowingSearchEngineView = true
-                                       },
+                            print("Move to web view")
+                            self.webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
+                            print(webViewStateModel.linkWebsite)
+                            isShowingSearchEngineView = true
+                        },
                         secondaryButton: .cancel(Text("Nanti saja")) {
                             print("Cancel")
                         }
@@ -145,7 +148,7 @@ struct NotfoundStateView: View {
         }
         .onAppear{
             fakeNetworkCall()
-//            apiServiceGoogle.fetchGoogle(userRawText: $text, completion: true)
+            apiServiceGoogle.fetchGoogle(userRawText: text) {result in }
         }
     }
     

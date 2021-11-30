@@ -21,6 +21,7 @@ struct SearchEngineView: View {
                 Button(action: {
                     print("Button Share is pressed")
                     MacroApp.actionSheet(link: apiServiceGoogle.linkGoogle)
+                    webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
                 }, label: {
                     Image(systemName: "square.and.arrow.up")
                 })
@@ -71,7 +72,6 @@ struct SearchEngineView: View {
 }
 
 func actionSheet(link: String) {
-//    guard let urlShare = URL(string: getLink ?? "https://www.google.com/") else { return }
     guard let urlShare = URL(string: link ?? "https://www.google.com") else { return }
     let activeVc = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
     UIApplication.shared.windows.first?.rootViewController?.present(activeVc, animated: true, completion: nil)

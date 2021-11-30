@@ -16,7 +16,7 @@ struct WebView: UIViewRepresentable {
 
     @ObservedObject var webViewStateModel: WebViewStateModel
     @ObservedObject var apiServiceGoogle: ApiServiceGoogle
-
+    
     typealias UIViewType = WKWebView
 
     class Coordinator: NSObject, WKNavigationDelegate {
@@ -52,10 +52,12 @@ struct WebView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        uiView.load(URLRequest(url: URL(string: apiServiceGoogle.linkGoogle)!))
+        guard let urlShare = URL(string: apiServiceGoogle.linkGoogle ?? "https://www.google.com") else { return }
+//        uiView.load(URLRequest(url: URL(string: webViewStateModel.linkWebsite)!))
+        uiView.load(URLRequest(url: urlShare))
 
         if webViewStateModel.goToPage {
-            uiView.load(URLRequest(url: URL(string: apiServiceGoogle.linkGoogle)!))
+            uiView.load(URLRequest(url: urlShare))
             webViewStateModel.goToPage = false
         }
     }
