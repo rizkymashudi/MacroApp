@@ -25,7 +25,7 @@ struct CopastView: View {
                     VStack{
                         Spacer(minLength: 10)
                         TextEditor(text: $yourText)
-                            .frame(width: 320, height: 390, alignment: .center)
+                            .frame(width: 320, height: 380, alignment: .center)
                             .cornerRadius(8)
                     }
                 }
@@ -65,7 +65,7 @@ struct CopastView: View {
                             }
                         }
                     }
-                    .frame(width: 350, height: 420, alignment: .center)
+                    .frame(width: 347, height: 400, alignment: .center)
                     .background(RoundedRectangle(cornerRadius: 8, style: .continuous).fill(colorPallete.bgListview))
                     .onTapGesture {
                         let pasteboard = UIPasteboard.general
@@ -105,10 +105,14 @@ struct CopastView: View {
                     
                 )
             }
-            .frame(width: 350, height: 420)
-
-
+            .frame(width: 347, height: 400)
         }
+    }
+}
+
+struct CopastView_Previews: PreviewProvider {
+    static var previews: some View {
+        CopastView(yourText: .constant(""))
     }
 }
 

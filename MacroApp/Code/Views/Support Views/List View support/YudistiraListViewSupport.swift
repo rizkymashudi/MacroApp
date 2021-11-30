@@ -13,6 +13,8 @@ struct YudistiraListViewSupport: View {
     
     var newsYudistira : ApiYudistira
     @State var isCardTapped = false
+    @Binding var yourText: String
+    
     
     let imageNotFound = "https://dummyimage.com/358x172/d1d1d1/757575.png&text=Image+not+found"
     
@@ -22,7 +24,11 @@ struct YudistiraListViewSupport: View {
             LabelMafindo()
             VStack{
                 VStack(alignment: .leading){
-                    Text("Hasil Pencarian \"\" dari data Mafindo").font(.system(size: 13))
+                    Text("Hasil Pencarian \"\(yourText)\" ").font(.system(size: 13))
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(width: 350, alignment: .leading)
+                        .lineLimit(2)
+                    Text("dari data Mafindo").font(.system(size: 13))
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(width: 350, alignment: .leading)
                         .lineLimit(6)
@@ -63,10 +69,11 @@ struct YudistiraListViewSupport: View {
                                 Text("Dibuat : \(newsYudistira.selectedNews?.date ?? "date")")
                                     .font(.system(size: 13).weight(.regular))
                             }
-                            HStack(spacing: 3){
-                                Text("7").font(.system(size: 13).weight(.bold))
-                                Text("Kata ditemukan").font(.system(size: 13).weight(.regular))
-                            }.padding(.bottom, 10)
+                            .padding(.bottom, 10)
+//                            HStack(spacing: 3){
+//                                Text("7").font(.system(size: 13).weight(.bold))
+//                                Text("Kata ditemukan").font(.system(size: 13).weight(.regular))
+//                            }.padding(.bottom, 10)
                         }
                     }
                 }
@@ -115,12 +122,12 @@ struct YudistiraListViewSupport: View {
                                             .font(.system(size: 13).weight(.regular))
                                         
                                     }
-                                    HStack(spacing: 3){
-                                        Text("5")
-                                            .font(.system(size: 13).weight(.bold))
-                                        Text("kata ditemukan")
-                                            .font(.system(size: 13).weight(.regular))
-                                    }
+//                                    HStack(spacing: 3){
+//                                        Text("5")
+//                                            .font(.system(size: 13).weight(.bold))
+//                                        Text("kata ditemukan")
+//                                            .font(.system(size: 13).weight(.regular))
+//                                    }
                                     
                                 }
                             }
