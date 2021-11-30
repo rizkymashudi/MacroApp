@@ -27,7 +27,7 @@ struct YudistiraListView: View {
                     
             }else{
                 if newsYudistira.finalNews.isEmpty {
-                    NotfoundStateView()
+                    NotfoundStateView(text: $text)
                         .navigationTitle("Hasil pencarian hoax")
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
@@ -39,7 +39,7 @@ struct YudistiraListView: View {
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
                 }
             }
-        }.onAppear(perform: { apiServiceGoogle.fetchGoogle(userRawText: text) { result in
+        }.onAppear(perform: { newsYudistira.fetch(userRawText: text) { result in
 //            print(result)
         }})
     }

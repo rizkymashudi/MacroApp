@@ -12,6 +12,8 @@ struct NotfoundStateView: View {
     @State var showingAlert: Bool = false
     @State var isLoading = false
     @State var isShowingSearchEngineView = false
+    @Binding var text: String
+//    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
 
     
     var body: some View {
@@ -116,7 +118,7 @@ struct NotfoundStateView: View {
                         .multilineTextAlignment(.center)
                 }
                 .padding(.bottom, 100)
-                NavigationLink(destination: SearchEngineView(), isActive: $isShowingSearchEngineView){ }
+                NavigationLink(destination: SearchEngineView(text: $text), isActive: $isShowingSearchEngineView){ }
                 .hidden()
                 Button(action: {
                     print("alert")
@@ -143,6 +145,7 @@ struct NotfoundStateView: View {
         }
         .onAppear{
             fakeNetworkCall()
+//            apiServiceGoogle.fetchGoogle(userRawText: $text, completion: true)
         }
     }
     
@@ -155,8 +158,8 @@ struct NotfoundStateView: View {
     }
 }
 
-struct NotfoundStateView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotfoundStateView()
-    }
-}
+//struct NotfoundStateView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NotfoundStateView()
+//    }
+//}

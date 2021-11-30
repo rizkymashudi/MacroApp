@@ -10,18 +10,22 @@ import SwiftUINavigationBarStyling
 
 struct SearchEngineView: View {
     @ObservedObject var webViewStateModel: WebViewStateModel = WebViewStateModel()
+    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
+
+    @Binding var text: String
 
     var body: some View {
-        WebView(webViewStateModel: webViewStateModel)
+        WebView(webViewStateModel: webViewStateModel, apiServiceGoogle: apiServiceGoogle)
             .navigationTitle("Hasil Pencarian")
             .toolbar{
                 Button(action: {
                     print("Button Share is pressed")
-                    MacroApp.actionSheet()
+                    MacroApp.actionSheet(link: apiServiceGoogle.linkGoogle)
                 }, label: {
                     Image(systemName: "square.and.arrow.up")
                 })
             }
+            .onAppear(perform: { apiServiceGoogle.fetchGoogle(userRawText: text) {result in }})
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
             .toolbar {
@@ -66,16 +70,17 @@ struct SearchEngineView: View {
     }
 }
 
-func actionSheet() {
-    guard let urlShare = URL(string: "https://www.kominfo.go.id/content/detail/20086/hoaks-broadcast-pengobatan-gratis-kanker-tanpa-operasi-dan-kemo-rspad/0/laporan_isu_hoaks" ) else { return }
+func actionSheet(link: String) {
+//    guard let urlShare = URL(string: getLink ?? "https://www.google.com/") else { return }
+    guard let urlShare = URL(string: link ?? "https://www.google.com") else { return }
     let activeVc = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
     UIApplication.shared.windows.first?.rootViewController?.present(activeVc, animated: true, completion: nil)
 }
 
-struct SearchEngineView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchEngineView()
-    }
-}
+//struct SearchEngineView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchEngineView()
+//    }
+//}
 
 
