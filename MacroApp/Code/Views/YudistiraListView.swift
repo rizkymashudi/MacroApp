@@ -14,30 +14,40 @@ struct YudistiraListView: View {
     
     @ObservedObject var newsYudistira = ApiYudistira()
     @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
+    @ObservedObject var networkManager = NetworkManager()
     @State var isNotfoundStateHidden = true
     @State var text : String = ""
+    @Binding var yourText: String
+    
     var body: some View {
         
         Group{
-            if newsYudistira.isLoading{
-                YudistiraListViewSupport(newsYudistira: newsYudistira)
-                    .navigationTitle("Hasil pencarian hoax")
+
+            if networkManager.isConnected || newsYudistira.isFail {
+                if newsYudistira.isLoading{
+                    YudistiraListViewSupport(newsYudistira: newsYudistira, yourText: $yourText)
+                        .navigationTitle("Hasil pencarian")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
+                    
+                }else{
+                    if newsYudistira.finalNews.isEmpty {
+                        NotfoundStateView()
+                            .navigationTitle("Hasil pencarian")
+                            .navigationBarTitleDisplayMode(.inline)
+                            .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
+                    } else {
+                        YudistiraListViewSupport(newsYudistira: newsYudistira, yourText: $yourText)
+                            .navigationTitle("Hasil pencarian")
+                            .navigationBarTitleDisplayMode(.inline)
+                            .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
+                    }
+                }
+            } else {
+                OfflineStateView()
+                    .navigationTitle("Hasil pencarian")
                     .navigationBarTitleDisplayMode(.inline)
                     .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
-                    
-            }else{
-                if newsYudistira.finalNews.isEmpty {
-                    NotfoundStateView(text: $text)
-                        .navigationTitle("Hasil pencarian hoax")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
-//                        .onAppear(perform: apiServiceGoogle.fetchGoogle(userRawText: text) { result in }})
-                } else {
-                    YudistiraListViewSupport(newsYudistira: newsYudistira)
-                        .navigationTitle("Hasil pencarian hoax")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
-                }
             }
         }.onAppear(perform: { newsYudistira.fetch(userRawText: text) { result in
 //            print(result)
@@ -47,7 +57,7 @@ struct YudistiraListView: View {
 
 struct YudistiraListView_Previews: PreviewProvider {
     static var previews: some View {
-        YudistiraListView()
+        YudistiraListView(yourText: .constant(""))
     }
 }
 

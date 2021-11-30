@@ -22,7 +22,6 @@ struct buttonSearch: ButtonStyle {
 struct GrowingSearchButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding()
             .font(.system(size: 17, weight: .medium))
             .frame(width: 344, height: 56)
             .background(colorPallete.symbol)
@@ -35,9 +34,9 @@ struct GrowingSearchButton: ButtonStyle {
 
 
 
-//struct StartSearchButton_Previews: PreviewProvider {
+//struct GrowingSearchButton_Previews: PreviewProvider {
 //    static var previews: some View {
-//        StartSearchButton()
+//        GrowingSearchButton()
 //    }
 //}
 

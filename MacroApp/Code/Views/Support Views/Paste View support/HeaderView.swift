@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        VStack{
+        GeometryReader { geo in
             ZStack{
                 colorPallete.primary
                 Circle() //top leading
@@ -37,9 +37,9 @@ struct HeaderView: View {
                     .position(x: 350, y: 410)
                     .clipped()
             }
-            .frame(height: 320)
+            .frame(height: geo.size.height * 0.45)
+            .edgesIgnoringSafeArea(.all)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -18,11 +18,9 @@ class ApiYudistira: ObservableObject {
     //untuk tampung data setelah di looping
     @Published var finalNews = [NewsYudistira]()
     @Published var relatedNews = [RelatedNewsModel]()
-    
     @Published var isLoading: Bool = false
-    
     @Published var selectedNews: NewsYudistira?
-    
+    @Published var isFail: Bool = true
 
     func fetch(userRawText: String, completion: @escaping (Bool) -> Void) {
         isLoading = true
@@ -40,6 +38,7 @@ class ApiYudistira: ObservableObject {
             return
         }
         
+
         //request method post dengan alamofire
         AF.request(url, method: .post, parameters: body).responseJSON(completionHandler:  { response in
             switch response.result {
@@ -73,13 +72,10 @@ class ApiYudistira: ObservableObject {
                     DispatchQueue.main.async {
                         //tampung ke model yudistira var finalItems
                         self.finalNews.append(NewsYudistira(id: id ?? "-", authors: authors ?? "-", title: title ?? "-", content: content ?? "-", fact: fact ?? "-", references: resRef, imgUrl: imgUrl, date: date ?? "-", conclusion: conclusion ?? "-"))
-                        
                         self.relatedNews.append(RelatedNewsModel(relatedContent: content ?? "-"))
-                        
+                    
                         self.isLoading = false
                         completion(true)
-
-                    
                         //sementara
                         if self.finalNews.count > 0 && self.finalNews.count < 50{
                             self.selectedNews = self.finalNews[0]
@@ -89,8 +85,9 @@ class ApiYudistira: ObservableObject {
                     }
                 }
                 
-                self.relatedData(userRawText: userRawText)
-                
+
+//                self.relatedData(userRawText: userRawText)
+            
                 group.notify(queue: .main) {
                     print("Finished all requests.")
                     print("Final News: \(self.finalNews.count)")
@@ -100,23 +97,22 @@ class ApiYudistira: ObservableObject {
                 
             case .failure:
                 print("Error Connect to Server")
+                self.isFail = false
                 completion(false)
+                break
             }
         })
     }
     
     
-    func relatedData(userRawText: String) {
+//    func relatedData(userRawText: String) {
+//
+//        var currentIndex = 0
+//        for i in self.newsArray{
+//            print(i)
+//        }
+//    }
 
-        var currentIndex = 0
-        for i in self.relatedNews{
-            if i.relatedContent == "Warning..." {
-                print("found \(i.relatedContent) for index \(currentIndex)")
-                break
-            }
-            currentIndex += 1
-        }
-    }
 
 }
 

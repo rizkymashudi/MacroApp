@@ -12,23 +12,10 @@ class ApiBackend : ObservableObject {
  
     func fetchFinalData(){
         
-        
+        //tidak terpakai
         
     }
     
-    
-//        AF.request(url, method: .post, parameters: body, encoder: JSONEncoding.default as! ParameterEncoder, headers: nil).responseJSON{ response in
-//            switch response.result {
-//            case .success:
-//                guard  let jsonObject = try JSONSerialization.jsonObject(with: AFdata.data!) as? [String: Any] else {
-//                                print("Error: Cannot convert data to JSON object")
-//                                return
-//                print("abc")
-//                print(response.result)
-//            case .failure:
-//                print("post failure")
-//            }
-//        }
          
 }
 
