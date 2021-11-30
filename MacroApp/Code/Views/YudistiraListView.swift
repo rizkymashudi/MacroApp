@@ -13,7 +13,7 @@ import Shimmer
 struct YudistiraListView: View {
     
     @ObservedObject var newsYudistira = ApiYudistira()
-    @StateObject var apiServiceGoogle = ApiServiceGoogle()
+    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
     @ObservedObject var networkManager = NetworkManager()
     @State var isNotfoundStateHidden = true
     @State var text : String = ""
@@ -22,6 +22,7 @@ struct YudistiraListView: View {
     var body: some View {
         
         Group{
+
             if networkManager.isConnected || newsYudistira.isFail {
                 if newsYudistira.isLoading{
                     YudistiraListViewSupport(newsYudistira: newsYudistira, yourText: $yourText)
@@ -52,8 +53,6 @@ struct YudistiraListView: View {
 //            print(result)
         }})
     }
-      
-
 }
 
 struct YudistiraListView_Previews: PreviewProvider {
