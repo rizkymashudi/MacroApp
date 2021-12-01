@@ -22,7 +22,6 @@ struct YudistiraListView: View {
     var body: some View {
         
         Group{
-           
             if networkManager.isConnected {
                 if newsYudistira.isBadConnection{
                     OfflineStateView()
