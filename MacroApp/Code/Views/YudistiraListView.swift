@@ -12,7 +12,7 @@ import Shimmer
 
 struct YudistiraListView: View {
     
-    @ObservedObject var newsYudistira = ApiYudistira()
+//    @ObservedObject var newsYudistira = ApiYudistira()
     @StateObject var newsYudistira = ApiYudistira()
     @StateObject var apiServiceGoogle = ApiServiceGoogle()
     @State var isNotfoundStateHidden = true
@@ -42,15 +42,17 @@ struct YudistiraListView: View {
         }.onAppear(perform: {       newsYudistira.fetch(userRawText: text) { result in
             print(result)
         }})
-        }.onAppear{
-            apiServiceGoogle.fetchGoogle()
-        }
+//        }.onAppear{
+//            apiServiceGoogle.fetchGoogle()
+//        }
+//    }
+//}
+
+//struct YudistiraListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        YudistiraListView()
+//    }
+//}
+
     }
 }
-
-struct YudistiraListView_Previews: PreviewProvider {
-    static var previews: some View {
-        YudistiraListView()
-    }
-}
-
