@@ -38,7 +38,7 @@ struct SearchEngineView: View {
                             print("Go Back")
                         }, label: {
                             Image(systemName: "chevron.left")
-                        })
+                        }).disabled(true)
 
                         Spacer()
 
@@ -47,7 +47,7 @@ struct SearchEngineView: View {
                             print("Go Forward")
                         }, label: {
                             Image(systemName: "chevron.right")
-                        })
+                        }).disabled(true)
 
                         Spacer()
 
@@ -55,7 +55,7 @@ struct SearchEngineView: View {
                             print("Button aA is presseed")
                         }, label: {
                             Image(systemName: "textformat.size")
-                        })
+                        }).disabled(true)
 
                         Spacer()
 
