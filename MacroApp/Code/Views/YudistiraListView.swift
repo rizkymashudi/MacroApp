@@ -23,7 +23,7 @@ struct YudistiraListView: View {
     var body: some View {
         
         VStack{
-           
+//         Group{
             if networkManager.isConnected {
                 if newsYudistira.isBadConnection{
                     OfflineStateView()
