@@ -13,7 +13,7 @@ import Shimmer
 struct YudistiraListView: View {
     
     @ObservedObject var newsYudistira = ApiYudistira()
-    @StateObject var apiServiceGoogle = ApiServiceGoogle()
+    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
     @ObservedObject var networkManager = NetworkManager()
     @State var isNotfoundStateHidden = true
     @State var text : String = ""

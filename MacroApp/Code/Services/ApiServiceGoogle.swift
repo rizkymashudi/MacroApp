@@ -11,41 +11,37 @@ import Alamofire
 
 class ApiServiceGoogle: ObservableObject {
 
-    @Published var googleResultModel: [tagsDeveloper] = []
-    @Published var linkInGoogle = [GoogleLinksModel]()
-    
-    let link = "https://serpapi.com/search.json?q=Gatot+Subroto+kanker&hl=en&gl=us&google_domain=google.com&api_key=39517d6f8267e5c27393fbd818c0504820975b2fe24a38f86d199f06255e1982"
+    @Published var googleResultModel = [tagsOrganicResult]()
+    @Published var linkGoogle: String = ""
 
-    let baseUrl : String = "https://serpapi.com/search?engine=google&q="
-    let accessKey : String = "&api_key=39517d6f8267e5c27393fbd818c0504820975b2fe24a38f86d199f06255e1982"
+    func fetchGoogle(userRawText: String, completion: @escaping (Bool) -> Void) {
+        let baseUrl: String = "https://serpapi.com/search.json"
+        let apiKeySerpApi = "39517d6f8267e5c27393fbd818c0504820975b2fe24a38f86d199f06255e1982"
+        let body: [String:Any] = ["q": userRawText, "api_key": apiKeySerpApi, "hl": "en"]
 
-    func fetchGoogle(){
-        
-        let request = AF.request(link, method: .get)
-        
-        request.responseJSON { (response) in
-         
-            
-        
-            if let data = response.data, let jsonData = String(data: data, encoding: .utf8) {
-//                print("Data: \(utf8Text)") // original server data as UTF8 string
-//                print(jsonData)
-                let decoder = JSONDecoder()
-
-//                do {
-//                    let items = try decoder.decode([tagsDeveloper].self, from: jsonData)
-//                    print(items)
-//                } catch {
-//                    print(error.localizedDescription)
-//                }
-                
-            
-            }
-
-
+        guard let url = URL(string: baseUrl) else {
+            print("Cannot create url")
+            completion(false)
+            return
         }
-        
-    }
-    
 
+        AF.request(url, parameters: body).responseJSON(completionHandler: { response in
+
+            switch response.result {
+            case .success:
+                guard let data = response.data else { return }
+
+                do {
+                    let result = try? JSONDecoder().decode(tagsDeveloper.self, from: data)
+                    self.linkGoogle = result?.organicResults[0].link ?? "https://www.google.com"
+                    print(self.linkGoogle)
+                } catch {
+                    print("Error to decode")
+                }
+            case .failure(_):
+                print("Error Connect to Server SerpApi")
+                completion(false)
+            }
+        })
+    }
 }
