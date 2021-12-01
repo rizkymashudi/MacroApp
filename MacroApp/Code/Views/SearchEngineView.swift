@@ -21,12 +21,13 @@ struct SearchEngineView: View {
                 Button(action: {
                     print("Button Share is pressed")
                     MacroApp.actionSheet(link: apiServiceGoogle.linkGoogle)
-//                    webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
+                    print(apiServiceGoogle.linkGoogle)
+                    webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
                 }, label: {
                     Image(systemName: "square.and.arrow.up")
                 })
             }
-//            .onAppear(perform: { apiServiceGoogle.fetchGoogle})
+            .onAppear(perform: { apiServiceGoogle.fetchGoogle(userRawText: text) {result in }})
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
             .toolbar {
@@ -72,7 +73,8 @@ struct SearchEngineView: View {
 }
 
 func actionSheet(link: String) {
-    guard let urlShare = URL(string: link ?? "https://www.google.com" ) else { return }
+    print("action sheet udah terpanggil")
+    guard let urlShare = URL(string: link ) else { return }
     let activeVc = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
     UIApplication.shared.windows.first?.rootViewController?.present(activeVc, animated: true, completion: nil)
 }
