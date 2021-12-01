@@ -21,12 +21,12 @@ struct SearchEngineView: View {
                 Button(action: {
                     print("Button Share is pressed")
                     MacroApp.actionSheet(link: apiServiceGoogle.linkGoogle)
-                    webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
+//                    webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
                 }, label: {
                     Image(systemName: "square.and.arrow.up")
                 })
             }
-            .onAppear(perform: { apiServiceGoogle.fetchGoogle(userRawText: text) {result in }})
+//            .onAppear(perform: { apiServiceGoogle.fetchGoogle})
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .white)
             .toolbar {
