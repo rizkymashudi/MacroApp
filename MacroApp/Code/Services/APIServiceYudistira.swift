@@ -20,7 +20,7 @@ class ApiYudistira: ObservableObject {
     @Published var relatedNews = [RelatedNewsModel]()
     @Published var isLoading: Bool = false
     @Published var selectedNews: NewsYudistira?
-    @Published var isFail: Bool = false
+    @Published var isBadConnection: Bool = false
 
     func fetch(userRawText: String, completion: @escaping (Bool) -> Void) {
         isLoading = true
@@ -94,7 +94,7 @@ class ApiYudistira: ObservableObject {
                 
             case .failure:
                 print("Error Connect to Backend Server")
-                self.isFail = true
+                self.isBadConnection = true
                 completion(false)
                 break
             }

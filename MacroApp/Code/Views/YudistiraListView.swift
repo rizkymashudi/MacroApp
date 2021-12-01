@@ -24,14 +24,12 @@ struct YudistiraListView: View {
         Group{
            
             if networkManager.isConnected {
-                if newsYudistira.isFail{
+                if newsYudistira.isBadConnection{
                     OfflineStateView()
                         .navigationTitle("Hasil pencarian")
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
-                }
-                
-                if newsYudistira.isLoading{
+                } else if newsYudistira.isLoading {
                     YudistiraListViewSupport(newsYudistira: newsYudistira, yourText: $yourText)
                         .navigationTitle("Hasil pencarian")
                         .navigationBarTitleDisplayMode(.inline)
