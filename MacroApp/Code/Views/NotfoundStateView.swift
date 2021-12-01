@@ -12,8 +12,11 @@ struct NotfoundStateView: View {
     @State var showingAlert: Bool = false
     @State var isLoading = false
     @State var isShowingSearchEngineView = false
+    @Binding var text: String
 
-    
+    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
+    @ObservedObject var webViewStateModel = WebViewStateModel()
+
     var body: some View {
         VStack{
             LabelMafindo()
@@ -116,7 +119,7 @@ struct NotfoundStateView: View {
                         .multilineTextAlignment(.center)
                 }
                 .padding(.bottom, 100)
-                NavigationLink(destination: SearchEngineView(), isActive: $isShowingSearchEngineView){ }
+                NavigationLink(destination: SearchEngineView(text: $text), isActive: $isShowingSearchEngineView){ }
                 .hidden()
                 Button(action: {
                     print("alert")
@@ -130,9 +133,11 @@ struct NotfoundStateView: View {
                         title: Text("Maaf, Hasil pencarian pada data Mafindo tidak ditemukan"),
                         message: Text("apakah anda ingin  melanjutkan pencarian melalui search engine?"),
                         primaryButton: .default(Text("Ya")) {
-                                           print("Move to web view")
-                                           isShowingSearchEngineView = true
-                                       },
+                                print("Move to web view")
+                                webViewStateModel.linkWebsite = apiServiceGoogle.linkGoogle
+                                print(webViewStateModel.linkWebsite)
+                                isShowingSearchEngineView = true
+                        },
                         secondaryButton: .cancel(Text("Nanti saja")) {
                             print("Cancel")
                         }
@@ -143,6 +148,7 @@ struct NotfoundStateView: View {
         }
         .onAppear{
             fakeNetworkCall()
+            apiServiceGoogle.fetchGoogle(userRawText: text) { result in }
         }
     }
     
@@ -154,9 +160,9 @@ struct NotfoundStateView: View {
         
     }
 }
-
-struct NotfoundStateView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotfoundStateView()
-    }
-}
+//
+//struct NotfoundStateView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NotfoundStateView()
+//    }
+//}

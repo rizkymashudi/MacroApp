@@ -13,15 +13,17 @@ import Shimmer
 struct YudistiraListView: View {
     
     @ObservedObject var newsYudistira = ApiYudistira()
-    @StateObject var apiServiceGoogle = ApiServiceGoogle()
+    @ObservedObject var apiServiceGoogle = ApiServiceGoogle()
     @ObservedObject var networkManager = NetworkManager()
     @State var isNotfoundStateHidden = true
     @State var text : String = ""
     @Binding var yourText: String
-    
+
+    @ViewBuilder
     var body: some View {
         
-        Group{
+        VStack{
+//         Group{
             if networkManager.isConnected {
                 if newsYudistira.isBadConnection{
                     OfflineStateView()
@@ -36,7 +38,7 @@ struct YudistiraListView: View {
                     
                 }else{
                     if newsYudistira.finalNews.isEmpty {
-                        NotfoundStateView()
+                        NotfoundStateView(text: $yourText)
                             .navigationTitle("Hasil pencarian")
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarColor(UIColor(colorPallete.navBarColor), textColor: .black)
