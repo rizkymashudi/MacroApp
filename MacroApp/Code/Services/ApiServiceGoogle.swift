@@ -16,7 +16,7 @@ class ApiServiceGoogle: ObservableObject {
 
     func fetchGoogle(userRawText: String, completion: @escaping (Bool) -> Void) {
         let baseUrl: String = "https://serpapi.com/search.json"
-        let apiKeySerpApi = "39517d6f8267e5c27393fbd818c0504820975b2fe24a38f86d199f06255e1982"
+        let apiKeySerpApi = "0dd324915702c8c985e627afc597f897287cfbc82ce17c1594f66d8347c632c9"
         let body: [String:Any] = ["q": userRawText, "api_key": apiKeySerpApi, "hl": "en"]
 
         guard let url = URL(string: baseUrl) else {
