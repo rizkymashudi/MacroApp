@@ -36,7 +36,7 @@ struct MainView: View {
                 if shouldShowOnboarding {
                     OnBoardingScene()
                 } else {
-                    PasteViewScene()
+                    MainTabBar()
                 }
             } else {
                 LaunchScreen(animate: $animate)

@@ -71,6 +71,7 @@ struct CopastView: View {
                         let pasteboard = UIPasteboard.general
                         if pasteboard.hasStrings {
                             print("clipboard contain value")
+                            
                             guard let pasteText = pasteboard.string else {
                                 showingAlert = true
                                 return

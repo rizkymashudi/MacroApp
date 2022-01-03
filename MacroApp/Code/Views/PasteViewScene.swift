@@ -44,7 +44,6 @@ struct PasteViewScene: View {
                         
                         Spacer()
                         VStack(alignment: .leading){
-                            Spacer()
                             Text("Periksa informasi dengan cepat dan mudah")
                                 .font(.system(size: 28, weight: .medium))
                                 .foregroundColor(colorPallete.symbol)
@@ -56,6 +55,7 @@ struct PasteViewScene: View {
                                 .frame(width: 340, alignment: .leading)
                         }
                         .frame(width: 140, height: 120)
+                        .padding(.top, 20)
                    
                         Spacer()
                         CopastView(yourText: $yourText)
@@ -69,8 +69,7 @@ struct PasteViewScene: View {
                         .buttonStyle(GrowingSearchButton())
                         .disabled(yourText.isEmpty)
                         .opacity(yourText.isEmpty ? 0.5 : 1)
-//                        .padding()
-                        .padding(.bottom, 25)
+                        .padding(.bottom, 50)
                         Spacer()
                     }
                     .ignoresSafeArea(.all)
